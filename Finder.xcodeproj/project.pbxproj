@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */; };
+		B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF694D1F154333009FDF40 /* Main.storyboard */; };
@@ -32,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BEC0968598DB8C6D702B1FE /* Pods-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Finder/Pods-Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		A563A52C46648C61003A25D7 /* Pods-Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finder/Pods-Finder.release.xcconfig"; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +71,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063A57246B53683BD25840CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */,
+				404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		236349790E94608B4A11AF3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BEC0968598DB8C6D702B1FE /* Pods-Finder.debug.xcconfig */,
+				A563A52C46648C61003A25D7 /* Pods-Finder.release.xcconfig */,
+				6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */,
+				6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F7CF693D1F154333009FDF40 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +106,8 @@
 				F7CF69481F154333009FDF40 /* Finder */,
 				F7CF695D1F154333009FDF40 /* FinderTests */,
 				F7CF69471F154333009FDF40 /* Products */,
+				236349790E94608B4A11AF3F /* Pods */,
+				063A57246B53683BD25840CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7CF69631F154333009FDF40 /* Build configuration list for PBXNativeTarget "Finder" */;
 			buildPhases = (
+				3B25814FD836FE4AB7B3BF82 /* [CP] Check Pods Manifest.lock */,
 				F7CF69421F154333009FDF40 /* Sources */,
 				F7CF69431F154333009FDF40 /* Frameworks */,
 				F7CF69441F154333009FDF40 /* Resources */,
+				D68EF78A3DF19883BA2079B2 /* [CP] Embed Pods Frameworks */,
+				FF54DFC449F0B04BD9EAADA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7CF69661F154333009FDF40 /* Build configuration list for PBXNativeTarget "FinderTests" */;
 			buildPhases = (
+				D51F0C5C3B2A5A311C134DB6 /* [CP] Check Pods Manifest.lock */,
 				F7CF69561F154333009FDF40 /* Sources */,
 				F7CF69571F154333009FDF40 /* Frameworks */,
 				F7CF69581F154333009FDF40 /* Resources */,
+				436945CB20CB36A651D1DCCC /* [CP] Embed Pods Frameworks */,
+				26E17D3C694320FB6470227F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +261,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26E17D3C694320FB6470227F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B25814FD836FE4AB7B3BF82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		436945CB20CB36A651D1DCCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51F0C5C3B2A5A311C134DB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D68EF78A3DF19883BA2079B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Finder/Pods-Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF54DFC449F0B04BD9EAADA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Finder/Pods-Finder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7CF69421F154333009FDF40 /* Sources */ = {
@@ -370,6 +501,7 @@
 		};
 		F7CF69641F154333009FDF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BEC0968598DB8C6D702B1FE /* Pods-Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MN29R57D4L;
@@ -383,6 +515,7 @@
 		};
 		F7CF69651F154333009FDF40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A563A52C46648C61003A25D7 /* Pods-Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MN29R57D4L;
@@ -396,6 +529,7 @@
 		};
 		F7CF69671F154333009FDF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +544,7 @@
 		};
 		F7CF69681F154333009FDF40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

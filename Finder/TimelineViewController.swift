@@ -17,6 +17,10 @@ class TimelineViewController: UIViewController {
         updateUI()
     }
     
+    // Push keyboard down when background is pressed
+    
+    
+    
     func updateUI() {
         // Change font of navigation bar title
         //UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AndaleMono", size: 50)!]

@@ -7,14 +7,34 @@
 //
 
 import UIKit
+//import TextFieldEffects
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
+
+    // MARK: Properties
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    // Update the UI
+    func updateUI () {
+
+    }
+    
+    // Push keyboard down when background is pressed
+    @IBAction func didPressBackground(_ sender: Any) {
+        print("PUSH KEYBOARD DOWN")
+        view.endEditing(true)
+    }
+   
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
