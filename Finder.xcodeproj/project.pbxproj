@@ -13,6 +13,12 @@
 		F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69501F154333009FDF40 /* Assets.xcassets */; };
 		F7CF69541F154333009FDF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */; };
 		F7CF695F1F154333009FDF40 /* FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF695E1F154333009FDF40 /* FinderTests.swift */; };
+		F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69691F154D8A009FDF40 /* Andale-Mono */; };
+		F7CF696C1F154E8D009FDF40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */; };
+		F7CF696E1F1550DD009FDF40 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */; };
+		F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69701F155686009FDF40 /* LoginViewController.swift */; };
+		F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69721F155691009FDF40 /* ProfileViewController.swift */; };
+		F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69741F15569F009FDF40 /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		F7CF695A1F154333009FDF40 /* FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF695E1F154333009FDF40 /* FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTests.swift; sourceTree = "<group>"; };
 		F7CF69601F154333009FDF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CF69691F154D8A009FDF40 /* Andale-Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Andale-Mono"; sourceTree = "<group>"; };
+		F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AndaleMono.ttf; path = "Finder/Andale-Mono/AndaleMono.ttf"; sourceTree = "<group>"; };
+		F7CF69701F155686009FDF40 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F7CF69721F155691009FDF40 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7CF69741F15569F009FDF40 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,8 @@
 		F7CF693D1F154333009FDF40 = {
 			isa = PBXGroup;
 			children = (
+				F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */,
+				F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */,
 				F7CF69481F154333009FDF40 /* Finder */,
 				F7CF695D1F154333009FDF40 /* FinderTests */,
 				F7CF69471F154333009FDF40 /* Products */,
@@ -77,6 +91,8 @@
 		F7CF69481F154333009FDF40 /* Finder */ = {
 			isa = PBXGroup;
 			children = (
+				F7CF696F1F155678009FDF40 /* View Controllers */,
+				F7CF69691F154D8A009FDF40 /* Andale-Mono */,
 				F7CF69491F154333009FDF40 /* AppDelegate.swift */,
 				F7CF694B1F154333009FDF40 /* ViewController.swift */,
 				F7CF694D1F154333009FDF40 /* Main.storyboard */,
@@ -94,6 +110,16 @@
 				F7CF69601F154333009FDF40 /* Info.plist */,
 			);
 			path = FinderTests;
+			sourceTree = "<group>";
+		};
+		F7CF696F1F155678009FDF40 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF69701F155686009FDF40 /* LoginViewController.swift */,
+				F7CF69721F155691009FDF40 /* ProfileViewController.swift */,
+				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +208,9 @@
 			files = (
 				F7CF69541F154333009FDF40 /* LaunchScreen.storyboard in Resources */,
 				F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */,
+				F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */,
+				F7CF696E1F1550DD009FDF40 /* AndaleMono.ttf in Resources */,
+				F7CF696C1F154E8D009FDF40 /* Default-568h@2x.png in Resources */,
 				F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
+				F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
+				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +441,7 @@
 				F7CF69651F154333009FDF40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7CF69661F154333009FDF40 /* Build configuration list for PBXNativeTarget "FinderTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +450,7 @@
 				F7CF69681F154333009FDF40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
