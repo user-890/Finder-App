@@ -93,6 +93,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1pn-ob-pNC">
+                                        <rect key="frame" x="0.0" y="211" width="375" height="183"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1pn-ob-pNC" id="eT3-1a-9Mn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="UHn-tV-OiG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ij2-45-fgg">
+                                        <rect key="frame" x="0.0" y="394" width="375" height="183"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ij2-45-fgg" id="tX9-Ig-mTG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -157,8 +179,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rVJ-p4-Svg" kind="relationship" relationship="viewControllers" id="lbT-So-vHT"/>
                         <segue destination="bGs-JA-AjT" kind="relationship" relationship="viewControllers" id="faW-36-l1F"/>
+                        <segue destination="rVJ-p4-Svg" kind="relationship" relationship="viewControllers" id="lbT-So-vHT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AB-Gh-3Gq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,4 +207,7 @@
             <point key="canvasLocation" x="1828" y="903.59820089955031"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="768" height="509"/>
+    </resources>
 </document>
