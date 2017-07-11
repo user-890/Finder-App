@@ -21,6 +21,8 @@
 		F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69701F155686009FDF40 /* LoginViewController.swift */; };
 		F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69721F155691009FDF40 /* ProfileViewController.swift */; };
 		F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69741F15569F009FDF40 /* TimelineViewController.swift */; };
+		F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */; };
+		F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		F7CF69701F155686009FDF40 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7CF69721F155691009FDF40 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7CF69741F15569F009FDF40 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		F7CF69481F154333009FDF40 /* Finder */ = {
 			isa = PBXGroup;
 			children = (
+				F7CF69781F158048009FDF40 /* Views */,
 				F7CF696F1F155678009FDF40 /* View Controllers */,
 				F7CF69691F154D8A009FDF40 /* Andale-Mono */,
 				F7CF69491F154333009FDF40 /* AppDelegate.swift */,
@@ -152,6 +157,15 @@
 				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F7CF69781F158048009FDF40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */,
+				F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,8 +377,10 @@
 				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
 				F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */,
+				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
+				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
