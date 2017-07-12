@@ -11,9 +11,11 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
     
     // MARK: Properties
+
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postDetailView: UIView!
+
     
     
 
@@ -21,9 +23,9 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        // Change the color of the 'postDetailView' to black
-        postDetailView.layer.borderColor = UIColor.white as! CGColor
-        postDetailView.layer.borderWidth = 3
+        
+
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,5 +33,5 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

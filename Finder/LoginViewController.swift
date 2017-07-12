@@ -19,6 +19,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "AndaleMono", size: 34)!]
 
         // Do any additional setup after loading the view.
     }

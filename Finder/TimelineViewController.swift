@@ -8,11 +8,19 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: Properties
+    @IBOutlet weak var tableView: UITableView!
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Change navigation bar title color
+        
+        //set up delegates
+        tableView.dataSource = self
+        tableView.delegate = self
         
         updateUI()
     }
@@ -23,13 +31,71 @@ class TimelineViewController: UIViewController {
     
     func updateUI() {
         // Change font of navigation bar title
-        //UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AndaleMono", size: 50)!]
+        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AndaleMono", size: 50)!]
         
         // Chaage the color of the nav bar title 
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
     }
     
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    var randomNum = Int ( arc4random_uniform(10) )
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row % randomNum == 0 {
+            
+            let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommendedTableViewCell", for: indexPath) as! RecommendedTableViewCell
+            
+            return cellTwo
+            
+        }
+        else {
+            
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
+            
+            // Make profile image circular
+            cell.profileImageView?.layer.cornerRadius = (cell.profileImageView?.frame.size.width)! / 2
+            cell.profileImageView?.layer.masksToBounds = true
+            
+            // Make view outline black
+            cell.postDetailView.layer.borderWidth = 0.50
+            return cell
+
+            }
+            
+        }
+    
+
+    
+    
+    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        if indexPath.row == 0 {
+//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "postTableViewCell")
+//            //cell.profileImageView?.layer.cornerRadius = (cell.profileImageView?.frame.size.width)! / 2
+//            //cell.profileImageView?.layer.masksToBounds = true
+//            return cell
+//        }
+//        else {
+//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "recommendedTableViewCell")
+//            //set the data here
+//            return cell
+//        }
+//    }
+//    
+    
+    
+
+
 
 
     override func didReceiveMemoryWarning() {

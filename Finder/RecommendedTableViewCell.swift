@@ -10,6 +10,12 @@ import UIKit
 
 class RecommendedTableViewCell: UITableViewCell {
 
+    // MARK: Properties
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var authorButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

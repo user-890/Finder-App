@@ -26,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         
         // Change color of navigation bar text color 
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
         // Change the font of the navigation title
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "AndaleMono", size: 34)!]
+        
         
         
         // Change font of navigation bar title
