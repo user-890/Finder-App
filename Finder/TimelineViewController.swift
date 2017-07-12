@@ -12,6 +12,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
+    
+    
   
 
     override func viewDidLoad() {
@@ -30,13 +32,28 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func updateUI() {
-        // Change font of navigation bar title
-        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AndaleMono", size: 50)!]
-        
-        // Chaage the color of the nav bar title 
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        
+        // Add two labels to navigation bar 
+        if let navigationBar = self.navigationController?.navigationBar {
+            // Center label
+            let firstFrame = CGRect(x: 145, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
+            
+            let firstLabel = UILabel(frame: firstFrame)
+            firstLabel.text = "FINDER"
+            // Make label text white
+            firstLabel.textColor = UIColor.white
+            firstLabel.font = UIFont(name: "AndaleMono", size: 20)
+            
+            navigationBar.addSubview(firstLabel)
+        }
     }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        // Change the color of the tab bar
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.tintColor = UIColor.white
+    }
+    
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,36 +82,17 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             // Make profile image circular
             cell.profileImageView?.layer.cornerRadius = (cell.profileImageView?.frame.size.width)! / 2
             cell.profileImageView?.layer.masksToBounds = true
+//            cell.profileImageView?.layer.borderWidth = 1
             
             // Make view outline black
             cell.postDetailView.layer.borderWidth = 0.50
             return cell
-
+            
             }
             
         }
     
-
     
-    
-    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 {
-//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "postTableViewCell")
-//            //cell.profileImageView?.layer.cornerRadius = (cell.profileImageView?.frame.size.width)! / 2
-//            //cell.profileImageView?.layer.masksToBounds = true
-//            return cell
-//        }
-//        else {
-//            let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "recommendedTableViewCell")
-//            //set the data here
-//            return cell
-//        }
-//    }
-//    
-    
-    
-
 
 
 

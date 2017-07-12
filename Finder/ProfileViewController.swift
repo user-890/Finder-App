@@ -9,13 +9,32 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var profileCoverImage: UIImageView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var outlineView: UIView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Update the UI
+        updateUI()
+    
     }
 
+    
+    func updateUI() {
+        // Maker profile picture circular
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.layer.masksToBounds = true
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,3 +52,4 @@ class ProfileViewController: UIViewController {
     */
 
 }
+

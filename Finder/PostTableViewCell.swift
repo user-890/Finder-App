@@ -15,8 +15,16 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var postDetailView: UIView!
+    @IBOutlet weak var bookmarkButton: UIButton!
 
     
+    @IBAction func pressOnBookmark(_ sender: Any) {
+        if bookmarkButton.isSelected{
+            bookmarkButton.isSelected = false
+        } else {
+            bookmarkButton.isSelected = true
+        }
+    }
     
 
     override func awakeFromNib() {
