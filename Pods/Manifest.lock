@@ -1,12 +1,18 @@
 PODS:
+  - Bolts/Tasks (1.8.4)
+  - Parse (1.15.0):
+    - Bolts/Tasks (~> 1.8)
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
+  - Parse
   - TextFieldEffects
 
 SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: b0893c2a96457b22ca8aaf8261932d5e8878c027
+PODFILE CHECKSUM: b8e7a8ba580f7a3685feda2a614b18c04e0dcdec
 
 COCOAPODS: 1.2.1

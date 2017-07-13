@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Finder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80121AD793364277D19DE3DA74E377DB</key>
+		<key>8D21663F68427E6E2CD35C20D7506AA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4FD519363C8B5372651EC25E1CECC61</key>
+		<key>B594767436210816E50A744E9E7F4250</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAA2CFB1B0A3BD8DAA556B81A3C3D4C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

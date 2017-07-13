@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Sign in current user (?)
+        if let currentUser = PFUser.current() {
+            print("Welcome back \(currentUser.username!)")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let CaptureViewController = storyboard.instantiateViewController(withIdentifier: "appFeed")
+            window?.rootViewController = CaptureViewController
+        }
+        
+
+        // Set up Parse
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration) in
+            configuration.applicationId = "finder"
+            configuration.clientKey = "finder"
+            configuration.server = "http://finder-app-fbu.herokuapp.com/parse"
+
+        }))
+
         
         //change color of tab bar
           UITabBar.appearance().barTintColor = UIColor.black

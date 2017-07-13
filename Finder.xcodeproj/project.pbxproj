@@ -12,6 +12,7 @@
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
 		F78193511F16DE7D0043F7DA /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = F78193501F16DE7D0043F7DA /* PublicArt.json */; };
 		F78193541F16DF980043F7DA /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193531F16DF980043F7DA /* Artwork.swift */; };
+		F78193561F16F2750043F7DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193551F16F2750043F7DA /* Post.swift */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF694D1F154333009FDF40 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		F7CF69541F154333009FDF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */; };
 		F7CF695F1F154333009FDF40 /* FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF695E1F154333009FDF40 /* FinderTests.swift */; };
 		F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69691F154D8A009FDF40 /* Andale-Mono */; };
-		F7CF696C1F154E8D009FDF40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */; };
 		F7CF696E1F1550DD009FDF40 /* AndaleMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */; };
 		F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69701F155686009FDF40 /* LoginViewController.swift */; };
 		F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69721F155691009FDF40 /* ProfileViewController.swift */; };
@@ -48,6 +48,7 @@
 		F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F78193501F16DE7D0043F7DA /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 		F78193531F16DF980043F7DA /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		F78193551F16F2750043F7DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		F7CF695E1F154333009FDF40 /* FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTests.swift; sourceTree = "<group>"; };
 		F7CF69601F154333009FDF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF69691F154D8A009FDF40 /* Andale-Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Andale-Mono"; sourceTree = "<group>"; };
-		F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AndaleMono.ttf; path = "Finder/Andale-Mono/AndaleMono.ttf"; sourceTree = "<group>"; };
 		F7CF69701F155686009FDF40 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7CF69721F155691009FDF40 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F78193531F16DF980043F7DA /* Artwork.swift */,
+				F78193551F16F2750043F7DA /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -128,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				F7CF696D1F1550DD009FDF40 /* AndaleMono.ttf */,
-				F7CF696B1F154E8D009FDF40 /* Default-568h@2x.png */,
 				F7CF69481F154333009FDF40 /* Finder */,
 				F7CF695D1F154333009FDF40 /* FinderTests */,
 				F7CF69471F154333009FDF40 /* Products */,
@@ -288,7 +288,6 @@
 				F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */,
 				F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */,
 				F7CF696E1F1550DD009FDF40 /* AndaleMono.ttf in Resources */,
-				F7CF696C1F154E8D009FDF40 /* Default-568h@2x.png in Resources */,
 				F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +408,7 @@
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 				F78193541F16DF980043F7DA /* Artwork.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
+				F78193561F16F2750043F7DA /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
