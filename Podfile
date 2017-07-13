@@ -6,7 +6,6 @@ use_frameworks!
 
 target 'Finder' do
    pod "TextFieldEffects"
-   pod 'Parse'
    pod "Koloda"
 
 
