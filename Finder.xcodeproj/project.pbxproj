@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35851F17F7B2006E88B2 /* HomeViewController.swift */; };
+		49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BD35871F17FC29006E88B2 /* OverlayView.xib */; };
+		49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */; };
 		9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */; };
 		B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */; };
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49BD35851F17F7B2006E88B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		49BD35871F17FC29006E88B2 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
 		6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +188,7 @@
 				F7CF69721F155691009FDF40 /* ProfileViewController.swift */,
 				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
 				F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */,
+				49BD35851F17F7B2006E88B2 /* HomeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 			children = (
 				F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */,
 				F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */,
+				49BD35871F17FC29006E88B2 /* OverlayView.xib */,
+				49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */,
 				F7CF69541F154333009FDF40 /* LaunchScreen.storyboard in Resources */,
 				F78193511F16DE7D0043F7DA /* PublicArt.json in Resources */,
 				F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */,
@@ -414,7 +424,9 @@
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
+				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
 				F78193541F16DF980043F7DA /* Artwork.swift in Sources */,
+				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

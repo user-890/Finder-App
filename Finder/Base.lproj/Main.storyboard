@@ -418,7 +418,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rVJ-p4-Svg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home-icon" selectedImage="home-icon" id="gOh-Nh-8iI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="6UB-cR-hgd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="6UB-cR-hgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -431,10 +431,10 @@
             </objects>
             <point key="canvasLocation" x="1828" y="125.4872563718141"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="LTZ-7F-H3X">
             <objects>
-                <viewController id="ktV-6d-xvu" sceneMemberID="viewController">
+                <viewController id="ktV-6d-xvu" customClass="HomeViewController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5UF-I7-3OW"/>
                         <viewControllerLayoutGuide type="bottom" id="Gl2-dC-era"/>
@@ -442,9 +442,18 @@
                     <view key="view" contentMode="scaleToFill" id="gOD-jl-NBI">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-25-g3s" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="46" y="20" width="289" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EaY-ID-AEX"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="2Mh-25-g3s" id="HaA-r6-ZkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sej-GS-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,7 +485,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGs-JA-AjT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="list-icon" selectedImage="list-icon" id="KQy-j7-j64"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UlR-g9-Oao">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="UlR-g9-Oao">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
