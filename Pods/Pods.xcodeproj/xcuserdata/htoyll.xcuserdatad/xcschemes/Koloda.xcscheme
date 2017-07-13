@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C011288067B6E5B19239CF8AD568A13E'
-               BlueprintName = 'Pods-Finder'
+               BlueprintIdentifier = '20151774CE2F5FA6B8126D4F5ED1C5FE'
+               BlueprintName = 'Koloda'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Finder.framework'>
+               BuildableName = 'Koloda.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
