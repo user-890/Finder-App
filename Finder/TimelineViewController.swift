@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Parse
 
 class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
