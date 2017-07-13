@@ -1,18 +1,24 @@
 PODS:
   - Bolts/Tasks (1.8.4)
+  - Koloda (4.1):
+    - pop (~> 1.0)
   - Parse (1.15.0):
     - Bolts/Tasks (~> 1.8)
+  - pop (1.0.10)
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
+  - Koloda
   - Parse
   - TextFieldEffects
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
   Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: b8e7a8ba580f7a3685feda2a614b18c04e0dcdec
+PODFILE CHECKSUM: bd4b6eec6c64d7da9c5fdd32e2d76a1034e461fb
 
 COCOAPODS: 1.2.1
