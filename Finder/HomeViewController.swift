@@ -11,6 +11,40 @@ import Koloda
 
 private var numberOfCards: Int = 3
 
+func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
+    
+    // Setup the font specific variables
+    let textColor: UIColor = UIColor.white
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 17)!
+    
+    //Setup the image context using the passed image.
+    UIGraphicsBeginImageContext(inImage.size)
+    
+    //Setups up the font attributes that will be later used to dictate how the text should be drawn
+    let textFontAttributes = [
+        NSFontAttributeName: textFont,
+        NSForegroundColorAttributeName: textColor,
+        ]
+    
+    //Put the image into a rectangle as large as the original image.
+    inImage.draw(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
+    
+    // Creating a point within the space that is as bit as the image.
+    let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width, height: inImage.size.height)
+    
+    //Now Draw the text into an image.
+    drawText.draw(in: rect, withAttributes: textFontAttributes)
+    
+    // Create a new image out of the images we have created
+    let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+    
+    // End the context now that we have the image we need
+    UIGraphicsEndImageContext()
+    
+    //And pass it back up to the caller.
+    return newImage
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet var kolodaView: KolodaView!
@@ -18,7 +52,12 @@ class HomeViewController: UIViewController {
     fileprivate var dataSource: [UIImage] = {
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
-            array.append(UIImage(named: "Card_like_\(index + 1)")!)
+            let base = UIImage(named: "Card_like")
+            let point = CGPoint(x: 10, y: 10)
+            let str = "So many things to say!!!! \(index)" as NSString
+            array.append(textToImage(drawText: str, inImage: base!, atPoint: point))
+            //array.append(UIImage(named: "Card_like_\(index + 1)")!)
+            
         }
         
         return array
@@ -71,13 +110,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: KolodaViewDelegate {
     
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        let position = kolodaView.currentCardIndex
-        for i in 1...3 {
-            dataSource.append(UIImage(named: "Card_like_\(i)")!)
-        }
-        kolodaView.insertCardAtIndexRange(position..<position + 3, animated: true)
-    }
+//    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+//        let position = kolodaView.currentCardIndex
+//        for i in 1...3 {
+//            dataSource.append(UIImage(named: "Card_like_\(i)")!)
+//        }
+//        kolodaView.insertCardAtIndexRange(position..<position + 3, animated: true)
+//    }
     
 //    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
 //        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)

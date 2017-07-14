@@ -441,12 +441,22 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OVL-Iw-JkS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-25-g3s" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="46" y="20" width="289" height="394"/>
+                                <rect key="frame" x="43" y="89" width="289" height="394"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gl2-dC-era" firstAttribute="top" secondItem="OVL-Iw-JkS" secondAttribute="bottom" id="6E2-Pp-U0j"/>
+                            <constraint firstItem="OVL-Iw-JkS" firstAttribute="leading" secondItem="gOD-jl-NBI" secondAttribute="leading" id="ixh-nY-moj"/>
+                            <constraint firstAttribute="trailing" secondItem="OVL-Iw-JkS" secondAttribute="trailing" id="tiX-Oq-Y4y"/>
+                            <constraint firstItem="OVL-Iw-JkS" firstAttribute="top" secondItem="5UF-I7-3OW" secondAttribute="bottom" id="xol-rA-N6u"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EaY-ID-AEX"/>
                     <connections>
