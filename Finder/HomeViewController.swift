@@ -16,21 +16,30 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     // Setup the font specific variables
     let textColor: UIColor = UIColor.white
     let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 17)!
+    let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
     UIGraphicsBeginImageContext(inImage.size)
+    
+    //alignment
+    paraStyle.alignment = .center
     
     //Setups up the font attributes that will be later used to dictate how the text should be drawn
     let textFontAttributes = [
         NSFontAttributeName: textFont,
         NSForegroundColorAttributeName: textColor,
+        NSParagraphStyleAttributeName: paraStyle
         ]
     
     //Put the image into a rectangle as large as the original image.
     inImage.draw(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
     
     // Creating a point within the space that is as bit as the image.
+    let textSize = drawText.size(attributes: textFontAttributes)
+    //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
+    //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
     let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width, height: inImage.size.height)
+    
     
     //Now Draw the text into an image.
     drawText.draw(in: rect, withAttributes: textFontAttributes)
