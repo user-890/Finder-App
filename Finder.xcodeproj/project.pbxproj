@@ -15,7 +15,7 @@
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
 		F78193511F16DE7D0043F7DA /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = F78193501F16DE7D0043F7DA /* PublicArt.json */; };
 		F78193541F16DF980043F7DA /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193531F16DF980043F7DA /* Artwork.swift */; };
-		F78193561F16F2750043F7DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193551F16F2750043F7DA /* Post.swift */; };
+		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF694D1F154333009FDF40 /* Main.storyboard */; };
@@ -54,7 +54,8 @@
 		F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F78193501F16DE7D0043F7DA /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 		F78193531F16DF980043F7DA /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		F78193551F16F2750043F7DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
+		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				F78193531F16DF980043F7DA /* Artwork.swift */,
-				F78193551F16F2750043F7DA /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -155,6 +155,7 @@
 		F7CF69481F154333009FDF40 /* Finder */ = {
 			isa = PBXGroup;
 			children = (
+				F78193571F1752230043F7DA /* Finder.entitlements */,
 				F78193521F16DF5A0043F7DA /* Models */,
 				F781934D1F16DE260043F7DA /* Supporting Files */,
 				F7CF69781F158048009FDF40 /* Views */,
@@ -166,6 +167,7 @@
 				F7CF69501F154333009FDF40 /* Assets.xcassets */,
 				F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */,
 				F7CF69551F154333009FDF40 /* Info.plist */,
+				F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -260,6 +262,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = MN29R57D4L;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					F7CF69591F154333009FDF40 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -299,6 +306,7 @@
 				F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */,
 				F7CF696E1F1550DD009FDF40 /* AndaleMono.ttf in Resources */,
 				F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */,
+				F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +428,6 @@
 				F78193541F16DF980043F7DA /* Artwork.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
-				F78193561F16F2750043F7DA /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +567,7 @@
 			baseConfigurationReference = 8BEC0968598DB8C6D702B1FE /* Pods-Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
 				DEVELOPMENT_TEAM = MN29R57D4L;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -574,6 +582,7 @@
 			baseConfigurationReference = A563A52C46648C61003A25D7 /* Pods-Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
 				DEVELOPMENT_TEAM = MN29R57D4L;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

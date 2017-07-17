@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController {
     
@@ -16,10 +19,48 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var outlineView: UIView!
     
+    var databaseRef: DatabaseReference!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Establish connection to database
+        databaseRef = Database.database().reference()
+        
+        if let userID = Auth.auth().currentUser?.uid {
+            databaseRef.child("profile").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                let dictionary = snapshot.value as? NSDictionary
+                
+                let username = dictionary?["username"] as? String 
+                if let profileImageURL = dictionary?["photo"] as? String {
+                    let url = URL(string: profileImageURL)
+                    
+                    // Grab the image
+                    URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                        if error != nil {
+                            print(error!)
+                            return
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.profileImageView.image = UIImage(data: data!)
+                        }
+                        
+                    })
+                        
+                    .resume()
+                }
+                
+               self.usernameLabel.text = username
+            }) {
+                (error) in
+                print(error.localizedDescription)
+                return
+            }
+            
+        }
 
         // Update the UI
         updateUI()
@@ -30,7 +71,7 @@ class ProfileViewController: UIViewController {
     func updateUI() {
         // Maker profile picture circular
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
-        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.masksToBounds = true 
         
     }
     

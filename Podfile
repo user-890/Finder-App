@@ -6,12 +6,17 @@ use_frameworks!
 
 target 'Finder' do
    pod "TextFieldEffects"
-   pod 'Parse'
    pod "Koloda"
-   
- 
+
+
 
   # Pods for Finder
+   pod "TextFieldEffects"
+   pod 'FBSDKCoreKit'
+   pod 'FBSDKShareKit'
+   pod 'FBSDKLoginKit'
+   pod 'Firebase/Core'
+   pod 'Firebase/Auth'
 
   target 'FinderTests' do
     inherit! :search_paths
