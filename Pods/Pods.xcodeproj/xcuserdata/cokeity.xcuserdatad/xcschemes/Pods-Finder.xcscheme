@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-<<<<<<< HEAD
-   LastUpgradeVersion = "0830"
-=======
    LastUpgradeVersion = "0700"
->>>>>>> home_viewcontroller
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -18,11 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-               BlueprintIdentifier = "B594767436210816E50A744E9E7F4250"
-=======
-               BlueprintIdentifier = "24788B71B515032022F06B442CCACA19"
->>>>>>> home_viewcontroller
+               BlueprintIdentifier = "A602B2EA472F1DB6D672BFDA95056831"
                BuildableName = "Pods_Finder.framework"
                BlueprintName = "Pods-Finder"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -53,11 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-<<<<<<< HEAD
-            BlueprintIdentifier = "B594767436210816E50A744E9E7F4250"
-=======
-            BlueprintIdentifier = "24788B71B515032022F06B442CCACA19"
->>>>>>> home_viewcontroller
+            BlueprintIdentifier = "A602B2EA472F1DB6D672BFDA95056831"
             BuildableName = "Pods_Finder.framework"
             BlueprintName = "Pods-Finder"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -72,18 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-<<<<<<< HEAD
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B594767436210816E50A744E9E7F4250"
-            BuildableName = "Pods_Finder.framework"
-            BlueprintName = "Pods-Finder"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-=======
->>>>>>> home_viewcontroller
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -56,6 +56,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
 
 class HomeViewController: UIViewController {
     
+    //Outlet
     @IBOutlet var kolodaView: KolodaView!
     
     fileprivate var dataSource: [UIImage] = {
@@ -72,6 +73,12 @@ class HomeViewController: UIViewController {
         return array
     }()
 
+    //OnTap
+    @IBAction func onReadMore(_ sender: Any) {
+        self.performSegue(withIdentifier: "readMoreSegue", sender: nil)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

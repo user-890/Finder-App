@@ -6,73 +6,48 @@
 	<dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>FBSDKShareKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>14</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>13</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Koloda.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Parse.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-Finder 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Finder.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-FinderTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-		<key>TextFieldEffects 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -87,22 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24788B71B515032022F06B442CCACA19</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>392A5F6C46DEC5001B8DD4AC14C5E904</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4D9252FA2B2FDFFC4D8EFA014D5F7E5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,32 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D21663F68427E6E2CD35C20D7506AA9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9BDD0E42347ED8EDEA19928B85B79254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B594767436210816E50A744E9E7F4250</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC5000D645EEAF961C85907CDC796FE1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BEF7E6E85DB5CDE5D7A18F4F2EB8494B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C011288067B6E5B19239CF8AD568A13E</key>
+		<key>A602B2EA472F1DB6D672BFDA95056831</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,17 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAA2CFB1B0A3BD8DAA556B81A3C3D4C3</key>
+		<key>D9851E3297070A519E445AC07C348087</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E396A93E4C79B22B7816E9F02F62ECED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

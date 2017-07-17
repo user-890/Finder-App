@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-<<<<<<< HEAD
-   LastUpgradeVersion = "0830"
-=======
    LastUpgradeVersion = "0700"
->>>>>>> home_viewcontroller
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-<<<<<<< HEAD
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8D21663F68427E6E2CD35C20D7506AA9"
-               BuildableName = "TextFieldEffects.framework"
-               BlueprintName = "TextFieldEffects"
-               ReferencedContainer = "container:Pods.xcodeproj">
-=======
             buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -31,37 +14,23 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4D9252FA2B2FDFFC4D8EFA014D5F7E5F'
+               BlueprintIdentifier = 'D9851E3297070A519E445AC07C348087'
                BlueprintName = 'TextFieldEffects'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TextFieldEffects.framework'>
->>>>>>> home_viewcontroller
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-<<<<<<< HEAD
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
-=======
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
->>>>>>> home_viewcontroller
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-<<<<<<< HEAD
-      buildConfiguration = "Debug"
-=======
->>>>>>> home_viewcontroller
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -69,47 +38,17 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-<<<<<<< HEAD
-      allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D21663F68427E6E2CD35C20D7506AA9"
-            BuildableName = "TextFieldEffects.framework"
-            BlueprintName = "TextFieldEffects"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-=======
       buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
->>>>>>> home_viewcontroller
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-<<<<<<< HEAD
-      buildConfiguration = "Release"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = ""
-      useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8D21663F68427E6E2CD35C20D7506AA9"
-            BuildableName = "TextFieldEffects.framework"
-            BlueprintName = "TextFieldEffects"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-=======
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES">
->>>>>>> home_viewcontroller
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

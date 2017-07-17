@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -172,7 +172,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="223"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7q7-zM-GHG" id="11I-o6-BKn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-07-11 at 12.07.33 AM" translatesAutoresizingMaskIntoConstraints="NO" id="kwr-Hm-9yV">
@@ -241,7 +241,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="259"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CMa-ru-RId" id="4Ll-LE-cN3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="258.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC6-Qb-HbD">
@@ -317,7 +317,7 @@
                                         <rect key="frame" x="0.0" y="287" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1pn-ob-pNC" id="eT3-1a-9Mn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="UHn-tV-OiG">
@@ -448,9 +448,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-25-g3s" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="43" y="89" width="289" height="394"/>
+                                <rect key="frame" x="43" y="41" width="289" height="394"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkC-oo-NXu" userLabel="ReadMore">
+                                <rect key="frame" x="303" y="504" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onReadMore:" destination="ktV-6d-xvu" eventType="touchUpInside" id="bue-hj-2qc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -463,11 +471,31 @@
                     <navigationItem key="navigationItem" id="EaY-ID-AEX"/>
                     <connections>
                         <outlet property="kolodaView" destination="2Mh-25-g3s" id="HaA-r6-ZkF"/>
+                        <segue destination="iRD-ex-IL1" kind="push" identifier="readMoreSegue" id="pCb-8H-DlY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sej-GS-aVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2767.1999999999998" y="903.59820089955031"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f2g-z3-kvd">
+            <objects>
+                <viewController id="iRD-ex-IL1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GC7-1l-hDO"/>
+                        <viewControllerLayoutGuide type="bottom" id="L99-hF-46E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dtx-f3-2a1">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uRK-T6-YHY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaD-p9-ZqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3722" y="904"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7wU-Iz-fNt">
