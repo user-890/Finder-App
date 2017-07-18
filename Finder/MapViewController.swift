@@ -14,6 +14,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Properties
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addressLabel: UILabel!
     
     
     let manager = CLLocationManager()
@@ -29,6 +30,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         mapView.setRegion(region, animated: true)
         
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (
+            placemark, error) in
+            if error != nil {
+                print("An error has occurred")
+            } else {
+                // See if there's content int he placemark variable
+                if let place = placemark?[0] {
+                    if let checker = place.subThoroughfare {
+                        self.addressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
+                    }
+                }
+            }
+        }
     }
     
 
