@@ -260,7 +260,7 @@
 				TargetAttributes = {
 					F7CF69451F154333009FDF40 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5JTWQYEJ7H;
+						DevelopmentTeam = JPLF4RZQB9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -568,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = JPLF4RZQB9;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
@@ -583,7 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = JPLF4RZQB9;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
