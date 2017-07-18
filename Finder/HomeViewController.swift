@@ -54,11 +54,33 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     return newImage
 }
 
-class HomeViewController: UIViewController {
+
+
+func getWords(fact: String) -> [String] {
+    var sentence = fact
+    sentence = fact.lowercased()
+    var wordlist:[String] = []
+    var word = ""
+    for w in fact.characters {
+        if (w == " ") {
+            wordlist.append(word)
+            word = ""
+        }
+        else {
+            word.append(w)
+        }
+    }
+    return wordlist
+}
+
+class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     //Outlet
     @IBOutlet var kolodaView: KolodaView!
+    @IBOutlet var collectionView: UICollectionView!
     
+    //Variables
+    var wordBreakdown: [String] = []
     fileprivate var dataSource: [UIImage] = {
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
@@ -85,10 +107,20 @@ class HomeViewController: UIViewController {
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        collectionView.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "wordTag", for: indexPath)
+        return cell
+    }
     // MARK: IBActions
     
 //    @IBAction func leftButtonTapped() {
