@@ -7,7 +7,7 @@ use_frameworks!
 target 'Finder' do
    pod "TextFieldEffects"
    pod "Koloda"
-
+   pod "FoodFactsSDK"
 
 
   # Pods for Finder

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FoodFactsSDK
 
 
 @UIApplicationMain
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Change color of navigation bar text color
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
+        //Account credentials https://github.com/foodfacts/FoodFacts-Swift-SDK
+        //FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
         
         return true
     }

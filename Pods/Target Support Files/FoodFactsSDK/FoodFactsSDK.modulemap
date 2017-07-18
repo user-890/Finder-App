@@ -1,0 +1,6 @@
+framework module FoodFactsSDK {
+  umbrella header "FoodFactsSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
