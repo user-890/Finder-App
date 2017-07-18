@@ -28,6 +28,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Hey! We want to where you&apos;re @</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -43,23 +45,22 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb831064217057725</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>831064217057725</string>
-    <key>FacebookDisplayName</key>
-    <string>Finder</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbauth2</string>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb831064217057725</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>831064217057725</string>
+	<key>FacebookDisplayName</key>
+	<string>Finder</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 </dict>
 </plist>
