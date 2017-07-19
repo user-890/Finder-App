@@ -13,9 +13,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     
-    
-  
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Change navigation bar title color
@@ -47,7 +44,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-
     override func viewWillAppear(_ animated: Bool) {
         // Change the color of the tab bar
         super.viewWillAppear(animated)
