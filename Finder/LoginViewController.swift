@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+
+
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -20,7 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    
+    @IBOutlet weak var usernameTextField: UITextField!
     
     var isSignIn: Bool = true
     
@@ -28,9 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Loads FB login button
-        //makeFacebookLoginButton()
+     
         
         
     }
@@ -38,19 +39,42 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     /**********************************FACEBOOK LOGIN/REGISTER*******************************************/
 
     
-//    
-//    // Generate Facebook login button
+    
+    
+    
+    // Generate Facebook login button
 //    func makeFacebookLoginButton() {
 //        
 //        // Get Facebook login button
 //        let loginButton = FBSDKLoginButton()
 //        view.addSubview(loginButton)
-//        // Eventuall change with constraints
+//        
+//        // EventuallY change with constraints
 //        loginButton.frame = CGRect(x: 16, y: 450, width: view.frame.width - 32, height: 50)
 //        
 //        loginButton.delegate = self
 //    }
-//    
+    
+    // Fetch user credentials
+//    func facebookLogin() {
+//        if let accessToken = FBSDKAccessToken.current {
+//            let params = ["fields":"name,email"]
+//            let graphRequest = graphRequest(graphPath: "me", parameters: params)
+//            graphRequest.start { (urlResponse, requestResult) in
+//                switch requestResult {
+//                case .failed(let error):
+//                    print(error)
+//                case .success(let graphResponse):
+//                    if let responseDictionary = graphResponse.dictionaryValue {
+//                        UserDefaults.standard.set(responseDictionary, forKey: "userInfo")
+//                    }
+//                }
+//            }
+//        } else {
+//        }
+//    }
+    
+    
 //    // Logout with Facebook
 //    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
 //        print("Did logout of Facebook")
@@ -65,7 +89,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //        print("Successfully logged in with Facebook")
 //        
 //    }
-    
+//    
     
     /**********************************FACEBOOK LOGIN/REGISTER ENDS*******************************************/
     
@@ -234,6 +258,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         } else {
             
+            guard let email = emailTextField.text, let password = passwordTextField.text, let name = usernameTextField.text else {
+                print("Form is not valid")
+                return
+            }
             
             if emailTextField.text == "" {
                 let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
@@ -246,21 +274,42 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                     
-                    if error == nil {
-                        print("You have successfully signed up")
-                        //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
+                    
+                    if error != nil {
                         
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                        self.present(vc!, animated: true, completion: nil)
                         
-                    } else {
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                         
                         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         alertController.addAction(defaultAction)
-                        
                         self.present(alertController, animated: true, completion: nil)
+                        
+                        
+                        return
                     }
+                    
+                    
+                    guard let uid = user?.uid else {
+                        return
+                    }
+                    
+                    
+                    // Succesfull authenticated the user
+                    let ref = Database.database().reference(fromURL: "https://finder-e44b3.firebaseio.com/")
+                    let userReference = ref.child("Users").child((user?.uid)!)
+                    let values = ["name": name, "email": email, "password": password]
+                    userReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
+                    
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        print("Saved user successfully into Firebase db")
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                        self.present(vc!, animated: true, completion: nil)
+    
+                    })
                 }
              }
             

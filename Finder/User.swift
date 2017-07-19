@@ -13,15 +13,11 @@ import FirebaseStorage
 
 
 
-class User {
-    
-    var id: String?
+class User: NSObject {
     var name: String?
-    var genre: String?
-    
-    init(id: String?, name: String?, genre: String?){
-        self.id = id
-        self.name = name
-        self.genre = genre
+    var email: String?
+    init(dictionary: [String: Any]) {
+        self.name = dictionary["name"] as? String ?? ""
+        self.email = dictionary["email"] as? String ?? ""
     }
 }

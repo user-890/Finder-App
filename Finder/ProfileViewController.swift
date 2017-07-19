@@ -8,8 +8,8 @@
 
 import UIKit
 import Firebase
-import FirebaseStorage
 import FirebaseDatabase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -20,52 +20,32 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var outlineView: UIView!
     
     var databaseRef: DatabaseReference!
+    var users = [User]()
     
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Establish connection to database
-        databaseRef = Database.database().reference()
-        
-        if let userID = Auth.auth().currentUser?.uid {
-            databaseRef.child("profile").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
-                let dictionary = snapshot.value as? NSDictionary
-                
-                let username = dictionary?["username"] as? String 
-                if let profileImageURL = dictionary?["photo"] as? String {
-                    let url = URL(string: profileImageURL)
-                    
-                    // Grab the image
-                    URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-                        if error != nil {
-                            print(error!)
-                            return
-                        }
-                        
-                        DispatchQueue.main.async {
-                            self.profileImageView.image = UIImage(data: data!)
-                        }
-                        
-                    })
-                        
-                    .resume()
-                }
-                
-               self.usernameLabel.text = username
-            }) {
-                (error) in
-                print(error.localizedDescription)
-                return
-            }
-            
-        }
-
-        // Update the UI
+        //Update the UI
         updateUI()
-    
+        
+        // Set the firebase reference
+        var databaseRef = Database.database().reference()
+        
+        // Retrieve the names
+        databaseRef.child("Users").observe(.childAdded, with: { (DataSnapshot) in
+            
+            // Code to execute when a child is added under "Users"
+            
+            
+        })
+
     }
+    
+    
+
+    
 
     
     func updateUI() {
@@ -74,6 +54,8 @@ class ProfileViewController: UIViewController {
         profileImageView.layer.masksToBounds = true 
         
     }
+    
+
     
     
     override func didReceiveMemoryWarning() {

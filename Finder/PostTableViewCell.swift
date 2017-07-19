@@ -13,10 +13,15 @@ class PostTableViewCell: UITableViewCell {
     // MARK: Properties
 
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var postDetailView: UIView!
     @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var articleImageView: UIImageView!
+    @IBOutlet weak var articleAuthor: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var newsLabel: UILabel!
+    @IBOutlet weak var postDetailView: UIView!
 
+    
     
     @IBAction func pressOnBookmark(_ sender: Any) {
         if bookmarkButton.isSelected{
@@ -30,6 +35,7 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
         
 

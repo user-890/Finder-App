@@ -12,11 +12,11 @@ target 'Finder' do
 
   # Pods for Finder
    pod "TextFieldEffects"
-   pod 'FBSDKCoreKit'
-   pod 'FBSDKShareKit'
-   pod 'FBSDKLoginKit'
    pod 'Firebase/Core'
    pod 'Firebase/Auth'
+   pod 'Firebase/Database'
+   pod 'Firebase/Storage'
+   pod 'SDWebImage', '~>3.8'
 
   target 'FinderTests' do
     inherit! :search_paths

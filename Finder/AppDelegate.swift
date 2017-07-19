@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -17,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Facebook Login
+//        // Facebook Login
 //        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-//        
+        
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
@@ -41,9 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    // [START new_delegate]
+//    // [START new_delegate]
 //    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+//        let facebookDidHandle = FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+//        
+//        return facebookDidHandle
 //    }
     
 

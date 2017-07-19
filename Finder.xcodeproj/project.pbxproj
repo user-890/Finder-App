@@ -16,6 +16,10 @@
 		F78193511F16DE7D0043F7DA /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = F78193501F16DE7D0043F7DA /* PublicArt.json */; };
 		F78193541F16DF980043F7DA /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193531F16DF980043F7DA /* Artwork.swift */; };
 		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
+		F781935B1F19DF640043F7DA /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781935A1F19DF640043F7DA /* EditProfileViewController.swift */; };
+		F781935D1F19FD850043F7DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781935C1F19FD850043F7DA /* User.swift */; };
+		F781935F1F1E78E80043F7DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F781935E1F1E78E80043F7DA /* CoreLocation.framework */; };
+		F78193611F1ECB1F0043F7DA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193601F1ECB1F0043F7DA /* Article.swift */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF694D1F154333009FDF40 /* Main.storyboard */; };
@@ -56,6 +60,10 @@
 		F78193531F16DF980043F7DA /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F781935A1F19DF640043F7DA /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		F781935C1F19FD850043F7DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F781935E1F1E78E80043F7DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F78193601F1ECB1F0043F7DA /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781935F1F1E78E80043F7DA /* CoreLocation.framework in Frameworks */,
 				B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +107,7 @@
 		063A57246B53683BD25840CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F781935E1F1E78E80043F7DA /* CoreLocation.framework */,
 				7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */,
 				404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */,
 			);
@@ -127,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				F78193531F16DF980043F7DA /* Artwork.swift */,
+				F781935C1F19FD850043F7DA /* User.swift */,
+				F78193601F1ECB1F0043F7DA /* Article.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -189,6 +201,7 @@
 				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
 				F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */,
 				49BD35851F17F7B2006E88B2 /* HomeViewController.swift */,
+				F781935A1F19DF640043F7DA /* EditProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -417,14 +430,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78193611F1ECB1F0043F7DA /* Article.swift in Sources */,
 				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
 				F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */,
 				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
+				F781935D1F19FD850043F7DA /* User.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
+				F781935B1F19DF640043F7DA /* EditProfileViewController.swift in Sources */,
 				F78193541F16DF980043F7DA /* Artwork.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
