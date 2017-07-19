@@ -8,6 +8,8 @@ target 'Finder' do
    pod "TextFieldEffects"
    pod "Koloda"
    pod "FoodFactsSDK"
+   pod 'Parse'
+   pod 'ParseUI'
 
 
   # Pods for Finder

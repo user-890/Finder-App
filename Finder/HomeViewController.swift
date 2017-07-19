@@ -15,7 +15,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     
     // Setup the font specific variables
     let textColor: UIColor = UIColor.white
-    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 17)!
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 28)!
     let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
@@ -36,6 +36,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     
     // Creating a point within the space that is as bit as the image.
     let textSize = drawText.size(attributes: textFontAttributes)
+    
     //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
     let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width, height: inImage.size.height)
@@ -85,7 +86,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
             let base = UIImage(named: "Card_like")
-            let point = CGPoint(x: 10, y: 10)
+            let point = CGPoint(x: 10, y: 250)
             let str = "So many things to say!!!! \(index)" as NSString
             array.append(textToImage(drawText: str, inImage: base!, atPoint: point))
             //array.append(UIImage(named: "Card_like_\(index + 1)")!)

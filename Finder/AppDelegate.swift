@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FoodFactsSDK
+import Parse
 
 
 @UIApplicationMain
@@ -40,6 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Account credentials https://github.com/foodfacts/FoodFacts-Swift-SDK
         //FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
+        
+        if PFUser.current() != nil {
+            print("Welcome back!")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "Home")
+            window?.rootViewController = HomeViewController
+        }
         
         return true
     }

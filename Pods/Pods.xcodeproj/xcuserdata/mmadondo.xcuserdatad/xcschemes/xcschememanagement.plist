@@ -34,6 +34,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Finder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,11 +77,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04627088CA86E0F9A1E8F5186CBD9B1E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -92,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A4A43F69C96E126363BE6518C277D00</key>
+		<key>5569B53B03366C78639A6BD64D6E2F10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +122,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A760316124FD796EF09C09479E9F0021</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1C4DD05CD534D7D42E188B0522DF945</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAA2CFB1B0A3BD8DAA556B81A3C3D4C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
