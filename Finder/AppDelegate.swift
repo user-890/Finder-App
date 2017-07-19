@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
+import Parse
 
 
 @UIApplicationMain
@@ -21,9 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 //        
         
-        // Use Firebase library to configure APIs
-        FirebaseApp.configure()
+//        // Use Firebase library to configure APIs
+//        FirebaseApp.configure()
         
+        //Initialize Parse
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+            configuration.applicationId = "Finder"
+            configuration.clientKey = "whatcannotbetouched"
+            configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
+        }))
         
         //change color of tab bar
         UITabBar.appearance().barTintColor = UIColor.black

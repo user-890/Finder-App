@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
+import Parse
+//import Firebase
+//import FirebaseAuth
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -17,7 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
     @IBOutlet weak var signInSelector: UISegmentedControl!
     @IBOutlet weak var signInLabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
@@ -192,10 +193,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //        
 //    }
     
-    
+    //@TODO
     @IBAction func pressOnSignUpButton(_ sender: Any) {
-        
-        if isSignIn {
+        if !isSignIn {
+            /* FIREBASE SIGN IN CODE
             if self.emailTextField.text == "" || self.passwordTextField.text == "" {
                 
                 //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
@@ -206,7 +207,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 alertController.addAction(defaultAction)
                 
                 self.present(alertController, animated: true, completion: nil)
-                
+ 
+            
+            
             } else {
                 
                 Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
@@ -232,9 +235,47 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }
+        */
+            //PARSE SIGN UP
+            let newUser = PFUser()
+            newUser.username = usernameTextField.text
+            newUser.password = passwordTextField.text
+            newUser.signUpInBackground(block: { (success: Bool, error: Error?) in
+                if success {
+                    //set default fields for PFUser
+                    let icon = Fact.getPFFileFromImage(image: (UIImage(named: "Potrait1")))
+                    let bookmarks:[Fact] = []
+                    let follow:[PFUser] = []
+                    newUser.setObject(newUser.username, forKey: "display_name")
+                    newUser.setObject(icon, forKey: "profile_picture")
+                    newUser.setObject(bookmarks, forKey: "bookmarks")
+                    newUser.setObject(follow, forKey: "following")
+                    newUser.setObject(follow, forKey: "followers")
+                    newUser.saveInBackground(block: { (bool: Bool, error: Error?) in
+                        if (bool != nil) {
+                            //saved sucessfully
+                            print("saved successfully!")
+                        } else {
+                            print("failed miserably")
+                        }
+                    })
+                    print("signed up successfully")
+                    self.usernameTextField.text = ""
+                    self.passwordTextField.text = ""
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    //show alert
+                    self.showAlert()
+                    self.usernameTextField.text = ""
+                    self.passwordTextField.text = ""
+                    print("something went wrong with SignUpInBackground")
+                }
+            })
+            
+        
         } else {
             
-            
+            /* FIREBASE LOGIN CODE 
             if emailTextField.text == "" {
                 let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
                 
@@ -262,11 +303,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         self.present(alertController, animated: true, completion: nil)
                     }
                 }
-             }
+                */
+            //PARSE LOGIN
+            PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user: PFUser?, error: Error?) in
+                if (user != nil) {
+                    //there exists such an user
+                    self.usernameTextField.text = ""
+                    self.passwordTextField.text = ""
+                    print("Successfully logged in")
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    self.showAlert()
+                    self.usernameTextField.text = ""
+                    self.passwordTextField.text = ""
+                    //show alert something is wrong
+                }
+                
+            }
             
+             }
         }
-    }
     
+    func showAlert(){
+        let alertController = UIAlertController(title: "Error", message: "Username or password incorrect", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
