@@ -51,6 +51,9 @@ PODS:
   - Parse (1.15.0):
     - Bolts/Tasks (~> 1.8)
   - pop (1.0.10)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
@@ -61,6 +64,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Koloda
   - Parse
+  - SDWebImage
   - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -79,8 +83,9 @@ SPEC CHECKSUMS:
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: d81b4f1b9dd5cae4b70345af5ddf238a2b3b0ccc
+PODFILE CHECKSUM: 05df3c069e2bf2c1584274b3d2cf91f5b7576f96
 
 COCOAPODS: 1.2.1

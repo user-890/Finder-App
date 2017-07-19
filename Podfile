@@ -17,6 +17,7 @@ target 'Finder' do
    pod 'FBSDKLoginKit'
    pod 'Firebase/Core'
    pod 'Firebase/Auth'
+   pod 'SDWebImage'
 
   target 'FinderTests' do
     inherit! :search_paths
