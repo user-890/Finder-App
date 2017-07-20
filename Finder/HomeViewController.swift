@@ -41,7 +41,6 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
     let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width, height: inImage.size.height)
     
-    
     //Now Draw the text into an image.
     drawText.draw(in: rect, withAttributes: textFontAttributes)
     
@@ -54,7 +53,6 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     //And pass it back up to the caller.
     return newImage
 }
-
 
 
 func getWords(fact: String) -> [String] {

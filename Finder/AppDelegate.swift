@@ -20,12 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Facebook Login
-//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-//        
+        //        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //
         
-        // Use Firebase library to configure APIs
-        FirebaseApp.configure()
+        //        // Use Firebase library to configure APIs
+        //        FirebaseApp.configure()
         
+        //Initialize Parse
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+            configuration.applicationId = "Finder"
+            configuration.clientKey = "whatcannotbetouched"
+            configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
+        }))
+        
+        //user persist - check if current user is logged in
+        if let currentUser = PFUser.current(){
+            print("Welcome back to Finder, \(currentUser.username!) 😀")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeController = storyboard.instantiateViewController(withIdentifier: "Home")
+            window?.rootViewController = homeController
+            
+        }
         
         //change color of tab bar
         UITabBar.appearance().barTintColor = UIColor.black
@@ -39,26 +54,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Change color of navigation bar text color
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
-        //Account credentials https://github.com/foodfacts/FoodFacts-Swift-SDK
-        //FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
-        
-        if PFUser.current() != nil {
-            print("Welcome back!")
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "Home")
-            window?.rootViewController = HomeViewController
-        }
         
         return true
     }
     
     // [START new_delegate]
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-//        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
-//    }
+    //    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    //        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url as URL!, sourceApplication: sourceApplication, annotation: annotation)
+    //    }
     
-
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -84,4 +89,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
-
