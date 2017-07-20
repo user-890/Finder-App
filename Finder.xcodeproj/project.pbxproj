@@ -17,6 +17,7 @@
 		F78193511F16DE7D0043F7DA /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = F78193501F16DE7D0043F7DA /* PublicArt.json */; };
 		F78193541F16DF980043F7DA /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193531F16DF980043F7DA /* Artwork.swift */; };
 		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
+		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF694F1F154333009FDF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF694D1F154333009FDF40 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		F78193531F16DF980043F7DA /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
+		F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F78193531F16DF980043F7DA /* Artwork.swift */,
+				F78193AD1F20018A0043F7DA /* Recommended.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -171,6 +175,7 @@
 				F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */,
 				F7CF69551F154333009FDF40 /* Info.plist */,
 				F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */,
+				F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -263,7 +268,7 @@
 				TargetAttributes = {
 					F7CF69451F154333009FDF40 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5JTWQYEJ7H;
+						DevelopmentTeam = MN29R57D4L;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -421,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
+				F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
 				F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */,
 				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
@@ -572,7 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = MN29R57D4L;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
@@ -587,7 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
+				DEVELOPMENT_TEAM = MN29R57D4L;
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claire;

@@ -17,7 +17,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     
     // Setup the font specific variables
     let textColor: UIColor = UIColor.white
-    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 17)!
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 26)!
     let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
