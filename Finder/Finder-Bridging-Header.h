@@ -10,6 +10,6 @@
 #define Finder_Bridging_Header_h
 
 #import "SDWebImage/UIImageView+WebCache.h"
-
+#import "SWRevealViewController.h"
 
 #endif /* Finder_Bridging_Header_h */

@@ -32,28 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
         }))
         
-        //user persist - check if current user is logged in
-        if let currentUser = PFUser.current(){
-            print("Welcome back to Finder, \(currentUser.username!) 😀")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeController = storyboard.instantiateViewController(withIdentifier: "Home")
-            window?.rootViewController = homeController
-            
-        }
+//        //user persist - check if current user is logged in
+//        if let currentUser = PFUser.current(){
+//            print("Welcome back to Finder, \(currentUser.username!) 😀")
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let homeController = storyboard.instantiateViewController(withIdentifier: "Home")
+//            window?.rootViewController = homeController
+//            
+//        }
         
-        //change color of tab bar
-        UITabBar.appearance().barTintColor = UIColor.black
-        
-        // Change color of navigation bar
-        UINavigationBar.appearance().barTintColor = UIColor.black
-        
-        //Change the navigation bar color
-        UINavigationBar.appearance().tintColor = UIColor.white
-        
-        // Change color of navigation bar text color
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        
-        
+
         return true
     }
     

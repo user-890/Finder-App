@@ -8,95 +8,64 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimelineViewController: UITableViewController {
     
     // MARK: Properties
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
-
+    
+    // Array of articles
     var arr = [Recommended]()
-
-  
-
-
+    // Destination to full article
+    var dest_url : String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Change navigation bar title color
         
-        //set up delegates
-        tableView.dataSource = self
-        tableView.delegate = self
+        // Set up delegates
+        //self.tableview.delegate = self
+        self.tableview.dataSource = self
         
         get_data()
-        updateUI()
+        sideMenus()
+        
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    // Push keyboard down when background is pressed
-    
-    
-    
-    func updateUI() {
-        // Add two labels to navigation bar 
-        if let navigationBar = self.navigationController?.navigationBar {
-            // Center label
-            let firstFrame = CGRect(x: 145, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
-            
-            let firstLabel = UILabel(frame: firstFrame)
-            firstLabel.text = "FINDER"
-            // Make label text white
-            firstLabel.textColor = UIColor.white
-            firstLabel.font = UIFont(name: "AndaleMono", size: 20)
-            
-            navigationBar.addSubview(firstLabel)
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // Change the color of the tab bar
-        super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.tintColor = UIColor.white
-    }
+    // MARK: - Table view data source
     
     
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         return arr.count - 1
     }
     
-    var randomNum = Int ( arc4random_uniform(10) )
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 == 0 {
-            
-            let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommendedTableViewCell", for: indexPath) as! RecommendedTableViewCell
-            
-            cellTwo.recommend = arr[indexPath.row]
-
-            
-            return cellTwo
-            
-        }
-        else {
-            
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
-            
-            // Make profile image circular
-            cell.profileImageView?.layer.cornerRadius = (cell.profileImageView?.frame.size.width)! / 2
-            cell.profileImageView?.layer.masksToBounds = true
-//            cell.profileImageView?.layer.borderWidth = 1
-            
-            // Make view outline black
-            cell.postDetailView.layer.borderWidth = 0.50
-            return cell
-            
-            }
-            
-        }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
+        
+        
+        cell.recommend = arr[indexPath.row]
+        
+        return cell
+    }
     
     
     // Fetch the data from the API
@@ -132,7 +101,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                     self.arr.append(NewPost)
                     
                     DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                        self.tableview.reloadData()
                         
                     }
                 }
@@ -163,28 +132,80 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    
-    
-
-    
-    
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Segue to full article
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "webSeg") {
+            
+            
+            let viewController = segue.destination as! FullArticleViewController
+            viewController.dest_url = dest_url
+        }
     }
-    */
-
+    
+    // Implement side menu
+    func sideMenus() {
+        
+        if revealViewController() != nil {
+            
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            revealViewController().rightViewRevealWidth = 160
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    /*
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
+    /*
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
+    /*
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
+    /*
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
