@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,12 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51019F711FB8AFE2DCA53882E7BBE027</key>
+		<key>73AB3E75518EC0951A7F5F91EC2711DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>74862BA913F5B81FEA1A05644E798832</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8DE5E43A2A64629930C133A60AF6F691</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEB066B1AF1C9710166BBD8B0BA42B33</key>
+		<key>AD14E69EBD1108FD03979C8C9E618037</key>
 		<dict>
 			<key>primary</key>
 			<true/>
