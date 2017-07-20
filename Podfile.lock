@@ -43,6 +43,9 @@ PODS:
   - GTMSessionFetcher/Core (1.1.11)
   - Koloda (4.1):
     - pop (~> 1.0)
+  - KRActivityIndicatorView (2.0.2)
+  - KRProgressHUD (3.0.0):
+    - KRActivityIndicatorView (~> 2.0.2)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -60,6 +63,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Koloda
+  - KRProgressHUD
   - Parse
   - TextFieldEffects
 
@@ -76,11 +80,13 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
+  KRActivityIndicatorView: 2a9d5442ba8da6274db3afdf46aeaef7cf6dd8ad
+  KRProgressHUD: 14f9fad06080bdb1e59569104a8eda654c83e813
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: d81b4f1b9dd5cae4b70345af5ddf238a2b3b0ccc
+PODFILE CHECKSUM: ff21e1bd324aed88823d75dbfc3b5048b6c26fb8
 
 COCOAPODS: 1.2.1

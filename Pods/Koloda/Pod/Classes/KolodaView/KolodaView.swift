@@ -654,7 +654,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
                 }
             )
         }
-        
+        //print("\(currentItemsCount) + \(indexRange.count) == \(countOfCards)")
         assert(
             currentItemsCount + indexRange.count == countOfCards,
             "Cards count after update is not equal to data source count"

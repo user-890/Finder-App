@@ -8,7 +8,7 @@ target 'Finder' do
    pod "TextFieldEffects"
    pod "Koloda"
    pod 'Parse'
-
+   pod "KRProgressHUD"
 
   # Pods for Finder
    pod "TextFieldEffects"

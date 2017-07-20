@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 import Parse
+import KRProgressHUD
 
 private var numberOfCards: Int = 3
 
@@ -102,10 +103,12 @@ func makeFacts(){
 func getFacts() -> [PFObject] {
     var facts: [PFObject] = []
     //makeFacts()
+    KRProgressHUD.show()
     let query = PFQuery(className: "Fact")
     query.addDescendingOrder("createdAt")
     query.limit = 5
     //syncronous fetch
+    
     do {
         facts = try query.findObjects()
         print("get facts succes")
@@ -122,6 +125,7 @@ func getFacts() -> [PFObject] {
 //        }
 //        
 //    }
+    KRProgressHUD.dismiss()
     return facts
     
 }
@@ -222,13 +226,25 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: KolodaViewDelegate {
     
-//    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-//        let position = kolodaView.currentCardIndex
-//        for i in 1...3 {
-//            dataSource.append(UIImage(named: "Card_like_\(i)")!)
-//        }
-//        kolodaView.insertCardAtIndexRange(position..<position + 3, animated: true)
-//    }
+    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        print("in")
+        let newFacts = getFacts()
+        //add new facts to facts
+        facts.append(contentsOf: newFacts)
+        print("ok")
+        let images = createImages(facts: newFacts)
+        print("damn bbu")
+        let position = kolodaView.currentCardIndex
+        print("pos")
+        for image in images {
+            print("each")
+            dataSource.append(image)
+            print("appended")
+        }
+        print("tssss")
+        kolodaView.insertCardAtIndexRange(position..<position + images.count, animated: true)
+        print("done")
+    }
     
 //    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
 //        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
@@ -236,6 +252,7 @@ extension HomeViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         print(direction)
+        print(facts.count)
         let fact: PFObject = facts[index]
         print(fact["fact"])
         //print(facts[index]["fact"])
