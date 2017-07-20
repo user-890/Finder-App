@@ -13,10 +13,20 @@ import KRProgressHUD
 
 private var numberOfCards: Int = 3
 
+func randomColor() -> UIColor {
+    var randomRed:CGFloat = CGFloat(arc4random_uniform(256))
+    var randomGreen:CGFloat = CGFloat(arc4random_uniform(256))
+    var randomBlue:CGFloat = CGFloat(arc4random_uniform(256))
+    return UIColor(red:   randomRed/255,
+                   green: randomGreen/255,
+                   blue:  randomBlue/255,
+                   alpha: 1.0)
+}
+
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
     // Setup the font specific variables
-    let textColor: UIColor = UIColor.white
+    let textColor: UIColor = randomColor() //UIColor.white
     let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 26)!
     let paraStyle = NSMutableParagraphStyle()
     
@@ -75,7 +85,7 @@ func makeFacts(){
         }
     }
     //
-    Fact.postFact(source: "LOL", withCaption: "eho do you think u are") { (success: Bool, error: Error?) in
+    Fact.postFact(source: "LOL", withCaption: "appp timeline search results commits how do i resolve add two") { (success: Bool, error: Error?) in
         if success {
             print("saved correctely")
         } else {
@@ -83,7 +93,7 @@ func makeFacts(){
         }
     }
     //
-    Fact.postFact(source: "Blu HArbor", withCaption: "i wanna go home and workout") { (success: Bool, error: Error?) in
+    Fact.postFact(source: "Blu HArbor", withCaption: "hoem hoem hoem homeeeeeeee when to go home") { (success: Bool, error: Error?) in
         if success {
             print("saved correctely")
         } else {
@@ -91,7 +101,7 @@ func makeFacts(){
         }
     }
     //
-    Fact.postFact(source: "jeeeez", withCaption: "lowkey want those jello shots but i have self control") { (success: Bool, error: Error?) in
+    Fact.postFact(source: "jeeeez", withCaption: "food is the best thing to happen to mankind") { (success: Bool, error: Error?) in
         if success {
             print("saved correctely")
         } else {
