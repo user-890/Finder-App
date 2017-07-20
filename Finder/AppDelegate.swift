@@ -7,8 +7,12 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import Firebase
 import FoodFactsSDK
+=======
+//import Firebase
+>>>>>>> origin/master
 import Parse
 
 
@@ -23,8 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         //
         
+<<<<<<< HEAD
         //        // Use Firebase library to configure APIs
         //        FirebaseApp.configure()
+=======
+//        // Use Firebase library to configure APIs
+//        FirebaseApp.configure()
+>>>>>>> origin/master
         
         //Initialize Parse
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in

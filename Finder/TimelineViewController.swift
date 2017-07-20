@@ -12,10 +12,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     
+<<<<<<< HEAD
     
     //var arr = [Recommended]()
     
     
+=======
+>>>>>>> origin/master
     override func viewDidLoad() {
         super.viewDidLoad()
         // Change navigation bar title color

@@ -8,6 +8,7 @@
 
 import UIKit
 import Koloda
+import Parse
 
 private var numberOfCards: Int = 3
 
@@ -15,7 +16,11 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     
     // Setup the font specific variables
     let textColor: UIColor = UIColor.white
+<<<<<<< HEAD
     let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 28)!
+=======
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 26)!
+>>>>>>> origin/master
     let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
@@ -54,6 +59,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     return newImage
 }
 
+<<<<<<< HEAD
 
 func getWords(fact: String) -> [String] {
     var sentence = fact
@@ -64,35 +70,126 @@ func getWords(fact: String) -> [String] {
         if (w == " ") {
             wordlist.append(word)
             word = ""
-        }
-        else {
-            word.append(w)
+=======
+//Function to create facts
+func makeFacts(){
+    //hardcoded 5 facts
+    Fact.postFact(source: "Urban Dictionary", withCaption: "coffeee is a drink maybe") { (success: Bool, error: Error?) in
+        if success {
+            print("saved correctely")
+        } else {
+            print("nah fam")
         }
     }
-    return wordlist
+    //
+    Fact.postFact(source: "CNN", withCaption: "is a news source") { (success: Bool, error: Error?) in
+        if success {
+            print("saved correctely")
+        } else {
+            print("nah fam")
+        }
+    }
+    //
+    Fact.postFact(source: "LOL", withCaption: "eho do you think u are") { (success: Bool, error: Error?) in
+        if success {
+            print("saved correctely")
+        } else {
+            print("nah fam")
+>>>>>>> origin/master
+        }
+    }
+    //
+    Fact.postFact(source: "Blu HArbor", withCaption: "i wanna go home and workout") { (success: Bool, error: Error?) in
+        if success {
+            print("saved correctely")
+        } else {
+            print("nah fam")
+        }
+    }
+    //
+    Fact.postFact(source: "jeeeez", withCaption: "lowkey want those jello shots but i have self control") { (success: Bool, error: Error?) in
+        if success {
+            print("saved correctely")
+        } else {
+            print("nah fam")
+        }
+    }
 }
 
-class HomeViewController: UIViewController, UICollectionViewDataSource {
+func getFacts() -> [PFObject] {
+    var facts: [PFObject] = []
+    //makeFacts()
+    let query = PFQuery(className: "Fact")
+    query.addDescendingOrder("createdAt")
+    query.limit = 5
+    //syncronous fetch
+    do {
+        facts = try query.findObjects()
+        print("get facts succes")
+    } catch {
+        facts = []
+        print("error")
+    }
+//    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+//        if error == nil {
+//            facts = posts!
+//            print("all is well")
+//        } else {
+//            print(error ?? "ERROR")
+//        }
+//        
+//    }
+    return facts
+    
+}
+
+class HomeViewController: UIViewController {
+    
+    //Helpers
     
     //Outlet
     @IBOutlet var kolodaView: KolodaView!
-    @IBOutlet var collectionView: UICollectionView!
     
     //Variables
-    var wordBreakdown: [String] = []
-    fileprivate var dataSource: [UIImage] = {
+    var facts: [PFObject] = []
+    fileprivate var dataSource: [UIImage] = []
+//    fileprivate var dataSource: [UIImage] = {
+//        let facs = getFacts()
+//        var array: [UIImage] = []
+//        print(facs.count)
+//        for index in 0..<facs.count {
+//            let base = UIImage(named: "Card_like")
+//            let point = CGPoint(x: 10, y: 10)
+//            let curFact: PFObject = facs[index]
+//            let str = curFact["fact"] as? NSString
+//            print("\(str) \(index)")
+//            array.append(textToImage(drawText: str!, inImage: base!, atPoint: point))
+//        }
+//        
+//        return array
+//    }()
+    
+    func createImages(facts:[PFObject]) -> [UIImage] {
         var array: [UIImage] = []
-        for index in 0..<numberOfCards {
+        print(facts.count)
+        for index in 0..<facts.count {
             let base = UIImage(named: "Card_like")
+<<<<<<< HEAD
             let point = CGPoint(x: 10, y: 250)
             let str = "So many things to say!!!! \(index)" as NSString
             array.append(textToImage(drawText: str, inImage: base!, atPoint: point))
             //array.append(UIImage(named: "Card_like_\(index + 1)")!)
             
+=======
+            let point = CGPoint(x: 10, y: 10)
+            let curFact: PFObject = facts[index]
+            let str = curFact["fact"] as? NSString
+            print("\(str) \(index)")
+            array.append(textToImage(drawText: str!, inImage: base!, atPoint: point))
+>>>>>>> origin/master
         }
-        
         return array
-    }()
+    }
 
     //OnTap
     @IBAction func onReadMore(_ sender: Any) {
@@ -104,22 +201,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        facts = getFacts()
+        dataSource = createImages(facts: facts)
         kolodaView.dataSource = self
         kolodaView.delegate = self
-        collectionView.dataSource = self
         
 
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "wordTag", for: indexPath)
-        return cell
-    }
     // MARK: IBActions
     
 //    @IBAction func leftButtonTapped() {
@@ -171,6 +261,9 @@ extension HomeViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         print(direction)
+        let fact: PFObject = facts[index]
+        print(fact["fact"])
+        //print(facts[index]["fact"])
     }
 }
 
