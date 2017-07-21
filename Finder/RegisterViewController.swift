@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
     
@@ -64,6 +65,29 @@ class RegisterViewController: UIViewController {
         registerButton.layer.masksToBounds = true
         
     }
+    
+    // Register user
+    @IBAction func pressRegister(_ sender: Any) {
+        
+        //Initialize a user object
+        let newUser = PFUser()
+        
+        // set user properties
+        newUser.username = usernameTextField.text
+        newUser.password = passwordTextField.text
+        
+        // Call sign up function on the object
+        newUser.signUpInBackground { (success: Bool, error: Error?) in
+            if success {
+                print("Yay, registered new user!")
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        
+    }
+    
 
 
     override func didReceiveMemoryWarning() {

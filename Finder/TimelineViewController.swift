@@ -134,16 +134,16 @@ class TimelineViewController: UITableViewController {
     }
     
     
-    // Segue to full article
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if (segue.identifier == "webSeg") {
-            
-            
-            let viewController = segue.destination as! FullArticleViewController
-            viewController.dest_url = dest_url
-        }
-    }
+//    // Segue to full article
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if (segue.identifier == "webSeg") {
+//            
+//            
+//            let viewController = segue.destination as! FullArticleViewController
+//            viewController.dest_url = dest_url
+//        }
+//    }
     
     // Implement side menu
     func sideMenus() {

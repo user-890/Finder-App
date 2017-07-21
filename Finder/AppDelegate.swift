@@ -32,14 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
         }))
         
-//        //user persist - check if current user is logged in
-//        if let currentUser = PFUser.current(){
-//            print("Welcome back to Finder, \(currentUser.username!) 😀")
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let homeController = storyboard.instantiateViewController(withIdentifier: "Home")
-//            window?.rootViewController = homeController
-//            
-//        }
+        //user persist - check if current user is logged in
+        if let currentUser = PFUser.current(){
+            print("Welcome back to Finder, \(currentUser.username!) 😀")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
+            window?.rootViewController = homeController
+            
+        }
         
 
         return true
