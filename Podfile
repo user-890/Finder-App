@@ -11,6 +11,7 @@ target 'Finder' do
    pod "KRProgressHUD"
 
   # Pods for Finder
+   pod 'AlamofireImage', '~> 3.1'
    pod "TextFieldEffects"
    pod 'FBSDKCoreKit'
    pod 'FBSDKShareKit'

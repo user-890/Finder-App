@@ -8,11 +8,13 @@
 
 import UIKit
 
+
 class TimelineViewController: UITableViewController {
     
     // MARK: Properties
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     
     
     // Array of articles
@@ -151,7 +153,11 @@ class TimelineViewController: UITableViewController {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 160
+            revealViewController().rightViewRevealWidth = 300
+            
+            
+            mapButton.target = revealViewController()
+            mapButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             

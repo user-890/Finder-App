@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,6 +25,16 @@
 			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KRActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KRProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,17 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>278C2937C923D00D65499921103F4E70</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>73AB3E75518EC0951A7F5F91EC2711DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,12 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CD073744352A5D222D63DFA52DE07D0</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DE5E43A2A64629930C133A60AF6F691</key>
+		<key>8CE201B4C0A29B4FFD2AFB38FDE7083E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD14E69EBD1108FD03979C8C9E618037</key>
+		<key>9D8CA286F51E9994F0E0A39A50F88419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,12 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<key>E301597A4C36300C0E9F442615F73A71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC37BCB37D838DDBB9EC9EAE38F80771</key>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
