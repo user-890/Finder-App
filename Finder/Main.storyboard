@@ -616,7 +616,7 @@
         <scene sceneID="CFe-1g-B6K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Dt-kq-T5O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="b5O-9J-CIL"/>
+                    <tabBarItem key="tabBarItem" image="list-icon-1" id="b5O-9J-CIL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cMQ-yr-B19">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -702,7 +702,7 @@
         <scene sceneID="JzO-KK-2oP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9F-zV-hGe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2zx-lg-fye"/>
+                    <tabBarItem key="tabBarItem" image="home-icon" id="2zx-lg-fye"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zdI-vu-uyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -721,7 +721,7 @@
         <scene sceneID="Nus-7e-m2p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A2P-1Q-W7c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="Fv4-am-czT"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera-icon" id="Fv4-am-czT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QFw-wU-kcT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -741,6 +741,9 @@
         <image name="Image" width="768" height="509"/>
         <image name="Portrait1" width="262" height="262"/>
         <image name="buzz" width="636" height="358"/>
+        <image name="camera-icon" width="40" height="40"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="list-icon-1" width="25" height="25"/>
         <image name="menu" width="30" height="30"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>

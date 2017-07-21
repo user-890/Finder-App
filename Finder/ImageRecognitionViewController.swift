@@ -13,7 +13,7 @@ import AlamofireImage
 class ImageRecognitionViewController: UIViewController {
     
     // MARK: Properties
-    let apiKey = ""
+    let apiKey = "700430452c908377738869e1218f70b469753899"
     let version = "2017-7-20"
     
     @IBOutlet weak var imageView: UIImageView!
@@ -27,11 +27,50 @@ class ImageRecognitionViewController: UIViewController {
     
     @IBAction func getImage(_ sender: Any) {
         
+        // Disable user from pressing on button while the image is loading
+        let button = sender as! UIBarButtonItem
+        button.isEnabled = false
+        
         let randomNumber = Int(arc4random_uniform(1000))
         let url = URL(string: "https://unsplash.it/400/700?image=\(randomNumber)")!
         
         imageView.af_setImage(withURL: url)
         
+        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+        
+        let failure = {(error: Error) in
+            
+            DispatchQueue.main.async {
+                self.navigationItem.title = "Image could not be processed"
+                button.isEnabled = true
+            }
+            
+            print(error)
+            
+        }
+        
+        let recogURL = URL(string: "https://unsplash.it/50/100?image=\(randomNumber)")!
+        
+        visualRecognition.classify(image: recogURL.absoluteString, failure: failure) { classifiedImages in
+            
+            if let classifiedImage = classifiedImages.images.first {
+                print(classifiedImage.classifiers)
+                
+                if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
+                    DispatchQueue.main.async {
+                        self.navigationItem.title = classification
+                        button.isEnabled = true
+                    }
+                }
+                
+                
+            }else{
+                DispatchQueue.main.async {
+                    self.navigationItem.title = "Could not be determined"
+                    button.isEnabled = true
+                }
+            }
+        }
     }
     
 
