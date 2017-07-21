@@ -52,7 +52,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="ttE-O4-RQ1" kind="show" id="UFI-LW-HXY"/>
+                                    <action selector="pressLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHB-R2-yFF"/>
+                                    <segue destination="ttE-O4-RQ1" kind="show" identifier="loginSegue" id="UFI-LW-HXY"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2p-4d-GP6">
@@ -229,6 +230,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressRegister:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="ilJ-RZ-Ydr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -591,7 +595,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="ksk-OE-cA8">
             <objects>
-                <viewController id="ttE-O4-RQ1" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="ttE-O4-RQ1" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sIl-za-Gv4"/>
                         <viewControllerLayoutGuide type="bottom" id="LeL-qs-jOh"/>
