@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import VisualRecognitionV3
+import AlamofireImage
 
 class TakePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
     @IBOutlet weak var myImageView: UIImageView!
+    
+    
     let picker = UIImagePickerController()
+    let apiKey = "700430452c908377738869e1218f70b469753899"
+    let version = "2017-7-20"
+    
+   
+    
     
     func noCamera(){
         let alertVC = UIAlertController(
@@ -34,7 +43,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let vc = UIImagePickerController()
             vc.delegate = self
-            vc.allowsEditing = true
+            vc.allowsEditing = false
             vc.sourceType = UIImagePickerControllerSourceType.camera
             print("Camera is available 📸")
             self.present(vc, animated: true, completion: nil)
@@ -47,7 +56,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func photoFromLibrary(_ sender: UIBarButtonItem) {
         let vc = UIImagePickerController()
         vc.delegate = self
-        vc.allowsEditing = true
+        vc.allowsEditing = false
         vc.sourceType = .photoLibrary
         self.present(vc, animated: true, completion: nil)
     }
@@ -63,17 +72,49 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     // MARK: - Delegates
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // Get the image captured by the UIImagePickerController
-        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        myImageView.image = editedImage
-        // Do something with the images (based on your use case)
-        //go to postViewController
-        //self.performSegue(withIdentifier: "postSegue", sender: nil)
-        // Dismiss UIImagePickerController to go back to your original view controller
-        dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            myImageView.image = image
+
+            let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+            
+            // Get the URL of the image that was picked
+            let imageData = UIImageJPEGRepresentation(image, 0.01)
+            
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            
+            let fileURL = documentsURL.appendingPathComponent("tempImage.jpg")
+            
+            try? imageData?.write(to: fileURL, options: [])
+            
+            visualRecognition.classify(imageFile: fileURL) { (classifiedImages) in
+                
+                if let classifiedImage = classifiedImages.images.first {
+                    print(classifiedImage.classifiers)
+                    
+                    if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
+                        DispatchQueue.main.async {
+                            self.navigationItem.title = classification
+
+                        }
+                    }
+                    
+                    
+                }else{
+                    DispatchQueue.main.async {
+                        self.navigationItem.title = "Could not be determined"
+
+                    }
+                }
+
+            }
+            
+            dismiss(animated: true, completion: nil)
+            
+        }
+
         
     }
     
