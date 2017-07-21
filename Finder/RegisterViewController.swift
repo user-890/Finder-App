@@ -17,7 +17,13 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
     
-
+    @IBAction func onBack(_ sender: Any) {
+        self.dismiss(animated: true) { 
+            //do nothing 
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
