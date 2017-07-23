@@ -16,6 +16,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
+
     
     var effect: UIVisualEffect!
     
@@ -24,8 +25,9 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     let apiKey = "700430452c908377738869e1218f70b469753899"
     let version = "2017-7-20"
     
-   
-    
+
+
+
     
     func noCamera(){
         let alertVC = UIAlertController(
@@ -79,7 +81,12 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         // Make corners of pop up round
         popUpView.layer.cornerRadius = 5
         
+        //loadWebView()
+    
+        
     }
+    
+   
     
     // MARK: - Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -107,10 +114,10 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                     if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
                         DispatchQueue.main.async {
                             self.navigationItem.title = classification
-
+                            
                         }
-                    }
                     
+                    }
                     
                 }else{
                     DispatchQueue.main.async {
@@ -147,6 +154,8 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
             self.popUpView.transform = CGAffineTransform.identity
         }
     }
+    
+    
     
     func animateOut() {
         UIView.animate(withDuration: 0.3, animations: { 

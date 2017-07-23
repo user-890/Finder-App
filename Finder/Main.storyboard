@@ -505,13 +505,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="275" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pn7-ou-rsb">
-                                                    <rect key="frame" x="8" y="19" width="180" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2M-Fa-Y4i">
+                                                    <rect key="frame" x="8" y="14" width="178" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Logout"/>
+                                                    <connections>
+                                                        <segue destination="BYZ-38-t0r" kind="presentation" id="7HM-mA-rME"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -529,7 +530,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1J-of-hWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="-131"/>
+            <point key="canvasLocation" x="2004" y="-131.78410794602701"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Ouy-3p-jR6">
@@ -745,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz9-XG-AIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="1Ag-ev-aik">
-                    <rect key="frame" x="0.0" y="0.0" width="294" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="294" height="375"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dN-Hl-876">
@@ -797,4 +798,7 @@
         <image name="wjs-logo" width="475" height="475"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7HM-mA-rME"/>
+    </inferredMetricsTieBreakers>
 </document>
