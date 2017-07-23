@@ -14,6 +14,10 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     
     // MARK: Properties
     @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
+    @IBOutlet var popUpView: UIView!
+    
+    var effect: UIVisualEffect!
     
     
     let picker = UIImagePickerController()
@@ -67,7 +71,13 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         
         picker.delegate = self
- 
+        
+        // Deactivate effect until tapped on
+        effect = visualEffectView.effect
+        visualEffectView.effect = nil
+        
+        // Make corners of pop up round
+        popUpView.layer.cornerRadius = 5
         
     }
     
@@ -121,7 +131,62 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // Get popUp View on the same view controller
+    func animataeIn() {
+        self.view.addSubview(popUpView)
+        popUpView.center = self.view.center
+        
+        popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        // Originally make the popView invisible
+        popUpView.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) { 
+            self.visualEffectView.effect = self.effect
+            self.popUpView.alpha = 1
+            self.popUpView.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animateOut() {
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.popUpView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.popUpView.alpha = 0
+            
+            self.visualEffectView.effect = nil
+        }) { (success: Bool) in
+            self.popUpView.removeFromSuperview()
+        }
+    }
    
+    // Show PopUPViewController
+    @IBAction func showPopUp(_ sender: Any) {
+        
+        animataeIn()
+        
+    }
+    
+    @IBAction func dismissPopUp(_ sender: Any) {
+        
+        animateOut()
+        
+    }
+    
+    
+    
+    
+    
+//    @IBAction func showPopUp(_ sender: Any) {
+//        
+//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
+//        // Adds the view controller of the popOverVC to our current view controller
+//        self.addChildViewController(popOverVC)
+//        popOverVC.view.frame = self.view.frame
+//        self.view.addSubview(popOverVC.view)
+//        popOverVC.didMove(toParentViewController: self)
+//    }
+//    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

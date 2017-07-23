@@ -13,6 +13,8 @@
 		49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */; };
 		9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */; };
 		B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */; };
+		F70E7EA81F228D1E0069001A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA71F228D1E0069001A /* User.swift */; };
+		F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA91F228FD80069001A /* TakePictureViewController.swift */; };
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
 		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
@@ -26,7 +28,6 @@
 		F7A0301F1F21BB0F00515762 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7A030221F21BB1600515762 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A030211F21BB1600515762 /* RestKit.framework */; };
 		F7A030231F21BB1700515762 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7A030211F21BB1600515762 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F7A030261F21C2E500515762 /* ImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A030251F21C2E400515762 /* ImageRecognitionViewController.swift */; };
 		F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69491F154333009FDF40 /* AppDelegate.swift */; };
 		F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF694B1F154333009FDF40 /* ViewController.swift */; };
 		F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69501F154333009FDF40 /* Assets.xcassets */; };
@@ -76,6 +77,9 @@
 		7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEC0968598DB8C6D702B1FE /* Pods-Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Finder/Pods-Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		A563A52C46648C61003A25D7 /* Pods-Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finder/Pods-Finder.release.xcconfig"; sourceTree = "<group>"; };
+		F70E7EA71F228D1E0069001A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F70E7EA91F228FD80069001A /* TakePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
+		F70E7EAB1F22BE3E0069001A /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
 		F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -91,7 +95,6 @@
 		F7A030161F217CB700515762 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = "<group>"; };
 		F7A030211F21BB1600515762 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
-		F7A030251F21C2E400515762 /* ImageRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRecognitionViewController.swift; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CF694B1F154333009FDF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		063A57246B53683BD25840CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F70E7EAB1F22BE3E0069001A /* TextToSpeechV1.framework */,
 				7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */,
 				404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */,
 			);
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F78193AD1F20018A0043F7DA /* Recommended.swift */,
+				F70E7EA71F228D1E0069001A /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,7 +255,7 @@
 				F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */,
 				49BD35851F17F7B2006E88B2 /* HomeViewController.swift */,
 				F7A030161F217CB700515762 /* RegisterViewController.swift */,
-				F7A030251F21C2E400515762 /* ImageRecognitionViewController.swift */,
+				F70E7EA91F228FD80069001A /* TakePictureViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -461,7 +466,7 @@
 		};
 		F7A030241F21BB9E00515762 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -470,7 +475,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
@@ -505,10 +510,11 @@
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */,
-				F7A030261F21C2E500515762 /* ImageRecognitionViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
+				F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */,
 				F7A030171F217CB700515762 /* RegisterViewController.swift in Sources */,
+				F70E7EA81F228D1E0069001A /* User.swift in Sources */,
 				491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */,
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
