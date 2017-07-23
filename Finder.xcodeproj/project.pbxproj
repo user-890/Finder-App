@@ -39,6 +39,7 @@
 		F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69741F15569F009FDF40 /* TimelineViewController.swift */; };
 		F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */; };
 		F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */; };
+		F7E1B9761F2486110041FB8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E1B9751F2486110041FB8D /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		F7CF69741F15569F009FDF40 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
+		F7E1B9701F2468A30041FB8D /* TextToSpeechV1.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TextToSpeechV1.framework.dSYM; path = Carthage/Build/iOS/TextToSpeechV1.framework.dSYM; sourceTree = "<group>"; };
+		F7E1B9751F2486110041FB8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E1B9761F2486110041FB8D /* CoreLocation.framework in Frameworks */,
 				B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */,
 				F7A0301E1F21BB0F00515762 /* VisualRecognitionV3.framework in Frameworks */,
 				F7A030221F21BB1600515762 /* RestKit.framework in Frameworks */,
@@ -137,6 +141,8 @@
 		063A57246B53683BD25840CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7E1B9751F2486110041FB8D /* CoreLocation.framework */,
+				F7E1B9701F2468A30041FB8D /* TextToSpeechV1.framework.dSYM */,
 				F70E7EAB1F22BE3E0069001A /* TextToSpeechV1.framework */,
 				7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */,
 				404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */,

@@ -40,6 +40,8 @@
         <dict>
             <key>NSAllowsArbitraryLoads</key><true/>
         </dict>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>Hey! We want to where you're @</string>
     </dict>
 </plist>
 

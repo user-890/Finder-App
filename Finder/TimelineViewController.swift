@@ -156,8 +156,8 @@ class TimelineViewController: UITableViewController {
             revealViewController().rightViewRevealWidth = 300
             
             
-            mapButton.target = revealViewController()
-            mapButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//            mapButton.target = revealViewController()
+//            mapButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             

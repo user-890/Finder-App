@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ("ViewController.swift
 //  Finder
 //
 //  Created by Claire Chen on 7/13/17.
