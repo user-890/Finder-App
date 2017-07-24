@@ -16,6 +16,9 @@
 		F70E7EA81F228D1E0069001A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA71F228D1E0069001A /* User.swift */; };
 		F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA91F228FD80069001A /* TakePictureViewController.swift */; };
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
+		F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B091F25B971002BB458 /* PostFact.swift */; };
+		F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */; };
+		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
 		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
 		F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300A1F216F3300515762 /* SWRevealViewController.m */; };
@@ -82,6 +85,9 @@
 		F70E7EA91F228FD80069001A /* TakePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		F70E7EAB1F22BE3E0069001A /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
 		F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7551B091F25B971002BB458 /* PostFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFact.swift; sourceTree = "<group>"; };
+		F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeFactViewController.swift; sourceTree = "<group>"; };
+		F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFactTableViewCell.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				F78193AD1F20018A0043F7DA /* Recommended.swift */,
 				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F70E7EA71F228D1E0069001A /* User.swift */,
+				F7551B091F25B971002BB458 /* PostFact.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				49BD35851F17F7B2006E88B2 /* HomeViewController.swift */,
 				F7A030161F217CB700515762 /* RegisterViewController.swift */,
 				F70E7EA91F228FD80069001A /* TakePictureViewController.swift */,
+				F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */,
 				49BD35871F17FC29006E88B2 /* OverlayView.xib */,
 				49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */,
+				F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -516,13 +525,16 @@
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */,
+				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 				F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */,
 				F7A030171F217CB700515762 /* RegisterViewController.swift in Sources */,
+				F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */,
 				F70E7EA81F228D1E0069001A /* User.swift in Sources */,
 				491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */,
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
+				F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 			);

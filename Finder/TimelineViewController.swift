@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 
 class TimelineViewController: UITableViewController {
@@ -15,6 +16,8 @@ class TimelineViewController: UITableViewController {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapButton: UIBarButtonItem!
+    
+    var post: [PFObject]? = []
     
     
     // Array of articles
@@ -32,19 +35,35 @@ class TimelineViewController: UITableViewController {
         
         get_data()
         sideMenus()
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        updatePosts() 
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func updatePosts() {
+        // Construct query
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "creationTime")
+        query.limit = 20
+        query.includeKey("authorId")
+        //query.includeKey("caption")
+        
+        
+        query.findObjectsInBackground { (posts: [PFObject]?,
+            error: Error?) in
+            if let posts = posts {
+                self.post = posts
+                self.tableview.reloadData()
+            } else {
+                print(String(describing: error?.localizedDescription))
+            }
+        }
+    }
+    
+    
     
     // MARK: - Table view data source
     
@@ -56,17 +75,34 @@ class TimelineViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arr.count - 1
+         return arr.count - 1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
+//        if indexPath.row % 2 == 0 {
+//            
+//            
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
+//            //let posts = post?[indexPath.row]
+//            cell.post = post?[indexPath.row]
+//            return cell
+//            
+//            
+//            
+//        } else {
         
-        
-        cell.recommend = arr[indexPath.row]
-        
-        return cell
+                let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
+                
+                
+                cellTwo.recommend = arr[indexPath.row]
+                
+                return cellTwo
+
+            
+ //       }
+  
+
     }
     
     
