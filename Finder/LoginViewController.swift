@@ -37,6 +37,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateUI() {
+        // Make placeholder text white
+        usernameLabel.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        passwordLabel.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        
         // make corners round
         usernameLabel.layer.cornerRadius = 10
         usernameLabel.layer.masksToBounds = true

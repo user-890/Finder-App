@@ -184,17 +184,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-hn-U1t">
-                                            <rect key="frame" x="82" y="531" width="211" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Already a Member?">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="goBackToLogin:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="XKp-Ss-bvu"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-Gu-V82">
                                             <rect key="frame" x="52" y="446" width="271" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,7 +196,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-iF-nV4">
-                                            <rect key="frame" x="82" y="496" width="211" height="30"/>
+                                            <rect key="frame" x="82" y="493" width="211" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title="Sign Up With Touch ID">
@@ -215,6 +204,17 @@
                                             </state>
                                             <connections>
                                                 <action selector="pressTouchID:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="xN4-HK-0TI"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-hn-U1t">
+                                            <rect key="frame" x="82" y="515" width="211" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Already a Member?">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goBackToLogin:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="XKp-Ss-bvu"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -444,7 +444,7 @@
                         <sections/>
                     </tableView>
                     <navigationItem key="navigationItem" title="FINDER" id="82b-14-nmH">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="awZ-Fx-Gl0">
+                        <barButtonItem key="leftBarButtonItem" image="menu-1" id="awZ-Fx-Gl0">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="aX4-6Y-Ff8" userLabel="Compose Fact">
@@ -676,7 +676,7 @@
         <scene sceneID="CFe-1g-B6K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Dt-kq-T5O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="list-icon-1" id="b5O-9J-CIL"/>
+                    <tabBarItem key="tabBarItem" image="timelineIcon" selectedImage="timelineIcon" id="b5O-9J-CIL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cMQ-yr-B19">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -763,7 +763,7 @@
         <scene sceneID="JzO-KK-2oP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9F-zV-hGe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="home-icon" id="2zx-lg-fye"/>
+                    <tabBarItem key="tabBarItem" image="homeIcon" selectedImage="homeIcon" id="2zx-lg-fye"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zdI-vu-uyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -945,11 +945,11 @@
             </objects>
             <point key="canvasLocation" x="4799" y="2640"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="VZ7-sY-sd1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKA-ye-tLe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="world-icon" selectedImage="world-icon" id="Iae-at-5mA"/>
+                    <tabBarItem key="tabBarItem" title="" image="world-icon" selectedImage="world-icon" id="Iae-at-5mA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSJ-hM-qVC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -989,12 +989,12 @@
         <image name="add-image-placeholder" width="600" height="800"/>
         <image name="buzz" width="636" height="358"/>
         <image name="camera-icon" width="40" height="40"/>
-        <image name="home-icon" width="30" height="30"/>
-        <image name="list-icon-1" width="25" height="25"/>
-        <image name="menu" width="30" height="30"/>
+        <image name="homeIcon" width="30" height="30"/>
+        <image name="menu-1" width="25" height="25"/>
+        <image name="timelineIcon" width="25" height="25"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7HM-mA-rME"/>
+        <segue reference="YFo-Sp-NZk"/>
     </inferredMetricsTieBreakers>
 </document>
