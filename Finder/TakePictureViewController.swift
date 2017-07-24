@@ -9,6 +9,7 @@
 import UIKit
 import VisualRecognitionV3
 import AlamofireImage
+import AVFoundation
 
 class TakePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -17,18 +18,12 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
 
-    
     var effect: UIVisualEffect!
-    
     
     let picker = UIImagePickerController()
     let apiKey = "700430452c908377738869e1218f70b469753899"
     let version = "2017-7-20"
-    
 
-
-
-    
     func noCamera(){
         let alertVC = UIAlertController(
             title: "No Camera",
@@ -43,6 +38,16 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
             alertVC,
             animated: true,
             completion: nil)
+        //AVSpeechSynthesizer implementation
+        
+        let  message: String = "Sorry, this device has no camera"
+        let className = message
+        let utterance = AVSpeechUtterance(string: className)
+        
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
     @IBAction func shootPhoto(_ sender: Any) {
@@ -115,6 +120,14 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                         DispatchQueue.main.async {
                             self.navigationItem.title = classification
                             
+                            //AVSpeechSynthesizer implementation
+                            let className = self.navigationItem.title
+                            let utterance = AVSpeechUtterance(string: className!)
+                            
+                            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                            
+                            let synthesizer = AVSpeechSynthesizer()
+                            synthesizer.speak(utterance)
                         }
                     
                     }
@@ -122,6 +135,15 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                 }else{
                     DispatchQueue.main.async {
                         self.navigationItem.title = "Could not be determined"
+                        
+                        //AVSpeechSynthesizer implementation
+                        let className = self.navigationItem.title
+                        let utterance = AVSpeechUtterance(string: className!)
+                        
+                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                        
+                        let synthesizer = AVSpeechSynthesizer()
+                        synthesizer.speak(utterance)
 
                     }
                 }
@@ -180,10 +202,6 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         animateOut()
         
     }
-    
-    
-    
-    
     
 //    @IBAction func showPopUp(_ sender: Any) {
 //        
