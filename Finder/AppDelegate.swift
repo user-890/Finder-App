@@ -18,29 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Facebook Login
-//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-//        
-        
-//        // Use Firebase library to configure APIs
-//        FirebaseApp.configure()
+
         
         //Initialize Parse
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-            configuration.applicationId = "Finder"
-            configuration.clientKey = "whatcannotbetouched"
-            configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
+            configuration.applicationId = "finder"
+            configuration.clientKey = "finder"
+            configuration.server = "http://finder-app-fbu.herokuapp.com/parse"
         }))
         
         //user persist - check if current user is logged in
-        if let currentUser = PFUser.current(){
-            print("Welcome back to Finder, \(currentUser.username!) 😀")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
-            window?.rootViewController = homeController
-            
-        }
-        
+//        if let currentUser = PFUser.current(){
+//            print("Welcome back to Finder, \(currentUser.username!) 😀")
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
+//            window?.rootViewController = homeController
+//            
+//        }
+//        
 
         return true
     }

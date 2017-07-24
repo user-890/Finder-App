@@ -19,16 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GTMSessionFetcher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>KRActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -74,11 +64,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>nanopb.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,22 +72,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<key>0E7E25FB78E704132E28CC0DD8FDB2F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5DAF200A56B56860C547C4A334D0F4B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C50C5DCE377433FFE51A73F99316F558</key>
+		<key>BF545EA7AC68A207267DCB173BF67C8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,17 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D0E6C615707102ED919C1DFBA77C3B33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DBF6426868E6CA9AA6D5A4C0BAF80A9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E38D4E906FC11DA709729527BAD887C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
