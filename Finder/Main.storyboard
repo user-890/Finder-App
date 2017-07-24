@@ -214,11 +214,8 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-<<<<<<< HEAD
                                                 <action selector="onBack:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="7Kt-qR-yqE"/>
-=======
-                                                <action selector="goBackToLogin:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="XKp-Ss-bvu"/>
->>>>>>> post
+
                                             </connections>
                                         </button>
                                     </subviews>
@@ -404,11 +401,9 @@
                                 <rect key="frame" x="0.0" y="442" width="375" height="113"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnW-9S-Gsr" id="ryf-7P-JFA">
-<<<<<<< HEAD
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
-=======
+
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
->>>>>>> post
+
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Username Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL4-lP-9qT">
