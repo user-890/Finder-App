@@ -9,6 +9,7 @@
 import UIKit
 import VisualRecognitionV3
 import AlamofireImage
+import AVFoundation
 
 class TakePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -114,6 +115,15 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                     if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
                         DispatchQueue.main.async {
                             self.navigationItem.title = classification
+                            
+                            //AVSpeechSynthesizer implementation
+                            let className = self.navigationItem.title
+                            let utterance = AVSpeechUtterance(string: className!)
+                            
+                            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                            
+                            let synthesizer = AVSpeechSynthesizer()
+                            synthesizer.speak(utterance)
                             
                         }
                     
