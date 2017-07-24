@@ -896,7 +896,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phy-Ag-lDR">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phy-Ag-lDR">
                                                             <rect key="frame" x="24" y="8" width="327" height="59"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <string key="text">This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact!</string>
@@ -919,6 +919,10 @@
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.63583583047945202" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="daN-ml-Qan" appends="YES" id="Oa6-4A-yDG"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -928,9 +932,15 @@
                         <outlet property="addressLabel" destination="dgZ-KY-2yf" id="57B-0y-78g"/>
                         <outlet property="mapView" destination="uD3-9l-hdW" id="Jkz-zi-hqw"/>
                         <outlet property="tableview" destination="lp1-JE-PZF" id="Z1d-RN-j5f"/>
+                        <outlet property="trayView" destination="Wt3-eq-aIT" id="8Ey-ef-hRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krV-TK-lyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="daN-ml-Qan">
+                    <connections>
+                        <action selector="didPanTray:" destination="71u-0c-sFQ" id="5PO-Xn-ZjS"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3664.8000000000002" y="2259.2203898050975"/>
         </scene>

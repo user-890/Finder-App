@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
     
     
@@ -18,11 +18,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var trayView: UIView!
     @IBOutlet weak var addressLabel: UILabel!
     
     // Array of articles
     //var arr = [Recommended]()
     let manager = CLLocationManager()
+    var trayOriginalCenter: CGPoint!
     
     
     
@@ -54,19 +56,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-        
-        //getApiData()
-    }
-    
-    
-    
+
     
     
     // MARK: - Table view data source
@@ -96,8 +86,54 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     }
     
     
+    @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
+        var translation = sender.translation(in: view)
+        print("translation \(translation)")
+        
+        if sender.state == UIGestureRecognizerState.began {
+            trayOriginalCenter = trayView.center
+            
+        } else if sender.state == UIGestureRecognizerState.changed {
+            trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
+        } else if sender.state == UIGestureRecognizerState.ended {
+            let velocity = sender.velocity(in: view)
+
+            let trayDownOffset: CGFloat = 160
+            let trayUp: CGPoint = trayView.center
+            let trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset)
+            
+            
+            if velocity.y > 0 {
+                UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                    self.trayView.center = trayDown
+                })
+            } else {
+                UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                    self.trayView.center = trayUp                 
+                })
+            }
+        }
+        
+    }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+
+        
+        //getApiData()
+    }
+    
+    
+    
+    
+   
     
 
     /*
