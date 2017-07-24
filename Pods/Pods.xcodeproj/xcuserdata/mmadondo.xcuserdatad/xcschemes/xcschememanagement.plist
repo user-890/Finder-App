@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,16 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>KRActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>KRProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Koloda.xcscheme</key>
 		<dict>
@@ -53,6 +68,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>10</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
@@ -122,7 +142,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8CE201B4C0A29B4FFD2AFB38FDE7083E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9BDD0E42347ED8EDEA19928B85B79254</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C4AED8E7F0E8047550BDB01102B0913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D8CA286F51E9994F0E0A39A50F88419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -158,6 +198,16 @@
 			<true/>
 		</dict>
 		<key>D9851E3297070A519E445AC07C348087</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBF6426868E6CA9AA6D5A4C0BAF80A9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E301597A4C36300C0E9F442615F73A71</key>
 		<dict>
 			<key>primary</key>
 			<true/>

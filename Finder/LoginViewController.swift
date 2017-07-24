@@ -21,9 +21,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +34,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateUI() {
+        
+        
+        usernameLabel.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        passwordLabel.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
         // make corners round
         usernameLabel.layer.cornerRadius = 10
         usernameLabel.layer.masksToBounds = true
