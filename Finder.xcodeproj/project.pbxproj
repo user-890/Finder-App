@@ -167,7 +167,6 @@
 				F7A030091F216F3300515762 /* SWRevealViewController.h */,
 				F7A0300A1F216F3300515762 /* SWRevealViewController.m */,
 				F7A0300B1F216F3300515762 /* UIImage-and-gif.swift */,
-				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F7A030081F216F3200515762 /* Finder-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
@@ -177,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F78193AD1F20018A0043F7DA /* Recommended.swift */,
+				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F70E7EA71F228D1E0069001A /* User.swift */,
 			);
 			name = Models;

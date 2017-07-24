@@ -14,14 +14,16 @@ import KRProgressHUD
 private var numberOfCards: Int = 3
 
 func randomColor() -> UIColor {
-    var randomRed:CGFloat = CGFloat(arc4random_uniform(256))
-    var randomGreen:CGFloat = CGFloat(arc4random_uniform(256))
-    var randomBlue:CGFloat = CGFloat(arc4random_uniform(256))
+    let randomRed:CGFloat = CGFloat(arc4random_uniform(256))
+    let randomGreen:CGFloat = CGFloat(arc4random_uniform(256))
+    let randomBlue:CGFloat = CGFloat(arc4random_uniform(256))
     return UIColor(red:   randomRed/255,
                    green: randomGreen/255,
                    blue:  randomBlue/255,
                    alpha: 1.0)
 }
+
+
 
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
@@ -69,49 +71,71 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
 //Function to create facts
 func makeFacts(){
     //hardcoded 5 facts
-    Fact.postFact(source: "Urban Dictionary", withCaption: "coffeee is a drink maybe") { (success: Bool, error: Error?) in
+    let s = "https://en.wikipedia.org/wiki/Knocker-up"
+    let t = "Before there were alarm clocks, there were “knockers-up”, who were hired to shoot dried peas from a blow gun at people’s windows in order to wake them up in the morning."
+    let r = "history"
+    Fact.postFact(source: s, related: r, withCaption: t) { (success: Bool, error: Error?) in
         if success {
-            print("saved correctely")
+            print("saved correctly")
         } else {
-            print("nah fam")
-        }
-    }
-    //
-    Fact.postFact(source: "CNN", withCaption: "is a news source") { (success: Bool, error: Error?) in
-        if success {
-            print("saved correctely")
-        } else {
-            print("nah fam")
-        }
-    }
-    //
-    Fact.postFact(source: "LOL", withCaption: "appp timeline search results commits how do i resolve add two") { (success: Bool, error: Error?) in
-        if success {
-            print("saved correctely")
-        } else {
-            print("nah fam")
-        }
-    }
-    //
-    Fact.postFact(source: "Blu HArbor", withCaption: "hoem hoem hoem homeeeeeeee when to go home") { (success: Bool, error: Error?) in
-        if success {
-            print("saved correctely")
-        } else {
-            print("nah fam")
-        }
-    }
-    //
-    Fact.postFact(source: "jeeeez", withCaption: "food is the best thing to happen to mankind") { (success: Bool, error: Error?) in
-        if success {
-            print("saved correctely")
-        } else {
-            print("nah fam")
+            print("nope")
         }
     }
 }
 
+// Fetch the data from the API
+func fetch_data()
+{
+    let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
+    let task = URLSession.shared.dataTask(with: apiurl! as URL) {
+        (data,response,error) in
+        if error != nil {
+            print (error)
+            return
+        }
+        do {
+            let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: Any]
+            let d = json["articles"] as! [[String: AnyObject]]
+            print(d.count)
+            for items in d
+            {
+                let title = items["title"]!
+                //let imgUrl = items["urlToImage"]! as! String
+                //let imgParsedUrl = URL(string: imgUrl)!
+                let dataurl = items["url"]!;
+//                Fact.postFact(source: dataurl as! String, withCaption: title as! String, withCompletion: { (success: Bool, error: Error?) in
+//                    if success {
+//                        print("saved correctely")
+//                    } else {
+//                        print("nah fam")
+//                    }
+//                })
+                //let img = self.imageParsed(imgData: imgParsedUrl);
+                print(title)
+                
+                //let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl)
+                //self.arr.append(NewPost)
+                
+                DispatchQueue.main.async {
+                    //after 
+                    print("doneeeeeee")
+                    //self.tableview.reloadData()
+                    
+                }
+            }
+        }
+        catch let jError {
+            print (jError)
+        }
+        //let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+        //print(str)
+    }
+    task.resume()
+}
+
 func getFacts() -> [PFObject] {
     var facts: [PFObject] = []
+    //fetch_data()
     //makeFacts()
     KRProgressHUD.show()
     let query = PFQuery(className: "Fact")
@@ -256,9 +280,10 @@ extension HomeViewController: KolodaViewDelegate {
         print("done")
     }
     
-//    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-//        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
-//    }
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        let fact = facts[index]
+        UIApplication.shared.openURL(URL(string: fact["source"] as! String)!)
+    }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         print(direction)
