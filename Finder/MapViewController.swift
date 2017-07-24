@@ -8,37 +8,90 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // MARK: Properties
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addressLabel: UILabel!
     
-    let regionRadius: CLLocationDistance = 1000
-
+    
+    let manager = CLLocationManager()
+    
+    
+    
+    
+    // Update locationw whenever the user moves
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations[0]
+        
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        mapView.setRegion(region, animated: true)
+        
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (
+            placemark, error) in
+            if error != nil {
+                print("An error has occurred")
+            } else {
+                // See if there's content int he placemark variable
+                if let place = placemark?[0] {
+                    if let checker = place.subThoroughfare {
+                        self.addressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
+                    }
+                }
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // set inital coordinates to Menlo Park, California
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-        centerMapOnLocation(location: initialLocation)
         
-        // show artwork on map
-//        let artwork = Artwork(title: "King David Kalakaua",
-//                              locationName: "Waikiki Gateway Park",
-//                              discipline: "Sculpture",
-//                              coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-//        
-//        mapView.addAnnotation(artwork)
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        //getApiData()
     }
     
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
+    
+    /*
+    func getApiData() {
+        let url = URL(string: "https://api.openaq.org/v1/countries")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print("Error")
+            } else {
+                if let content = data {
+                    do {
+                        // Convert JSon into an array that we can work with
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! AnyObject
+                        let d = json["results"] as! NSDictionary
+                        print(d)
+                        
+                        if let count = d["United States"] {
+                            print(count)
+                        }
+          
+                    } catch {
+                        
+                    }
+                }
+            }
+        }
+        
+        task.resume()
     }
-
- 
+    
+   */
+    
 
     /*
     // MARK: - Navigation
