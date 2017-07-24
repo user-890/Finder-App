@@ -19,7 +19,6 @@
 		F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B091F25B971002BB458 /* PostFact.swift */; };
 		F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */; };
 		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
-		F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
 		F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300A1F216F3300515762 /* SWRevealViewController.m */; };
 		F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300B1F216F3300515762 /* UIImage-and-gif.swift */; };
@@ -89,7 +88,6 @@
 		F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeFactViewController.swift; sourceTree = "<group>"; };
 		F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFactTableViewCell.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
-		F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
 		F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7A030081F216F3200515762 /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				F7CF69501F154333009FDF40 /* Assets.xcassets */,
 				F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */,
 				F7CF69551F154333009FDF40 /* Info.plist */,
-				F78193581F17EC9E0043F7DA /* GoogleService-Info.plist */,
 				F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */,
 			);
 			path = Finder;
@@ -390,7 +387,6 @@
 				F7A030131F216F9600515762 /* Main.storyboard in Resources */,
 				F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */,
 				F7A030101F216F6600515762 /* login.gif in Resources */,
-				F78193591F17EC9E0043F7DA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

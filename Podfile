@@ -14,11 +14,6 @@ target 'Finder' do
   # Pods for Finder
    pod 'AlamofireImage', '~> 3.1'
    pod "TextFieldEffects"
-   pod 'FBSDKCoreKit'
-   pod 'FBSDKShareKit'
-   pod 'FBSDKLoginKit'
-   pod 'Firebase/Core'
-   pod 'Firebase/Auth'
    pod 'SDWebImage'
 
   target 'FinderTests' do

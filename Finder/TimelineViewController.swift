@@ -35,14 +35,21 @@ class TimelineViewController: UITableViewController {
         
         get_data()
         sideMenus()
-        updatePosts() 
+        updatePosts()
+        
+        // Set up Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        tableview.insertSubview(refreshControl, at: 0)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Refresh Control
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        updatePosts()
+        refreshControl.endRefreshing()
     }
     
+
     func updatePosts() {
         // Construct query
         let query = PFQuery(className: "Post")
@@ -62,6 +69,13 @@ class TimelineViewController: UITableViewController {
             }
         }
     }
+
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     
     
@@ -73,35 +87,36 @@ class TimelineViewController: UITableViewController {
         return 1
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-         return arr.count - 1
+        return arr.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row % 2 == 0 {
+ //       if indexPath.row < post!.count {
+            
+            let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
+            
+            
+            cellTwo.recommend = arr[indexPath.row]
+            
+            return cellTwo
+            
+            
+//        } else {
 //            
 //            
 //            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
-//            //let posts = post?[indexPath.row]
+//            let posts = post?[indexPath.row]
 //            cell.post = post?[indexPath.row]
 //            return cell
 //            
 //            
-//            
-//        } else {
-        
-                let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
-                
-                
-                cellTwo.recommend = arr[indexPath.row]
-                
-                return cellTwo
-
-            
- //       }
-  
+//    
+//        }
+//  
 
     }
     
