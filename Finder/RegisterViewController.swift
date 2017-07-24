@@ -74,7 +74,7 @@ class RegisterViewController: UIViewController {
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print("Yay, registered new user!")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.performSegue(withIdentifier: "registerSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
             }

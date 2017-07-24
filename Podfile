@@ -9,6 +9,7 @@ target 'Finder' do
    pod "Koloda"
    pod 'Parse'
    pod "KRProgressHUD"
+   pod 'ParseUI'
 
   # Pods for Finder
    pod 'AlamofireImage', '~> 3.1'
