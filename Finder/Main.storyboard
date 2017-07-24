@@ -889,7 +889,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="8b0-Wc-NbZ">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapFact" rowHeight="96" id="8b0-Wc-NbZ" customClass="MapFactTableViewCell" customModule="Finder" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8b0-Wc-NbZ" id="Hux-6e-MWj">
@@ -907,8 +907,15 @@
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="phy-Ag-lDR" id="k00-o1-n9c"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="71u-0c-sFQ" id="6kk-Rm-Gs5"/>
+                                            <outlet property="delegate" destination="71u-0c-sFQ" id="GQu-KH-4KE"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.63583583047945202" colorSpace="custom" customColorSpace="displayP3"/>
@@ -920,6 +927,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="dgZ-KY-2yf" id="57B-0y-78g"/>
                         <outlet property="mapView" destination="uD3-9l-hdW" id="Jkz-zi-hqw"/>
+                        <outlet property="tableview" destination="lp1-JE-PZF" id="Z1d-RN-j5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krV-TK-lyz" userLabel="First Responder" sceneMemberID="firstResponder"/>

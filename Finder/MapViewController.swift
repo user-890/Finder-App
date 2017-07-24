@@ -10,14 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    
     
     // MARK: Properties
     
+    @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     
-    
+    // Array of articles
+    //var arr = [Recommended]()
     let manager = CLLocationManager()
     
     
@@ -62,35 +66,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
-    /*
-    func getApiData() {
-        let url = URL(string: "https://api.openaq.org/v1/countries")
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print("Error")
-            } else {
-                if let content = data {
-                    do {
-                        // Convert JSon into an array that we can work with
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! AnyObject
-                        let d = json["results"] as! NSDictionary
-                        print(d)
-                        
-                        if let count = d["United States"] {
-                            print(count)
-                        }
-          
-                    } catch {
-                        
-                    }
-                }
-            }
-        }
-        
-        task.resume()
+    
+    
+    
+    // MARK: - Table view data source
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
     
-   */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 20
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellTwo = tableView.dequeueReusableCell(withIdentifier: "mapFact", for: indexPath) as! MapFactTableViewCell
+        
+        
+        cellTwo.titleLabel.text = "The air quality is: Poor"
+        
+        return cellTwo
+        
+        
+    }
+    
+    
+    
+    
     
 
     /*
