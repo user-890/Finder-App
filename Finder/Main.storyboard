@@ -31,6 +31,10 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="FKB-yh-CHi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="HPb-EQ-eaI" appends="YES" id="3aq-Ey-WV2"/>
+                                    </connections>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -106,6 +110,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HPb-EQ-eaI">
+                    <connections>
+                        <action selector="pushKeyboardDown:" destination="BYZ-38-t0r" id="Xig-Yp-AFL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1786" y="653"/>
         </scene>
@@ -176,17 +185,43 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-hn-U1t">
-                                            <rect key="frame" x="82" y="506" width="211" height="30"/>
+                                            <rect key="frame" x="82" y="531" width="211" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <state key="normal" title="Already a Member?">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="alreadyMember" id="3no-Qq-5nE"/>
+                                                <action selector="goBackToLogin:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="XKp-Ss-bvu"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-Gu-V82">
+                                            <rect key="frame" x="52" y="446" width="271" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.2206489546" green="0.85979140229999995" blue="0.55028172720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <state key="normal" title="Register">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pressRegister:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="ilJ-RZ-Ydr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-iF-nV4">
+                                            <rect key="frame" x="82" y="496" width="211" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Sign Up With Touch ID">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pressTouchID:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="xN4-HK-0TI"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="apO-Y0-xDX" appends="YES" id="ioD-bl-N4g"/>
+                                    </connections>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -222,17 +257,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlj-Gu-V82">
-                                <rect key="frame" x="52" y="463" width="271" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2206489546" green="0.85979140229999995" blue="0.55028172720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressRegister:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="ilJ-RZ-Ydr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -248,9 +272,16 @@
                         <outlet property="passwordTextField" destination="cs2-Fg-jZi" id="3EB-y4-P5b"/>
                         <outlet property="registerButton" destination="nlj-Gu-V82" id="DN2-8c-BUs"/>
                         <outlet property="usernameTextField" destination="5i9-eC-aUH" id="n8V-4N-6fZ"/>
+                        <segue destination="ttE-O4-RQ1" kind="presentation" identifier="registerSegue" id="lGh-iv-qfl"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="alreadyMember" id="YFo-Sp-NZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFA-xu-2uw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="apO-Y0-xDX">
+                    <connections>
+                        <action selector="pushKeyboardDown:" destination="OMC-Pi-WWN" id="68f-iJ-b4G"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1784.8" y="1421.7391304347827"/>
         </scene>
@@ -610,6 +641,11 @@
                     <size key="freeformSize" width="275" height="667"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1J-of-hWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="u0l-vn-RHh">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="2004" y="-131.78410794602701"/>
         </scene>

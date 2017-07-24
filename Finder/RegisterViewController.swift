@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import LocalAuthentication
 
 class RegisterViewController: UIViewController {
     
@@ -79,6 +80,69 @@ class RegisterViewController: UIViewController {
                 print(error?.localizedDescription)
             }
         }
+        
+    }
+    
+    @IBAction func pushKeyboardDown(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    
+    @IBAction func goBackToLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "alreadyMember", sender: self)
+    }
+    
+    
+    // Authenticate user with TouchID
+    func authenticateUser() {
+        let context = LAContext()
+        
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(
+            LAPolicy.deviceOwnerAuthenticationWithBiometrics,
+            error: &error) {
+            
+            // Device can use TouchID
+            
+        } else {
+            // Device cannot use TouchID
+            switch error!.code{
+                
+            case LAError.Code.touchIDNotEnrolled.rawValue:
+                notifyUser("TouchID is not enrolled",
+                           err: error?.localizedDescription)
+                
+            case LAError.Code.passcodeNotSet.rawValue:
+                notifyUser("A passcode has not been set",
+                           err: error?.localizedDescription)
+                
+            default:
+                notifyUser("TouchID not available",
+                           err: error?.localizedDescription)
+                
+            }
+        }    
+    }
+    
+    func notifyUser(_ msg: String, err: String?) {
+        let alert = UIAlertController(title: msg,
+                                      message: err,
+                                      preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true,
+                     completion: nil)
+    }
+
+    
+    @IBAction func pressTouchID(_ sender: Any) {
+        
+        authenticateUser()
         
     }
     

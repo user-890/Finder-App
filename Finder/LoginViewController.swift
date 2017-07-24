@@ -66,6 +66,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func pushKeyboardDown(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     
     

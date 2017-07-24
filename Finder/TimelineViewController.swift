@@ -80,18 +80,18 @@ class TimelineViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 == 0 {
-            
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
-            //let posts = post?[indexPath.row]
-            cell.post = post?[indexPath.row]
-            return cell
-            
-            
-            
-        } else {
-            
+//        if indexPath.row % 2 == 0 {
+//            
+//            
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
+//            //let posts = post?[indexPath.row]
+//            cell.post = post?[indexPath.row]
+//            return cell
+//            
+//            
+//            
+//        } else {
+        
                 let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
                 
                 
@@ -100,7 +100,7 @@ class TimelineViewController: UITableViewController {
                 return cellTwo
 
             
-        }
+ //       }
   
 
     }
