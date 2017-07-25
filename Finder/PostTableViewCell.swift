@@ -7,31 +7,64 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class PostTableViewCell: UITableViewCell {
     
     // MARK: Properties
 
-    @IBOutlet weak var profileImageView: UIImageView!
+
+    @IBOutlet weak var factText: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var postDetailView: UIView!
-    @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var sourceURL: UILabel!
 
     
-    @IBAction func pressOnBookmark(_ sender: Any) {
-        if bookmarkButton.isSelected{
-            bookmarkButton.isSelected = false
-        } else {
-            bookmarkButton.isSelected = true
+    var post: PFObject! {
+        didSet {
+            let author = post["authorId"] as? PFUser
+            
+            
+            //
+            //            if didLikePost == "true" {
+            //                likeButton.isSelected = true
+            //            } else {
+            //                likeButton.isSelected = false
+            //            }
+            
+            
+            
+            if let creationTime = post["creationTime"] {
+                let postDateFormatter: DateFormatter = {
+                    let f = DateFormatter()
+                    f.dateFormat = "MMM d, yyyy"
+                    return f
+                }()
+                self.timeStamp.text = postDateFormatter.string(from: Date(timeIntervalSinceReferenceDate: creationTime as! TimeInterval))
+                
+            }
+            
+            if let user = post["authorId"] as? PFUser {
+                self.usernameLabel.text = user.username
+            } else {
+                self.usernameLabel.text = " "
+            }
+            self.factText.text = post["caption"] as? String
         }
+        
+        
+        
+        
     }
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2;
+        self.profileImageView.clipsToBounds = true
 
         
     }

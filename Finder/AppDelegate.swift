@@ -18,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Facebook Login
-//        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-//        
-        
-//        // Use Firebase library to configure APIs
-//        FirebaseApp.configure()
+
         
         //Initialize Parse
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
@@ -33,14 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }))
         
         //user persist - check if current user is logged in
-        if let currentUser = PFUser.current(){
-            print("Welcome back to Finder, \(currentUser.username!) 😀")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
-            window?.rootViewController = homeController
-            
-        }
-        
+//        if let currentUser = PFUser.current(){
+//            print("Welcome back to Finder, \(currentUser.username!) 😀")
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
+//            window?.rootViewController = homeController
+//            
+//        }
+//        
 
         return true
     }
