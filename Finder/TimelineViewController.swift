@@ -44,12 +44,7 @@ class TimelineViewController: UITableViewController {
     }
     
 
-    // Refresh Control
-    func refreshControlAction(_ refreshControl: UIRefreshControl) {
-        updatePosts()
-        refreshControl.endRefreshing()
-    }
-    
+
 
     func updatePosts() {
         // Construct query
@@ -72,6 +67,38 @@ class TimelineViewController: UITableViewController {
     }
 
     
+    // Refresh Control
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        updatePosts()
+        refreshControl.endRefreshing()
+    }
+    
+    
+    
+    var isMoreDataLoading = false
+    
+    // Infinite Scroll
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if (!isMoreDataLoading) {
+            
+            let scrollViewContentHeight = tableview.contentSize.height
+            let scrollOffsetThreshold = scrollViewContentHeight - tableview.bounds.size.height
+            
+            // When the user has scrolled past the threshold, start requesting
+            if(scrollView.contentOffset.y > scrollOffsetThreshold && tableview.isDragging) {
+                isMoreDataLoading = true
+                
+            // Code to load more results
+            get_data()
+            //updatePosts()
+            
+            }
+            
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -92,12 +119,13 @@ class TimelineViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arr.count + post!.count
+        return arr.count /*+ post!.count*/
     }
     
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row < post!.count{
+        if indexPath.row < post!.count && indexPath.row % 3 == 0{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
             //let posts = post?[indexPath.row]
@@ -119,10 +147,10 @@ class TimelineViewController: UITableViewController {
             return cellTwo
             
             
-    
+            
         }
-  
-
+        
+        
     }
     
     
