@@ -433,11 +433,19 @@
                                             <color key="textColor" red="0.33403394669999997" green="0.33403394669999997" blue="0.33403394669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://www.youtube.com/watch?v=LWw1whbRt9g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIE-Bg-Hme">
+                                            <rect key="frame" x="85" y="101" width="282" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="factText" destination="yht-Ok-HpL" id="AAq-Zf-etk"/>
                                     <outlet property="profileImageView" destination="vBj-Ja-r9k" id="6Pw-p0-iKL"/>
+                                    <outlet property="sourceURL" destination="mIE-Bg-Hme" id="0MH-5G-c5z"/>
                                     <outlet property="timeStamp" destination="HKw-I0-1fw" id="wny-hS-0qA"/>
                                     <outlet property="usernameLabel" destination="7hG-yP-kxL" id="D1I-IV-4AY"/>
                                 </connections>
