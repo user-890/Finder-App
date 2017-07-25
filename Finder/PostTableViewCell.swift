@@ -15,8 +15,10 @@ class PostTableViewCell: UITableViewCell {
     // MARK: Properties
 
 
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var factText: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
 
     
     var post: PFObject! {
@@ -33,21 +35,21 @@ class PostTableViewCell: UITableViewCell {
             
             
             
-//            if let creationTime = post["creationTime"] {
-//                let postDateFormatter: DateFormatter = {
-//                    let f = DateFormatter()
-//                    f.dateFormat = "MMM d, yyyy"
-//                    return f
-//                }()
-//                self.timeStamp.text = postDateFormatter.string(from: Date(timeIntervalSinceReferenceDate: creationTime as! TimeInterval))
-//                
-//            }
+            if let creationTime = post["creationTime"] {
+                let postDateFormatter: DateFormatter = {
+                    let f = DateFormatter()
+                    f.dateFormat = "MMM d, yyyy"
+                    return f
+                }()
+                self.timeStamp.text = postDateFormatter.string(from: Date(timeIntervalSinceReferenceDate: creationTime as! TimeInterval))
+                
+            }
             
-//            if let user = post["authorId"] as? PFUser {
-//                self.usernameLabel.text = user.username
-//            } else {
-//                self.usernameLabel.text = " "
-//            }
+            if let user = post["authorId"] as? PFUser {
+                self.usernameLabel.text = user.username
+            } else {
+                self.usernameLabel.text = " "
+            }
             self.factText.text = post["caption"] as? String
         }
         
@@ -60,8 +62,8 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-//        self.profileImageView.layer.cornerRadius = self.userProfileImage.frame.size.width / 2;
-//        self.profileImageView.clipsToBounds = true
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2;
+        self.profileImageView.clipsToBounds = true
 
         
     }

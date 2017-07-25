@@ -125,6 +125,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             let synthesizer = AVSpeechSynthesizer()
                             synthesizer.speak(utterance)
                             
+                            
                         }
                     
                     }

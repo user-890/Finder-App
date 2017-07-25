@@ -43,6 +43,7 @@ class TimelineViewController: UITableViewController {
         tableview.insertSubview(refreshControl, at: 0)
     }
     
+
     // Refresh Control
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         updatePosts()
@@ -88,35 +89,39 @@ class TimelineViewController: UITableViewController {
     }
     
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arr.count
+        return arr.count + post!.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- //       if indexPath.row < post!.count {
+        if indexPath.row < post!.count{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
+            //let posts = post?[indexPath.row]
+            cell.post = post?[indexPath.row]
+            tableview.rowHeight = 160
+            return cell
+            
+            
+        } else {
+            
+            
             
             let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
             
             
             cellTwo.recommend = arr[indexPath.row]
+            tableview.rowHeight = 430
             
             return cellTwo
             
             
-//        } else {
-//            
-//            
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
-//            let posts = post?[indexPath.row]
-//            cell.post = post?[indexPath.row]
-//            return cell
-//            
-//            
-//    
-//        }
-//  
+    
+        }
+  
 
     }
     
