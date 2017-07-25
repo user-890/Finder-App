@@ -52,7 +52,6 @@ class PostTableViewCell: UITableViewCell {
                 self.usernameLabel.text = " "
             }
             self.factText.text = post["caption"] as? String
-            self.sourceURL.text = post["source"] as? String
         }
         
         
