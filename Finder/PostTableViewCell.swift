@@ -19,6 +19,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var sourceURL: UILabel!
 
     
     var post: PFObject! {
@@ -51,6 +52,7 @@ class PostTableViewCell: UITableViewCell {
                 self.usernameLabel.text = " "
             }
             self.factText.text = post["caption"] as? String
+            self.sourceURL.text = post["source"] as? String
         }
         
         

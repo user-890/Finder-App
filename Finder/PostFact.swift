@@ -19,6 +19,7 @@ class Post: NSObject {
     let commentsCount: Int?
     //the image is either liked or not
     var liked: Bool?
+    let sourceURL: String?
     
     init(pfObject: PFObject) {
         creationTime = pfObject["creationTime"] as? TimeInterval
@@ -28,6 +29,7 @@ class Post: NSObject {
         likeCount = pfObject["likeCount"] as? Int
         commentsCount = pfObject["commentsCount"] as? Int
         liked = pfObject["liked"] as! Bool
+        sourceURL = pfObject["source"] as? String
         
     }
     
