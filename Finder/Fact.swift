@@ -11,7 +11,7 @@ import Parse
 
 class Fact: NSObject{
     //method to add a post to parse
-    class func postFact(source: String, related: String, withCaption fact: String, withCompletion completion: PFBooleanResultBlock?) {
+    class func postFact(source: String, related: String, num: Int, withCaption fact: String, withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let post = PFObject(className: "Fact")
         
@@ -19,6 +19,8 @@ class Fact: NSObject{
         post["fact"] = fact
         post["source"] = source
         post["tag"] = related
+        post["likes"] = 0
+        post["fact_id"] = num
         
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackground(block: completion)

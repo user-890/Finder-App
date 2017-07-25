@@ -647,30 +647,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T26-U5-Qvh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-nW-M0n" userLabel="ReadMore">
-                                <rect key="frame" x="303" y="504" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onReadMore:" destination="N9s-BQ-eEb" eventType="touchUpInside" id="O6R-af-eP6"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-ec-bD9" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="43" y="109" width="289" height="347"/>
+                                <rect key="frame" x="43" y="150" width="289" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="YfI-f0-YzF" firstAttribute="top" secondItem="T26-U5-Qvh" secondAttribute="bottom" id="AN1-YD-gQY"/>
-                            <constraint firstItem="T26-U5-Qvh" firstAttribute="leading" secondItem="n8e-Yd-eeq" secondAttribute="leading" id="ER9-Fd-s1R"/>
-                            <constraint firstItem="T26-U5-Qvh" firstAttribute="top" secondItem="Zes-W4-BYC" secondAttribute="bottom" id="WTM-06-LWh"/>
-                            <constraint firstAttribute="trailing" secondItem="T26-U5-Qvh" secondAttribute="trailing" id="bER-BC-BD5"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c9o-Uc-whQ"/>
                     <connections>
@@ -837,7 +819,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8b0-Wc-NbZ" id="Hux-6e-MWj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phy-Ag-lDR">
@@ -938,7 +920,4 @@
         <image name="menu" width="30" height="30"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="7HM-mA-rME"/>
-    </inferredMetricsTieBreakers>
 </document>

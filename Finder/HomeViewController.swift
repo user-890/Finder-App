@@ -11,8 +11,6 @@ import Koloda
 import Parse
 import KRProgressHUD
 
-private var numberOfCards: Int = 3
-
 func randomColor() -> UIColor {
     let randomRed:CGFloat = CGFloat(arc4random_uniform(256))
     let randomGreen:CGFloat = CGFloat(arc4random_uniform(256))
@@ -28,8 +26,8 @@ func randomColor() -> UIColor {
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
     // Setup the font specific variables
-    let textColor: UIColor = randomColor() //UIColor.white
-    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 26)!
+    let textColor: UIColor = UIColor.white
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 40)!
     let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
@@ -49,10 +47,10 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     inImage.draw(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
     
     // Creating a point within the space that is as bit as the image.
-    let textSize = drawText.size(attributes: textFontAttributes)
+    _ = drawText.size(attributes: textFontAttributes)
     //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
-    let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width, height: inImage.size.height)
+    let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width-10, height: inImage.size.height)
     
     
     //Now Draw the text into an image.
@@ -70,11 +68,11 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
 
 //Function to create facts
 func makeFacts(){
-    //hardcoded 5 facts
-    let s = "https://en.wikipedia.org/wiki/Knocker-up"
-    let t = "Before there were alarm clocks, there were “knockers-up”, who were hired to shoot dried peas from a blow gun at people’s windows in order to wake them up in the morning."
-    let r = "history"
-    Fact.postFact(source: s, related: r, withCaption: t) { (success: Bool, error: Error?) in
+    let s = "http://naruhodo.jp.net/why-all-cellphones-camera-in-japan-shipped-with-shutter-sound/"
+    let t = "Phones sold in Japan permanently have the shutter sound turned on so as to deter up-skirt photogtaphy."
+    let r = "tech"
+    let n = 14
+    Fact.postFact(source: s, related: r, num: n, withCaption: t) { (success: Bool, error: Error?) in
         if success {
             print("saved correctly")
         } else {
@@ -83,72 +81,45 @@ func makeFacts(){
     }
 }
 
-// Fetch the data from the API
-func fetch_data()
-{
-    let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
-    let task = URLSession.shared.dataTask(with: apiurl! as URL) {
-        (data,response,error) in
-        if error != nil {
-            print (error)
-            return
-        }
-        do {
-            let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: Any]
-            let d = json["articles"] as! [[String: AnyObject]]
-            print(d.count)
-            for items in d
-            {
-                let title = items["title"]!
-                //let imgUrl = items["urlToImage"]! as! String
-                //let imgParsedUrl = URL(string: imgUrl)!
-                let dataurl = items["url"]!;
-//                Fact.postFact(source: dataurl as! String, withCaption: title as! String, withCompletion: { (success: Bool, error: Error?) in
-//                    if success {
-//                        print("saved correctely")
-//                    } else {
-//                        print("nah fam")
-//                    }
-//                })
-                //let img = self.imageParsed(imgData: imgParsedUrl);
-                print(title)
-                
-                //let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl)
-                //self.arr.append(NewPost)
-                
-                DispatchQueue.main.async {
-                    //after 
-                    print("doneeeeeee")
-                    //self.tableview.reloadData()
-                    
+func getFacts(seenFacts: inout [Int]) -> [PFObject] {
+    let lim = 15 //how many facts
+    var facts: [PFObject] = []
+    var cur: [Int] = []
+    //makeFacts()
+    for index in 1...5{
+        var n = Int(arc4random_uniform(UInt32(lim))) //0-14 inclusive
+        if seenFacts.count + cur.count != 15 {
+            while seenFacts.contains(n) {
+                n += 1
+                if n == (lim - 1){
+                    n = 0
                 }
             }
+            while cur.contains(n) {
+                n += 1
+                if n == (lim - 1){
+                    n == 0
+                }
+            }
+            cur.append(n)
+            seenFacts.append(n)
         }
-        catch let jError {
-            print (jError)
-        }
-        //let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-        //print(str)
     }
-    task.resume()
-}
-
-func getFacts() -> [PFObject] {
-    var facts: [PFObject] = []
-    //fetch_data()
-    //makeFacts()
     KRProgressHUD.show()
+    for i in cur {
     let query = PFQuery(className: "Fact")
-    query.addDescendingOrder("createdAt")
-    query.limit = 5
+        print(i)
+        query.whereKey("fact_id", equalTo: i)
+    //query.addDescendingOrder("createdAt")
+    //query.limit = 5
     //syncronous fetch
-    
     do {
-        facts = try query.findObjects()
+        let res = try query.findObjects()
+        facts.append(contentsOf: res)
         print("get facts succes")
     } catch {
-        facts = []
         print("error")
+    }
     }
 //    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
 //        if error == nil {
@@ -167,6 +138,7 @@ func getFacts() -> [PFObject] {
 class HomeViewController: UIViewController {
     
     //Helpers
+    var seen: [Int] = []
     
     //Outlet
     @IBOutlet var kolodaView: KolodaView!
@@ -174,28 +146,13 @@ class HomeViewController: UIViewController {
     //Variables
     var facts: [PFObject] = []
     fileprivate var dataSource: [UIImage] = []
-//    fileprivate var dataSource: [UIImage] = {
-//        let facs = getFacts()
-//        var array: [UIImage] = []
-//        print(facs.count)
-//        for index in 0..<facs.count {
-//            let base = UIImage(named: "Card_like")
-//            let point = CGPoint(x: 10, y: 10)
-//            let curFact: PFObject = facs[index]
-//            let str = curFact["fact"] as? NSString
-//            print("\(str) \(index)")
-//            array.append(textToImage(drawText: str!, inImage: base!, atPoint: point))
-//        }
-//        
-//        return array
-//    }()
     
     func createImages(facts:[PFObject]) -> [UIImage] {
         var array: [UIImage] = []
         print(facts.count)
         for index in 0..<facts.count {
             let base = UIImage(named: "Card_like")
-            let point = CGPoint(x: 10, y: 10)
+            let point = CGPoint(x: 0, y: 0)
             let curFact: PFObject = facts[index]
             let str = curFact["fact"] as? NSString
             print("\(str) \(index)")
@@ -214,7 +171,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        facts = getFacts()
+        facts = getFacts(seenFacts: &seen)
         dataSource = createImages(facts: facts)
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -261,23 +218,16 @@ class HomeViewController: UIViewController {
 extension HomeViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        print("in")
-        let newFacts = getFacts()
+        print(seen)
+        let newFacts = getFacts(seenFacts: &seen)
         //add new facts to facts
         facts.append(contentsOf: newFacts)
-        print("ok")
         let images = createImages(facts: newFacts)
-        print("damn bbu")
         let position = kolodaView.currentCardIndex
-        print("pos")
         for image in images {
-            print("each")
             dataSource.append(image)
-            print("appended")
         }
-        print("tssss")
         kolodaView.insertCardAtIndexRange(position..<position + images.count, animated: true)
-        print("done")
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {

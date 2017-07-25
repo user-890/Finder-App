@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize Parse
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-            configuration.applicationId = "Finder"
-            configuration.clientKey = "whatcannotbetouched"
-            configuration.server = "https://frozen-fjord-66198.herokuapp.com/parse"
+            configuration.applicationId = "finder"
+            configuration.clientKey = "finder"
+            configuration.server = "http://finder-app-fbu.herokuapp.com/parse"
         }))
         
         //user persist - check if current user is logged in
