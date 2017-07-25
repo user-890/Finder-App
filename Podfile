@@ -9,15 +9,11 @@ target 'Finder' do
    pod "Koloda"
    pod 'Parse'
    pod "KRProgressHUD"
+   pod 'ParseUI'
 
   # Pods for Finder
    pod 'AlamofireImage', '~> 3.1'
    pod "TextFieldEffects"
-   pod 'FBSDKCoreKit'
-   pod 'FBSDKShareKit'
-   pod 'FBSDKLoginKit'
-   pod 'Firebase/Core'
-   pod 'Firebase/Auth'
    pod 'SDWebImage'
 
   target 'FinderTests' do

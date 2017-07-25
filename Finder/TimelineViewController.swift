@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 
 class TimelineViewController: UITableViewController {
@@ -15,6 +16,8 @@ class TimelineViewController: UITableViewController {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapButton: UIBarButtonItem!
+    
+    var post: [PFObject]? = []
     
     
     // Array of articles
@@ -32,19 +35,50 @@ class TimelineViewController: UITableViewController {
         
         get_data()
         sideMenus()
+        updatePosts()
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Set up Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        tableview.insertSubview(refreshControl, at: 0)
     }
+    
+
+    // Refresh Control
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        updatePosts()
+        refreshControl.endRefreshing()
+    }
+    
+
+    func updatePosts() {
+        // Construct query
+        let query = PFQuery(className: "Post")
+        query.order(byDescending: "creationTime")
+        query.limit = 20
+        query.includeKey("authorId")
+        //query.includeKey("caption")
+        
+        
+        query.findObjectsInBackground { (posts: [PFObject]?,
+            error: Error?) in
+            if let posts = posts {
+                self.post = posts
+                self.tableview.reloadData()
+            } else {
+                print(String(describing: error?.localizedDescription))
+            }
+        }
+    }
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     // MARK: - Table view data source
     
@@ -54,19 +88,41 @@ class TimelineViewController: UITableViewController {
         return 1
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arr.count - 1
+        return arr.count + post!.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
-        
-        
-        cell.recommend = arr[indexPath.row]
-        
-        return cell
+        if indexPath.row < post!.count{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
+            //let posts = post?[indexPath.row]
+            cell.post = post?[indexPath.row]
+            tableview.rowHeight = 160
+            return cell
+            
+            
+        } else {
+            
+            
+            
+            let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
+            
+            
+            cellTwo.recommend = arr[indexPath.row]
+            tableview.rowHeight = 430
+            
+            return cellTwo
+            
+            
+    
+        }
+  
+
     }
     
     
