@@ -299,7 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write A Fact! " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="467-hW-FMu">
-                                <rect key="frame" x="43" y="93" width="288" height="165"/>
+                                <rect key="frame" x="16" y="80" width="91" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -309,7 +309,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fd9-G0-SyD">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DvT-HX-aMC"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DvT-HX-aMC">
+                            <connections>
+                                <action selector="pressCancel:" destination="xzc-DD-yNG" id="LJI-PC-Qu8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="0z3-n3-H0e">
                             <connections>
                                 <action selector="pressPost:" destination="xzc-DD-yNG" id="pJ3-Lk-nCa"/>
@@ -429,11 +433,19 @@
                                             <color key="textColor" red="0.33403394669999997" green="0.33403394669999997" blue="0.33403394669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="https://www.youtube.com/watch?v=LWw1whbRt9g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIE-Bg-Hme">
+                                            <rect key="frame" x="85" y="101" width="282" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="factText" destination="yht-Ok-HpL" id="AAq-Zf-etk"/>
                                     <outlet property="profileImageView" destination="vBj-Ja-r9k" id="6Pw-p0-iKL"/>
+                                    <outlet property="sourceURL" destination="mIE-Bg-Hme" id="0MH-5G-c5z"/>
                                     <outlet property="timeStamp" destination="HKw-I0-1fw" id="wny-hS-0qA"/>
                                     <outlet property="usernameLabel" destination="7hG-yP-kxL" id="D1I-IV-4AY"/>
                                 </connections>
@@ -700,30 +712,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T26-U5-Qvh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-nW-M0n" userLabel="ReadMore">
-                                <rect key="frame" x="303" y="504" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onReadMore:" destination="N9s-BQ-eEb" eventType="touchUpInside" id="O6R-af-eP6"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-ec-bD9" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="43" y="109" width="289" height="347"/>
+                                <rect key="frame" x="43" y="150" width="289" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="YfI-f0-YzF" firstAttribute="top" secondItem="T26-U5-Qvh" secondAttribute="bottom" id="AN1-YD-gQY"/>
-                            <constraint firstItem="T26-U5-Qvh" firstAttribute="leading" secondItem="n8e-Yd-eeq" secondAttribute="leading" id="ER9-Fd-s1R"/>
-                            <constraint firstItem="T26-U5-Qvh" firstAttribute="top" secondItem="Zes-W4-BYC" secondAttribute="bottom" id="WTM-06-LWh"/>
-                            <constraint firstAttribute="trailing" secondItem="T26-U5-Qvh" secondAttribute="trailing" id="bER-BC-BD5"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c9o-Uc-whQ">
                         <barButtonItem key="rightBarButtonItem" image="world-icon" id="0jq-M8-OzD">
@@ -895,7 +889,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8b0-Wc-NbZ" id="Hux-6e-MWj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phy-Ag-lDR">
@@ -1014,9 +1008,4 @@
         <image name="timelineIcon" width="25" height="25"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="2jg-dB-vGk"/>
-        <segue reference="YFo-Sp-NZk"/>
-        <segue reference="y9p-j1-K5Q"/>
-    </inferredMetricsTieBreakers>
 </document>

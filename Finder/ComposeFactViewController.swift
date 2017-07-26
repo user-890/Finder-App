@@ -33,6 +33,10 @@ class ComposeFactViewController: UIViewController {
         
     }
     
+    @IBAction func pressCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
