@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PasswordResetViewController: UIViewController {
     
@@ -28,7 +29,45 @@ class PasswordResetViewController: UIViewController {
     
     @IBAction func sendButtonTapped(_ sender: Any) {
         
+        let emailAddress = emailAddressTextField.text
+        
+        if (emailAddress?.isEmpty)! {
+            // Display warning message
+            let userMessage: String = "Please type in your email address"
+            return
+        } else {
+            resetPassword(email: emailAddress!)
+        }
+        
+        
+        
     }
+    
+    func resetPassword(email : String){
+        
+        // convert the email string to lower case
+        let emailAddress = emailAddressTextField.text
+        
+        
+        PFUser.requestPasswordResetForEmail(inBackground: emailAddress!) { (success, error) -> Void in
+            if (error == nil) {
+                let success = UIAlertController(title: "Success", message: "Success! Check your email!", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                success.addAction(okButton)
+                self.present(success, animated: false, completion: nil)
+                
+                
+                
+            }else {
+                let alert = UIAlertController(title: "Alert", message: "Was Unable to Find You!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
+    
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true) {

@@ -86,6 +86,7 @@ class RegisterViewController: UIViewController {
         // set user properties
         newUser.username = usernameTextField.text
         newUser.password = passwordTextField.text
+        newUser.email = emailTextField.text
         
         // Call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
