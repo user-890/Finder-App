@@ -16,6 +16,7 @@ class TimelineViewController: UITableViewController {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var mapButton: UIBarButtonItem!
+ 
     
     var post: [PFObject]? = []
     
@@ -130,7 +131,7 @@ class TimelineViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
             //let posts = post?[indexPath.row]
             cell.post = post?[indexPath.row]
-            tableview.rowHeight = 160
+            tableview.rowHeight = 289
             return cell
             
             
