@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Finder
+
+  Created by Malvern Madondo on 7/25/17.
+  Copyright © 2017 Finder. All rights reserved.
+*/
+
+"UserName" = "Username";
+"PassWord" = "Password";
+"LoginButton" = "Login";
+"ForgotPasswordBtnTitle" = "Forgot Password?";
+"CreateAccountBtnTitle" = "Create an account";

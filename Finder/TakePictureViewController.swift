@@ -84,7 +84,8 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         
         //loadWebView()
     
-        
+//        UserDefaults.standard.set(["fr"], forKey: "AppleLanguages")
+//        UserDefaults.standard.synchronize()
     }
     
    
@@ -114,17 +115,37 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                     
                     if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
                         DispatchQueue.main.async {
+                            
                             self.navigationItem.title = classification
+                    
                             
                             //AVSpeechSynthesizer implementation
-                            let className = self.navigationItem.title
-                            let utterance = AVSpeechUtterance(string: className!)
+                            let classificationResult = self.navigationItem.title
                             
-                            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                            //let utterance = AVSpeechUtterance(string: classificationResult)
+                            let utterance: AVSpeechUtterance = AVSpeechUtterance(string: NSLocalizedString(classificationResult!, comment: "This is the classification result"))
                             
-                            let synthesizer = AVSpeechSynthesizer()
+                           utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                          //utterance.voice = AVSpeechSynthesisVoice(language: "fr-FR")
+                            
+                            let synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
+                            //synthesizer.speak(utterance)
+                            
+                            synthesizer.pauseSpeaking(at: .word)
                             synthesizer.speak(utterance)
                             
+//                            let theVoice = utterance.voice
+//                            
+//                            if case theVoice = utterance.voice{
+//                                synthesizer.pauseSpeaking(at: .word)
+//                                synthesizer.speak(utterance)
+//                                
+//                            } else {
+//                                synthesizer.pauseSpeaking(at: .word)
+//                                synthesizer.speak(utterance)
+//                                
+//                            } //end of else
+                        
                             
                         }
                     

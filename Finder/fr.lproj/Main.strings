@@ -1,0 +1,99 @@
+
+/* Class = "UIButton"; normalTitle = "Bookmarks"; ObjectID = "2KH-F3-Myu"; */
+"2KH-F3-Myu.normalTitle" = "Signets";
+
+/* Class = "UIButton"; normalTitle = "Create An Account"; ObjectID = "3Yv-2V-uhx"; */
+"3Yv-2V-uhx.normalTitle" = "Créer un compte";
+
+/* Class = "UITextField"; placeholder = "Write A Fact! "; ObjectID = "467-hW-FMu"; */
+"467-hW-FMu.placeholder" = "Écrivez un fait!";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "4dN-Hl-876"; */
+"4dN-Hl-876.normalTitle" = "X";
+
+/* Class = "UIButton"; normalTitle = "Location"; ObjectID = "4jY-ca-29S"; */
+"4jY-ca-29S.normalTitle" = "Emplacement";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "5i9-eC-aUH"; */
+"5i9-eC-aUH.placeholder" = "Nom d'utilisateur";
+
+/* Class = "UILabel"; text = "@Tiloooor"; ObjectID = "7hG-yP-kxL"; */
+"7hG-yP-kxL.text" = "@Tiloooor";
+
+/* Class = "UINavigationItem"; title = "FINDER"; ObjectID = "82b-14-nmH"; */
+"82b-14-nmH.title" = "FINDER";
+
+/* Class = "UILabel"; text = "21h"; ObjectID = "ALr-uZ-yPy"; */
+"ALr-uZ-yPy.text" = "21H";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Atr-nQ-F0I"; */
+"Atr-nQ-F0I.normalTitle" = "S'identifier";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "Cgt-GG-EbY"; */
+"Cgt-GG-EbY.normalTitle" = "Paramètres";
+
+/* Class = "UIBarButtonItem"; title = "Library"; ObjectID = "CvF-2O-3gD"; */
+"CvF-2O-3gD.title" = "Bibliothèque";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "E3T-DD-OJt"; */
+"E3T-DD-OJt.placeholder" = "Nom complet";
+
+/* Class = "UILabel"; text = "July 29"; ObjectID = "HKw-I0-1fw"; */
+"HKw-I0-1fw.text" = "29 juillet";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "HU0-N1-Hmr"; */
+"HU0-N1-Hmr.normalTitle" = "Mot de passe oublié?";
+
+/* Class = "UILabel"; text = "Forgot Password"; ObjectID = "Je9-t5-wsd"; */
+"Je9-t5-wsd.text" = "Mot de passe oublié";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KRB-J2-JdL"; */
+"KRB-J2-JdL.normalTitle" = "Bouton";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Me0-Sq-6Dd"; */
+"Me0-Sq-6Dd.placeholder" = "Nom d'utilisateur";
+
+/* Class = "UILabel"; text = "BuzzFeed"; ObjectID = "QIi-To-XiQ"; */
+"QIi-To-XiQ.text" = "BuzzFeed";
+
+/* Class = "UIButton"; normalTitle = "Sign Up With Touch ID"; ObjectID = "cOe-iF-nV4"; */
+"cOe-iF-nV4.normalTitle" = "Inscrivez-vous avec Touch ID";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "cs2-Fg-jZi"; */
+"cs2-Fg-jZi.placeholder" = "Mot de passe";
+
+/* Class = "UILabel"; text = "143 Kennedy Drive, Orange Connecticut, 06477, United States "; ObjectID = "dgZ-KY-2yf"; */
+"dgZ-KY-2yf.text" = "143 Kennedy Drive, Orange Connecticut, 06477, États-Unis";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "edR-ee-o7d"; */
+"edR-ee-o7d.title" = "Article";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "i2M-Fa-Y4i"; */
+"i2M-Fa-Y4i.normalTitle" = "Connectez - Out";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "j8z-Ya-FlK"; */
+"j8z-Ya-FlK.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Facebook Interns are GR8T!"; ObjectID = "mWk-rY-v7S"; */
+"mWk-rY-v7S.text" = "Les stagiaires de Facebook sont géniaux!!";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "nlj-Gu-V82"; */
+"nlj-Gu-V82.normalTitle" = "Registre";
+
+/* Class = "UILabel"; text = "This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact!"; ObjectID = "phy-Ag-lDR"; */
+"phy-Ag-lDR.text" = "C'est un fait! C'est un fait! C'est un fait!";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "plx-qf-Lak"; */
+"plx-qf-Lak.placeholder" = "Adresse e-mail";
+
+/* Class = "UIButton"; normalTitle = "Already a Member?"; ObjectID = "qLq-hn-U1t"; */
+"qLq-hn-U1t.normalTitle" = "Déjà membre?";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "v2p-4d-GP6"; */
+"v2p-4d-GP6.placeholder" = "Mot de passe";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wFe-nW-M0n"; */
+"wFe-nW-M0n.normalTitle" = "Bouton";
+
+/* Class = "UILabel"; text = "Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!"; ObjectID = "yht-Ok-HpL"; */
+"yht-Ok-HpL.text" = "Les stagiaires de Facebook sont géniaux!! Les stagiaires de Facebook sont géniaux!! Les stagiaires de Facebook sont géniaux!!";

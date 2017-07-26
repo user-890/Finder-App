@@ -20,7 +20,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var CreateAccountBtnLabel: UIButton!
     
+    @IBOutlet weak var ForgotPasswordBtnLabel: UIButton!
     
     
     
@@ -37,10 +39,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateUI() {
-        // Make placeholder text white
-        usernameLabel.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
         
-        passwordLabel.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        // Make placeholder text white
+        usernameLabel.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("UserName", comment: "This is the user's name"), attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        passwordLabel.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("PassWord", comment: "This is the user's password"), attributes: [NSForegroundColorAttributeName: UIColor.white])
         
         
         // make corners round
@@ -56,6 +59,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         loginButton.layer.cornerRadius = 10
         loginButton.layer.masksToBounds = true
+        
+        loginButton.setTitle(NSLocalizedString("LoginButton", comment: "This is the login button"), for: .normal)
+        
+        ForgotPasswordBtnLabel.setTitle(NSLocalizedString("ForgotPasswordBtnTitle", comment: "Forgot password button title"), for: .normal)
+        
+        CreateAccountBtnLabel.setTitle(NSLocalizedString("CreateAccountBtnTitle", comment: "Forgot password button title"), for: .normal)
+        
+        
         
     }
     

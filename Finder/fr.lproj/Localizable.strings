@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Finder
+
+  Created by Malvern Madondo on 7/25/17.
+  Copyright © 2017 Finder. All rights reserved.
+*/
+
+//Login Page
+"UserName" = "Nom d'utilisateur";
+"PassWord" = "Mot de passe";
+"LoginButton" = "S'identifier";
+"ForgotPasswordBtnTitle" = "Mot de passe oublié?";
+"CreateAccountBtnTitle" = "Créer un compte";
+
+
+
+
