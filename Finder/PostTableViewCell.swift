@@ -22,6 +22,7 @@ class PostTableViewCell: UITableViewCell {
     
     
     var trayOriginalCenter: CGPoint!
+    var startLocation: CGPoint!
     
     
     var post: PFObject! {
@@ -67,9 +68,11 @@ class PostTableViewCell: UITableViewCell {
         self.trayView.addGestureRecognizer(gestureRecognizer)
     }
     
+
+
     
     func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
-        var translation = gestureRecognizer.translation(in: contentView)
+        var translation = gestureRecognizer.translation(in: trayView)
         print("translation \(translation)")
         
         if gestureRecognizer.state == UIGestureRecognizerState.began {
@@ -78,7 +81,7 @@ class PostTableViewCell: UITableViewCell {
         } else if gestureRecognizer.state == UIGestureRecognizerState.changed {
             trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
         } else if gestureRecognizer.state == UIGestureRecognizerState.ended {
-            let velocity = gestureRecognizer.velocity(in: contentView)
+            let velocity = gestureRecognizer.velocity(in: trayView)
             
             let trayDownOffset: CGFloat = 160
             let trayUp: CGPoint = trayView.center

@@ -82,7 +82,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xZ3-nE-qAu" kind="presentation" id="402-6u-Udh"/>
+                                    <segue destination="1mG-Df-zhb" kind="presentation" id="402-6u-Udh"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-Sq-6Dd">
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1786" y="653"/>
         </scene>
-        <!--View Controller-->
+        <!--Password Reset-->
         <scene sceneID="nyI-bI-dYW">
             <objects>
-                <viewController id="xZ3-nE-qAu" sceneMemberID="viewController">
+                <viewController id="xZ3-nE-qAu" customClass="PasswordResetViewController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yfo-kz-TkA"/>
                         <viewControllerLayoutGuide type="bottom" id="fTj-bE-UUL"/>
@@ -131,15 +131,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je9-t5-wsd">
-                                <rect key="frame" x="51" y="28" width="273" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plx-qf-Lak">
-                                <rect key="frame" x="70" y="224" width="229" height="30"/>
+                                <rect key="frame" x="70" y="190" width="229" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,20 +140,34 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRB-J2-JdL">
-                                <rect key="frame" x="70" y="303" width="229" height="30"/>
+                                <rect key="frame" x="73" y="261" width="229" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2206489546" green="0.85979140229999995" blue="0.55028172720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="xZ3-nE-qAu" eventType="touchUpInside" id="gEd-eE-xIW"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Password Reset" id="g7g-WF-skR">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="QbK-Rv-tPc">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="xZ3-nE-qAu" id="k0b-gU-6BH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailAddressTextField" destination="plx-qf-Lak" id="Fq9-JV-5RL"/>
+                        <segue destination="OMC-Pi-WWN" kind="presentation" identifier="backToRegister" id="gDh-mQ-rng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaJ-dV-1Sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919.20000000000005" y="1427.136431784108"/>
+            <point key="canvasLocation" x="1858.4000000000001" y="1427.136431784108"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="OEy-2O-lQO">
@@ -284,7 +291,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1784.8" y="1421.7391304347827"/>
+            <point key="canvasLocation" x="2724" y="1421.7391304347827"/>
         </scene>
         <!--Compose Fact View Controller-->
         <scene sceneID="BNq-b5-JDp">
@@ -460,15 +467,9 @@
                                             </subviews>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <gestureRecognizers/>
-                                            <connections>
-                                                <outletCollection property="gestureRecognizers" destination="08b-1c-qiS" appends="YES" id="WHq-tq-GBD"/>
-                                            </connections>
                                         </view>
                                     </subviews>
                                     <gestureRecognizers/>
-                                    <connections>
-                                        <outletCollection property="gestureRecognizers" destination="08b-1c-qiS" appends="YES" id="oBR-ej-jCo"/>
-                                    </connections>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
@@ -476,7 +477,6 @@
                                     <outlet property="timeStamp" destination="HKw-I0-1fw" id="wny-hS-0qA"/>
                                     <outlet property="trayView" destination="GQG-fP-BUB" id="mAP-0o-oxF"/>
                                     <outlet property="usernameLabel" destination="KTA-YA-1iO" id="B5f-q8-Dby"/>
-                                    <outletCollection property="gestureRecognizers" destination="08b-1c-qiS" appends="YES" id="kcF-2c-6Ci"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -503,7 +503,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9l-Nf-70e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="08b-1c-qiS"/>
             </objects>
             <point key="canvasLocation" x="4799.1999999999998" y="652.62368815592208"/>
         </scene>
@@ -762,7 +761,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYp-D5-LlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6677.6000000000004" y="1492.8035982008996"/>
+            <point key="canvasLocation" x="7616.8000000000002" y="1492.8035982008996"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="030-c2-dv7">
@@ -802,7 +801,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reA-GR-srB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5738.3999999999996" y="1492.8035982008996"/>
+            <point key="canvasLocation" x="6677.6000000000004" y="1492.8035982008996"/>
         </scene>
         <!--Take Picture View Controller-->
         <scene sceneID="AHO-DH-Mih">
@@ -1026,6 +1025,24 @@
             </objects>
             <point key="canvasLocation" x="4776.8000000000002" y="-113.79310344827587"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CAH-Qt-VWk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1mG-Df-zhb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WFS-Ab-8U2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xZ3-nE-qAu" kind="relationship" relationship="rootViewController" id="69K-1h-mmS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7t-x5-f1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919.20000000000005" y="1427.136431784108"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="768" height="509"/>
@@ -1041,6 +1058,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="y9p-j1-K5Q"/>
         <segue reference="lGh-iv-qfl"/>
+        <segue reference="gDh-mQ-rng"/>
         <segue reference="YFo-Sp-NZk"/>
     </inferredMetricsTieBreakers>
 </document>

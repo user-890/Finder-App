@@ -16,6 +16,7 @@
 		F70E7EA81F228D1E0069001A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA71F228D1E0069001A /* User.swift */; };
 		F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA91F228FD80069001A /* TakePictureViewController.swift */; };
 		F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */; };
+		F724AA701F29458600B38BEF /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F724AA6F1F29458600B38BEF /* PasswordResetViewController.swift */; };
 		F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B091F25B971002BB458 /* PostFact.swift */; };
 		F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */; };
 		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
@@ -84,6 +85,7 @@
 		F70E7EA91F228FD80069001A /* TakePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		F70E7EAB1F22BE3E0069001A /* TextToSpeechV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextToSpeechV1.framework; path = Carthage/Build/iOS/TextToSpeechV1.framework; sourceTree = "<group>"; };
 		F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F724AA6F1F29458600B38BEF /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		F7551B091F25B971002BB458 /* PostFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFact.swift; sourceTree = "<group>"; };
 		F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeFactViewController.swift; sourceTree = "<group>"; };
 		F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFactTableViewCell.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				F7A030161F217CB700515762 /* RegisterViewController.swift */,
 				F70E7EA91F228FD80069001A /* TakePictureViewController.swift */,
 				F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */,
+				F724AA6F1F29458600B38BEF /* PasswordResetViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */,
+				F724AA701F29458600B38BEF /* PasswordResetViewController.swift in Sources */,
 				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
