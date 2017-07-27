@@ -700,6 +700,24 @@
             </objects>
             <point key="canvasLocation" x="2921" y="-130"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="MfM-QJ-IT2">
+            <objects>
+                <viewController id="foa-qB-cdX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VqW-mc-Ca8"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZa-FI-VZR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2s-yL-Kxu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmT-kh-7p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3903" y="-123"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="Yl0-H7-OMs">
             <objects>
@@ -713,7 +731,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-ec-bD9" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="43" y="150" width="289" height="365"/>
+                                <rect key="frame" x="32" y="124" width="310" height="412"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
@@ -1163,9 +1181,9 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YFo-Sp-NZk"/>
-        <segue reference="omV-ek-p9L"/>
         <segue reference="2jg-dB-vGk"/>
+        <segue reference="7HM-mA-rME"/>
+        <segue reference="omV-ek-p9L"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>

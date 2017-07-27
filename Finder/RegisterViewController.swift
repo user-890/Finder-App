@@ -92,6 +92,7 @@ class RegisterViewController: UIViewController {
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print("Yay, registered new user!")
+                //self.createFields(user: newUser)
                 self.performSegue(withIdentifier: "registerSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
@@ -99,6 +100,12 @@ class RegisterViewController: UIViewController {
         }
         
     }
+    
+    func createFields(user: PFUser) {
+        
+        //user.setObject(, forKey: "prof_pic")
+    }
+    
     
     @IBAction func pushKeyboardDown(_ sender: Any) {
         view.endEditing(true)
