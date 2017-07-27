@@ -26,7 +26,7 @@ func randomColor() -> UIColor {
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
     // Setup the font specific variables
-    let textColor: UIColor = UIColor.white
+    let textColor: UIColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
     let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 25)!
     let paraStyle = NSMutableParagraphStyle()
     
