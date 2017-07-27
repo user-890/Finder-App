@@ -44,6 +44,17 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         tableview.insertSubview(refreshControl, at: 0)
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // this method is an extension of the UIViewController
+        // so using self works as you might expect.
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        // Default is "true" so this sets it to false tells it to use
+        // the storyboard as you have it placed
+        // and not how it thinks it should place it.
+    }
 
 
 
