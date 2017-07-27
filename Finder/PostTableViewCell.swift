@@ -20,9 +20,13 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var trayView: UIView!
     
+    //Constraints
+    
+    
     
     var trayOriginalCenter: CGPoint!
     var startLocation: CGPoint!
+    var trayAtBottom = true
     
     
     var post: PFObject! {
@@ -58,47 +62,54 @@ class PostTableViewCell: UITableViewCell {
             
         }
         
-
+        
     }
     
-    override func awakeFromNib() {
+    override func awakeFromNib() {     //53 163 152 | 95 186 131
         super.awakeFromNib()
         // Initialization code
+        trayView.backgroundColor = UIColor(red: 53/255, green: 163/255, blue: 152/255, alpha: 0.87)
+        usernameLabel.textColor = UIColor.white
+        timeStamp.textColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
+        
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
+        trayView.center.y = (contentView.bounds.size.height) + 80
     }
     
-
-
+    
+    
     
     func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
         var translation = gestureRecognizer.translation(in: trayView)
         print("translation \(translation)")
-        
+        print("contentView \(contentView.center)")
+        let velocity = gestureRecognizer.velocity(in: trayView)
         if gestureRecognizer.state == UIGestureRecognizerState.began {
             trayOriginalCenter = trayView.center
             
         } else if gestureRecognizer.state == UIGestureRecognizerState.changed {
-            trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
-        } else if gestureRecognizer.state == UIGestureRecognizerState.ended {
-            let velocity = gestureRecognizer.velocity(in: trayView)
-            
-            let trayDownOffset: CGFloat = 160
-            let trayUp: CGPoint = trayView.center
-            let trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y /*+ trayDownOffset*/)
-            
-            
-            if velocity.y > 0 {
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.trayView.center = trayDown
-                })
+            if (trayAtBottom && velocity.y > 0) || (!trayAtBottom && velocity.y < 0){
+                //do nnothing
             } else {
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.trayView.center = trayUp
+                trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
+            }
+        } else if gestureRecognizer.state == UIGestureRecognizerState.ended {
+            if velocity.y < 0{ //swipe up
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.trayView.center = self.contentView.center
+                    self.trayAtBottom = false
+                })
+                
+            } else { //swipe down
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.trayView.center.y = (self.contentView.bounds.size.height) + 80
+                    self.trayAtBottom = true
                 })
             }
+            
         }
-
+        
     }
     
     
