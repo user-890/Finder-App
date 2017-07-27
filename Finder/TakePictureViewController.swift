@@ -32,8 +32,8 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     
     func noCamera(){
         let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
+            title: NSLocalizedString("NoCameraAlert", comment: "No camera available alert"),
+            message: NSLocalizedString("CameraAlertMessage", comment: "Message on camera availability"),
             preferredStyle: .alert)
         let okAction = UIAlertAction(
             title: "OK",
@@ -83,7 +83,8 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         popUpView.layer.cornerRadius = 5
         
         //loadWebView()
-    
+        
+       
         
     }
     

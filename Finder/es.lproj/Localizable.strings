@@ -14,5 +14,11 @@
 "userMessage" = "Ingrese su dirección de correo electrónico";
 "SuccessMessage" = "¡Éxito! ¡Consultar su correo electrónico!";
 "AlertMessage" = "No fue posible encontrarte!";
+"RegisFullName" = "Nombre completo";
+"RegisPassword" = "Contraseña";
+"RegisUsername" = "Nombre de usuario";
+"NoCameraAlert" = "No Camaras";
+"CameraAlertMessage" = "Lo sentimos, este dispositivo no tiene cámara";
+
 
 
