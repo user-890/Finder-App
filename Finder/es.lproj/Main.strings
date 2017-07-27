@@ -1,0 +1,111 @@
+
+/* Class = "UINavigationItem"; title = "Timeline"; ObjectID = "1Pa-5k-nDh"; */
+"1Pa-5k-nDh.title" = "Cronograma";
+
+/* Class = "UIButton"; normalTitle = "Bookmarks"; ObjectID = "2KH-F3-Myu"; */
+"2KH-F3-Myu.normalTitle" = "Marcadores";
+
+/* Class = "UILabel"; text = "35%"; ObjectID = "3OS-hg-bjJ"; */
+"3OS-hg-bjJ.text" = "35%";
+
+/* Class = "UIButton"; normalTitle = "Create An Account"; ObjectID = "3Yv-2V-uhx"; */
+"3Yv-2V-uhx.normalTitle" = "Crea una cuenta";
+
+/* Class = "UITextField"; placeholder = "Write A Fact! "; ObjectID = "467-hW-FMu"; */
+"467-hW-FMu.placeholder" = "¡Escriba un hecho!";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "4dN-Hl-876"; */
+"4dN-Hl-876.normalTitle" = "X";
+
+/* Class = "UIButton"; normalTitle = "Location"; ObjectID = "4jY-ca-29S"; */
+"4jY-ca-29S.normalTitle" = "Ubicación";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "5i9-eC-aUH"; */
+"5i9-eC-aUH.placeholder" = "Nombre de usuario";
+
+/* Class = "UIButton"; normalTitle = "Image Recognition"; ObjectID = "A4k-m8-7ME"; */
+"A4k-m8-7ME.normalTitle" = "Reconocimiento de imagen";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Atr-nQ-F0I"; */
+"Atr-nQ-F0I.normalTitle" = "Iniciar sesión";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "Cgt-GG-EbY"; */
+"Cgt-GG-EbY.normalTitle" = "Ajustes";
+
+/* Class = "UIBarButtonItem"; title = "Library"; ObjectID = "CvF-2O-3gD"; */
+"CvF-2O-3gD.title" = "Biblioteca";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "E3T-DD-OJt"; */
+"E3T-DD-OJt.placeholder" = "Nombre completo";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "HU0-N1-Hmr"; */
+"HU0-N1-Hmr.normalTitle" = "¿Se te olvidó tu contraseña?";
+
+/* Class = "UILabel"; text = "Facebook Interns are GR8T!"; ObjectID = "KD7-ny-2vW"; */
+"KD7-ny-2vW.text" = "¡Los pasantes de Facebook son GR8T!";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "KRB-J2-JdL"; */
+"KRB-J2-JdL.normalTitle" = "Enviar";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Me0-Sq-6Dd"; */
+"Me0-Sq-6Dd.placeholder" = "Nombre de usuario";
+
+/* Class = "UIButton"; normalTitle = "Text Recognition"; ObjectID = "P0c-sb-cCg"; */
+"P0c-sb-cCg.normalTitle" = "Reconocimiento de texto";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "QbK-Rv-tPc"; */
+"QbK-Rv-tPc.title" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "Sign Up With Touch ID"; ObjectID = "cOe-iF-nV4"; */
+"cOe-iF-nV4.normalTitle" = "Regístrate con Touch ID";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "cs2-Fg-jZi"; */
+"cs2-Fg-jZi.placeholder" = "Contraseña";
+
+/* Class = "UILabel"; text = "Tyler Holloway"; ObjectID = "dSz-pF-82K"; */
+"dSz-pF-82K.text" = "Tyler Holloway";
+
+/* Class = "UILabel"; text = "143 Kennedy Drive, Orange Connecticut, 06477, United States "; ObjectID = "dgZ-KY-2yf"; */
+"dgZ-KY-2yf.text" = "143 Kennedy Drive, Orange Connecticut, 06477, United States ";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "edR-ee-o7d"; */
+"edR-ee-o7d.title" = "ít.";
+
+/* Class = "UINavigationItem"; title = "Password Reset"; ObjectID = "g7g-WF-skR"; */
+"g7g-WF-skR.title" = "Restablecimiento de contraseña";
+
+/* Class = "UIButton"; normalTitle = "Logout"; ObjectID = "i2M-Fa-Y4i"; */
+"i2M-Fa-Y4i.normalTitle" = "Cerrar sesión";
+
+/* Class = "UILabel"; text = "BuzzFeed"; ObjectID = "j1I-Lc-pLr"; */
+"j1I-Lc-pLr.text" = "BuzzFeed";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "j8z-Ya-FlK"; */
+"j8z-Ya-FlK.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "65%"; ObjectID = "lgl-bC-QQj"; */
+"lgl-bC-QQj.text" = "65%";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "nlj-Gu-V82"; */
+"nlj-Gu-V82.normalTitle" = "Registro";
+
+/* Class = "UILabel"; text = "July 29"; ObjectID = "pLe-tM-6RV"; */
+"pLe-tM-6RV.text" = "29 de julio";
+
+/* Class = "UILabel"; text = "This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact! This is a fact!"; ObjectID = "phy-Ag-lDR"; */
+"phy-Ag-lDR.text" = "¡Esto es un hecho! ¡Esto es un hecho! ¡Esto es un hecho! ¡Esto es un hecho!";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "plx-qf-Lak"; */
+"plx-qf-Lak.placeholder" = "Dirección de correo electrónico";
+
+/* Class = "UIButton"; normalTitle = "Already a Member?"; ObjectID = "qLq-hn-U1t"; */
+"qLq-hn-U1t.normalTitle" = "¿Ya eres usuario?";
+
+/* Class = "UILabel"; text = "Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!"; ObjectID = "t6l-iG-nhJ"; */
+"t6l-iG-nhJ.text" = "¡Los pasantes de Facebook son GR8T! ¡Los pasantes de Facebook son GR8T! ¡Los pasantes de Facebook son GR8T!";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "v2p-4d-GP6"; */
+"v2p-4d-GP6.placeholder" = "Contraseña";
+
+/* Class = "UILabel"; text = "21h"; ObjectID = "xKE-DA-fEc"; */
+"xKE-DA-fEc.text" = "21h";

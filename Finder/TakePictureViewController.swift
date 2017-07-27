@@ -120,7 +120,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             let className = self.navigationItem.title
                             let utterance = AVSpeechUtterance(string: className!)
                             
-                            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                            utterance.voice = AVSpeechSynthesisVoice(language: "es-ES")
                             
                             let synthesizer = AVSpeechSynthesizer()
                             synthesizer.speak(utterance)
