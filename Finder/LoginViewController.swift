@@ -19,6 +19,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var ForgotPasswordButton: UIButton!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     
     
@@ -38,9 +40,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func updateUI() {
         // Make placeholder text white
-        usernameLabel.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        usernameLabel.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Username", comment: "This is the username"), attributes: [NSForegroundColorAttributeName: UIColor.white])
         
-        passwordLabel.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        passwordLabel.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Password", comment: "This is the password"), attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        loginButton.setTitle(NSLocalizedString("Login", comment: "Login button"), for: .normal)
+        
+        createAccountButton.setTitle(NSLocalizedString("CreateAccount", comment: "Create account button title"), for: .normal)
+        
+        ForgotPasswordButton.setTitle(NSLocalizedString("ForgotPassword", comment: "Forgot password button title"), for: .normal)
         
         
         // make corners round
