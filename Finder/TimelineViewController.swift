@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 
-class TimelineViewController: UITableViewController {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     // MARK: Properties
     @IBOutlet weak var tableview: UITableView!
@@ -79,7 +79,7 @@ class TimelineViewController: UITableViewController {
     var isMoreDataLoading = false
     
     // Infinite Scroll
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if (!isMoreDataLoading) {
             
@@ -111,21 +111,21 @@ class TimelineViewController: UITableViewController {
     // MARK: - Table view data source
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arr.count /*+ post!.count*/
     }
     
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row < post!.count && indexPath.row % 3 == 0{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
