@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461F5DEB1F2A61AE00E9EF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461F5DED1F2A61AE00E9EF76 /* Main.storyboard */; };
 		491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EAA1C1F1E74ED00194503 /* Fact.swift */; };
 		49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35851F17F7B2006E88B2 /* HomeViewController.swift */; };
 		49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BD35871F17FC29006E88B2 /* OverlayView.xib */; };
@@ -27,7 +28,6 @@
 		F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300A1F216F3300515762 /* SWRevealViewController.m */; };
 		F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300B1F216F3300515762 /* UIImage-and-gif.swift */; };
 		F7A030101F216F6600515762 /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7A0300F1F216F6600515762 /* login.gif */; };
-		F7A030131F216F9600515762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A030121F216F9600515762 /* Main.storyboard */; };
 		F7A030151F21722400515762 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A030141F21722400515762 /* FullArticleViewController.swift */; };
 		F7A030171F217CB700515762 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A030161F217CB700515762 /* RegisterViewController.swift */; };
 		F7A0301E1F21BB0F00515762 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */; };
@@ -75,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		461F5DEC1F2A61AE00E9EF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		461F5DEF1F2A61B200E9EF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		491EAA1C1F1E74ED00194503 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		49BD35851F17F7B2006E88B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49BD35871F17FC29006E88B2 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 		F7A0300A1F216F3300515762 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F7A0300B1F216F3300515762 /* UIImage-and-gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage-and-gif.swift"; sourceTree = "<group>"; };
 		F7A0300F1F216F6600515762 /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
-		F7A030121F216F9600515762 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F7A030141F21722400515762 /* FullArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		F7A030161F217CB700515762 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = "<group>"; };
@@ -245,7 +246,7 @@
 				F7CF696F1F155678009FDF40 /* View Controllers */,
 				F7CF69491F154333009FDF40 /* AppDelegate.swift */,
 				F7CF694B1F154333009FDF40 /* ViewController.swift */,
-				F7A030121F216F9600515762 /* Main.storyboard */,
+				461F5DED1F2A61AE00E9EF76 /* Main.storyboard */,
 				F7CF69501F154333009FDF40 /* Assets.xcassets */,
 				F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */,
 				F7CF69551F154333009FDF40 /* Info.plist */,
@@ -396,7 +397,7 @@
 				49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */,
 				F7CF69541F154333009FDF40 /* LaunchScreen.storyboard in Resources */,
 				F7CF69511F154333009FDF40 /* Assets.xcassets in Resources */,
-				F7A030131F216F9600515762 /* Main.storyboard in Resources */,
+				461F5DEB1F2A61AE00E9EF76 /* Main.storyboard in Resources */,
 				F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */,
 				F7A030101F216F6600515762 /* login.gif in Resources */,
 			);
@@ -571,6 +572,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		461F5DED1F2A61AE00E9EF76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				461F5DEC1F2A61AE00E9EF76 /* Base */,
+				461F5DEF1F2A61B200E9EF76 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		F7CF69521F154333009FDF40 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

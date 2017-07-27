@@ -17,7 +17,7 @@
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>7</integer>
 		</dict>
 		<key>FoodFactsSDK.xcscheme</key>
 		<dict>
@@ -97,6 +97,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0E7E25FB78E704132E28CC0DD8FDB2F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -177,6 +182,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BF545EA7AC68A207267DCB173BF67C8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
@@ -197,6 +207,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D0E6C615707102ED919C1DFBA77C3B33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D9851E3297070A519E445AC07C348087</key>
 		<dict>
 			<key>primary</key>
@@ -213,6 +228,11 @@
 			<true/>
 		</dict>
 		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
