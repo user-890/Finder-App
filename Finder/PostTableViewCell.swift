@@ -68,8 +68,8 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {     //53 163 152 | 95 186 131
         super.awakeFromNib()
         // Initialization code
-        trayView.backgroundColor = UIColor(red: 53/255, green: 163/255, blue: 152/255, alpha: 0.87)
-        usernameLabel.textColor = UIColor.white
+        trayView.backgroundColor = UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 0.87)
+        usernameLabel.textColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
         timeStamp.textColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
         
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
