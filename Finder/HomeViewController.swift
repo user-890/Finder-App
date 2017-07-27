@@ -26,8 +26,8 @@ func randomColor() -> UIColor {
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
     // Setup the font specific variables
-    let textColor: UIColor = UIColor.white
-    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 40)!
+    let textColor: UIColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
+    let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 25)!
     let paraStyle = NSMutableParagraphStyle()
     
     //Setup the image context using the passed image.
@@ -151,7 +151,7 @@ class HomeViewController: UIViewController {
         var array: [UIImage] = []
         print(facts.count)
         for index in 0..<facts.count {
-            let base = UIImage(named: "Card_like")
+            let base = UIImage(named: "mockcard")
             let point = CGPoint(x: 0, y: 0)
             let curFact: PFObject = facts[index]
             let str = curFact["fact"] as? NSString
