@@ -11,3 +11,8 @@
 "Login" = "Login";
 "CreateAccount" = "Create An Account";
 "ForgotPassword" = "Forgot Password?";
+"userMessage" = "Please type in your email address";
+"SuccessMessage" = "Success! Check your email!";
+"AlertMessage" = "Was Unable to Find You!";
+
+
