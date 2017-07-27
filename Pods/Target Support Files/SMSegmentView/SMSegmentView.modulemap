@@ -1,6 +1,0 @@
-framework module SMSegmentView {
-  umbrella header "SMSegmentView-umbrella.h"
-
-  export *
-  module * { export * }
-}

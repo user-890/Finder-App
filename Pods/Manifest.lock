@@ -17,7 +17,6 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - SMSegmentView (1.1)
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
@@ -27,7 +26,6 @@ DEPENDENCIES:
   - Parse
   - ParseUI
   - SDWebImage
-  - SMSegmentView (~> 1.1)
   - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -41,9 +39,8 @@ SPEC CHECKSUMS:
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  SMSegmentView: a99862f36ea73478558ae665c209cb80c0d4f059
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: d2662dfc9357084128edf5080d8a6c2d80aeaffd
+PODFILE CHECKSUM: f540f02cfb004b34dfe6caee396667768bf89e97
 
 COCOAPODS: 1.2.1

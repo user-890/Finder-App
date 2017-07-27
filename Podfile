@@ -10,7 +10,7 @@ target 'Finder' do
    pod 'Parse'
    pod "KRProgressHUD"
    pod 'ParseUI'
-   pod 'SMSegmentView', '~> 1.1'
+
 
   # Pods for Finder
    pod 'AlamofireImage', '~> 3.1'
