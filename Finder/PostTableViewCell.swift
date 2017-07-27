@@ -82,8 +82,8 @@ class PostTableViewCell: UITableViewCell {
     
     func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
         var translation = gestureRecognizer.translation(in: trayView)
-        print("translation \(translation)")
-        print("contentView \(contentView.center)")
+        //print("translation \(translation)")
+        //print("contentView \(contentView.center)")
         let velocity = gestureRecognizer.velocity(in: trayView)
         if gestureRecognizer.state == UIGestureRecognizerState.began {
             trayOriginalCenter = trayView.center
