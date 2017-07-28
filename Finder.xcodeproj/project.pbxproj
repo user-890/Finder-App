@@ -13,6 +13,7 @@
 		49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35851F17F7B2006E88B2 /* HomeViewController.swift */; };
 		49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BD35871F17FC29006E88B2 /* OverlayView.xib */; };
 		49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */; };
+		49C57DDB1F2AAE1100272511 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */; };
 		9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */; };
 		B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */; };
 		F70E7EA81F228D1E0069001A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA71F228D1E0069001A /* User.swift */; };
@@ -42,7 +43,6 @@
 		F7CF695F1F154333009FDF40 /* FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF695E1F154333009FDF40 /* FinderTests.swift */; };
 		F7CF696A1F154D8A009FDF40 /* Andale-Mono in Resources */ = {isa = PBXBuildFile; fileRef = F7CF69691F154D8A009FDF40 /* Andale-Mono */; };
 		F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69701F155686009FDF40 /* LoginViewController.swift */; };
-		F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69721F155691009FDF40 /* ProfileViewController.swift */; };
 		F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69741F15569F009FDF40 /* TimelineViewController.swift */; };
 		F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */; };
 		F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */; };
@@ -86,6 +86,7 @@
 		49BD35851F17F7B2006E88B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49BD35871F17FC29006E88B2 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
 		6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +126,6 @@
 		F7CF69601F154333009FDF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF69691F154D8A009FDF40 /* Andale-Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Andale-Mono"; sourceTree = "<group>"; };
 		F7CF69701F155686009FDF40 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F7CF69721F155691009FDF40 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7CF69741F15569F009FDF40 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CF69701F155686009FDF40 /* LoginViewController.swift */,
-				F7CF69721F155691009FDF40 /* ProfileViewController.swift */,
+				49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */,
 				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
 				F7A030141F21722400515762 /* FullArticleViewController.swift */,
 				F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */,
@@ -537,7 +537,6 @@
 				F7A030151F21722400515762 /* FullArticleViewController.swift in Sources */,
 				F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
-				F7CF69731F155691009FDF40 /* ProfileViewController.swift in Sources */,
 				F724AA751F2965C400B38BEF /* ImageRecognitionTableViewCell.swift in Sources */,
 				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
@@ -556,6 +555,7 @@
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
 				F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
+				49C57DDB1F2AAE1100272511 /* ProfileViewController.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 				F724AA731F29647100B38BEF /* MenuViewController.swift in Sources */,
 			);
