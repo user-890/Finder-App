@@ -102,8 +102,14 @@ class RegisterViewController: UIViewController {
     }
     
     func createFields(user: PFUser) {
-        
-        //user.setObject(, forKey: "prof_pic")
+        let defaultIcon = Fact.getPFFileFromImage(image: UIImage(named: "Image-6"))
+        let defaultBookmarks: [PFObject] = []
+        let defaultFollows: [PFUser] = []
+        user.setObject(defaultIcon, forKey: "prof_pic")
+        user.setObject(defaultBookmarks, forKey: "bookmarks")
+        user.setObject(defaultFollows, forKey: "followers")
+        user.setObject(defaultFollows, forKey: "following")
+        user.setObject(defaultBookmarks, forKey: "timeline")
     }
     
     

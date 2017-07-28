@@ -236,7 +236,11 @@ extension HomeViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        print(direction)
+        if direction == .right {
+            print("works")
+            //insert post to array
+            
+        }
         print(facts.count)
         let fact: PFObject = facts[index]
         print(fact["fact"])

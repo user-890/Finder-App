@@ -249,7 +249,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 300
+            //revealViewController().rightViewRevealWidth = 300
             
             
 //            mapButton.target = revealViewController()

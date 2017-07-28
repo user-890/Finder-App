@@ -1,30 +1,39 @@
 //
-//  ProfileViewController.swift
-//  
+//  ProfViewController.swift
+//  Finder
 //
-//  Created by Claire Chen on 7/27/17.
-//
+//  Created by Claire Chen on 7/28/17.
+//  Copyright © 2017 Finder. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class ProfileViewController: UIViewController {
+class ProfViewController: UIViewController {
+    
+    //Variables
+    var user: PFUser?
     
     //Outlets
+    @IBOutlet var userLabel: UILabel!
+    @IBOutlet var segControl: UISegmentedControl!
+    @IBOutlet var tableView: UITableView!
     
     
+    @IBAction func onDone(_ sender: Any) {
+        self.dismiss(animated: true) { 
+            //eyyy close
+        }
+    }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userLabel.text = user?.username
+        //what shows up
+        if (user != PFUser.current()) {
+            segControl.isHidden = true
+        }
         // Do any additional setup after loading the view.
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        //let curUser = PFUser.current()
-        //usernameLabel.text = curUser?.username
     }
 
     override func didReceiveMemoryWarning() {
