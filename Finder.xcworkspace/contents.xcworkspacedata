@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ProfileViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Finder.xcodeproj">
    </FileRef>
    <FileRef
