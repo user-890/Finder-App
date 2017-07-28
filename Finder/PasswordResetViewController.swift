@@ -33,7 +33,7 @@ class PasswordResetViewController: UIViewController {
         
         if (emailAddress?.isEmpty)! {
             // Display warning message
-            let userMessage: String = "Please type in your email address"
+            let userMessage: String = NSLocalizedString("userMessage", comment: "This is a message") //"Please type in your email address"
             return
         } else {
             resetPassword(email: emailAddress!)
@@ -51,7 +51,7 @@ class PasswordResetViewController: UIViewController {
         
         PFUser.requestPasswordResetForEmail(inBackground: emailAddress!) { (success, error) -> Void in
             if (error == nil) {
-                let success = UIAlertController(title: "Success", message: "Success! Check your email!", preferredStyle: .alert)
+                let success = UIAlertController(title: "Success", message: NSLocalizedString("SuccessMessage", comment: "Message when password reset successful"), preferredStyle: .alert)
                 let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 success.addAction(okButton)
                 self.present(success, animated: false, completion: nil)
@@ -59,7 +59,7 @@ class PasswordResetViewController: UIViewController {
                 
                 
             }else {
-                let alert = UIAlertController(title: "Alert", message: "Was Unable to Find You!", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Alert", message: NSLocalizedString("AlertMessage", comment: "Alert user on fail"), preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

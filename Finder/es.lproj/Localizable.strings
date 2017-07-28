@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Finder
+
+  Created by Malvern Madondo on 7/27/17.
+  Copyright © 2017 Finder. All rights reserved.
+*/
+
+"Username" = "Nombre de usuario";
+"Password" = "Contraseña";
+"Login" = "Iniciar sesión";
+"CreateAccount" = "Crea una cuenta";
+"ForgotPassword" = "¿Se te olvidó tu contraseña?";
+"userMessage" = "Ingrese su dirección de correo electrónico";
+"SuccessMessage" = "¡Éxito! ¡Consultar su correo electrónico!";
+"AlertMessage" = "No fue posible encontrarte!";
+"RegisFullName" = "Nombre completo";
+"RegisPassword" = "Contraseña";
+"RegisUsername" = "Nombre de usuario";
+"NoCameraAlert" = "No Camaras";
+"CameraAlertMessage" = "Lo sentimos, este dispositivo no tiene cámara";
+
+
+

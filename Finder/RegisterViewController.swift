@@ -41,13 +41,13 @@ class RegisterViewController: UIViewController {
     
     func updateUI() {
         // Make Placeholder white
-        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("RegisUsername", comment: "Username for registration"), attributes: [NSForegroundColorAttributeName: UIColor.white])
         
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("RegisPassword", comment: "Password for registration"), attributes: [NSForegroundColorAttributeName: UIColor.white])
 
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.white])
         
-        fullNameTextField.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: [NSForegroundColorAttributeName: UIColor.white])
+        fullNameTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("RegisFullName", comment: "Fullname registration"), attributes: [NSForegroundColorAttributeName: UIColor.white])
 
         
         // make corners round

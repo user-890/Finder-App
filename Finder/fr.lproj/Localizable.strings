@@ -11,3 +11,12 @@
 "Login" = "S'identifier";
 "CreateAccount" = "Créer un compte";
 "ForgotPassword" = "Mot de passe oublié?";
+"userMessage" = "Tapez votre adresse e-mail";
+"SuccessMessage" = "Succès! Vérifiez votre email!";
+"AlertMessage" = "Impossible de vous trouver!";
+"RegisFullName" = "Nom complet";
+"RegisPassword" = "Mot de passe";
+"RegisUsername" = "Nom d'utilisateur";
+"NoCameraAlert" = "Pas d'appareil photo";
+"CameraAlertMessage" = "Désolé, cet appareil n'a pas d'appareil photo";
+
