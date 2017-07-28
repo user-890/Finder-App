@@ -83,9 +83,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         popUpView.layer.cornerRadius = 5
         
         //loadWebView()
-        
-       
-        
+
     }
     
    
@@ -120,8 +118,10 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             //AVSpeechSynthesizer implementation
                             let className = self.navigationItem.title
                             let utterance = AVSpeechUtterance(string: className!)
+    
+                            let speechLang = Bundle.main.preferredLocalizations.first! //get current language locale
                             
-                            utterance.voice = AVSpeechSynthesisVoice(language: "es-ES")
+                            utterance.voice = AVSpeechSynthesisVoice(language: speechLang)
                             
                             let synthesizer = AVSpeechSynthesizer()
                             synthesizer.speak(utterance)
