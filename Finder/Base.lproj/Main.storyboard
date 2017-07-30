@@ -540,7 +540,7 @@
             </objects>
             <point key="canvasLocation" x="1033" y="-878"/>
         </scene>
-        <!--User List View Controller-->
+        <!--Users-->
         <scene sceneID="Xp2-uO-2Bo">
             <objects>
                 <viewController id="aQX-6g-C7G" customClass="UserListViewController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
@@ -570,7 +570,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="j69-Ht-ZxW"/>
+                    <navigationItem key="navigationItem" title="Users" id="j69-Ht-ZxW">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="JYb-51-kel">
+                            <connections>
+                                <action selector="donePressed:" destination="aQX-6g-C7G" id="at6-6c-vQN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myTable" destination="ZJu-4h-ETR" id="cXg-0s-hTV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upD-g0-YfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

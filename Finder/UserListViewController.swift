@@ -8,7 +8,11 @@
 
 import UIKit
 
+
 class UserListViewController: UIViewController {
+    
+    // MARK: Properties
+    @IBOutlet weak var myTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,12 @@ class UserListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func donePressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
+    
     /*
     // MARK: - Navigation
 
