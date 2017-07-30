@@ -14,6 +14,8 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: Properties
     @IBOutlet weak var myTable: UITableView!
+ 
+    
     
     // Empty Array of Parse users
     var users = [PFUser]()
@@ -45,6 +47,13 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         let userObject: PFUser = users[indexPath.row]
         userCell.textLabel!.text = userObject.object(forKey: "username") as? String
         
+        //let profilePictureObject = PFUser.current()?.object(forKey: "profile_picture") as! PFFile
+        if let profPic = PFUser.current()?["profile_picture"] as? PFFile {
+            profPic.getDataInBackground { (imageData: Data!, error: Error?) in
+                userCell.imageView?.image = UIImage(data:imageData)
+            }
+    
+        }
         return userCell
     }
     
