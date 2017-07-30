@@ -104,6 +104,15 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         newUser.password = passwordTextField.text
         newUser.email = emailTextField.text
         
+        // PROFILE IMAGE
+        let profileImageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
+        
+        if profileImageData != nil {
+            // Make sure have got all of the information to be send to Parse Cloud services
+            let profileImageFile = PFFile(data: profileImageData!)
+            newUser.setObject(profileImageFile, forKey: "profile_picture")
+        }
+        
         // Call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
@@ -187,6 +196,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         authenticateUser()
         
     }
+    
+
     
 
 
