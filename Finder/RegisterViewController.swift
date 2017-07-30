@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import LocalAuthentication
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,11 +18,27 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var profilePhotoImageView: UIImageView!
+    
     
     @IBAction func onBack(_ sender: Any) {
         self.dismiss(animated: true) { 
             //do nothing 
         }
+    }
+    
+    @IBAction func selectProfilePhoto(_ sender: Any) {
+        var myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        self.present(myPickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     

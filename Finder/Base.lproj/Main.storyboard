@@ -226,6 +226,21 @@
                                                 <action selector="onBack:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="7Kt-qR-yqE"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5s-cd-d0x">
+                                            <rect key="frame" x="116" y="28" width="143" height="143"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lN-2V-3pO">
+                                            <rect key="frame" x="75" y="170" width="225" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <state key="normal" title="Select Profile Image">
+                                                <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="selectProfilePhoto:" destination="OMC-Pi-WWN" eventType="touchUpInside" id="tc5-4X-ExZ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <gestureRecognizers/>
                                     <connections>
@@ -279,6 +294,7 @@
                         <outlet property="fullNameTextField" destination="E3T-DD-OJt" id="xw3-VD-AvH"/>
                         <outlet property="gifView" destination="sV3-n0-ZdQ" id="Xtm-cB-ipD"/>
                         <outlet property="passwordTextField" destination="cs2-Fg-jZi" id="3EB-y4-P5b"/>
+                        <outlet property="profilePhotoImageView" destination="U5s-cd-d0x" id="YZX-JM-aWQ"/>
                         <outlet property="registerButton" destination="nlj-Gu-V82" id="DN2-8c-BUs"/>
                         <outlet property="usernameTextField" destination="5i9-eC-aUH" id="n8V-4N-6fZ"/>
                         <segue destination="ttE-O4-RQ1" kind="presentation" identifier="registerSegue" id="lGh-iv-qfl"/>
@@ -1173,7 +1189,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="lGh-iv-qfl"/>
         <segue reference="gDh-mQ-rng"/>
-        <segue reference="7HM-mA-rME"/>
+        <segue reference="YFo-Sp-NZk"/>
         <segue reference="aHs-PI-U1q"/>
     </inferredMetricsTieBreakers>
 </document>
