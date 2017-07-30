@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import Parse
 
 
-class UserListViewController: UIViewController {
+class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Properties
     @IBOutlet weak var myTable: UITableView!
+    
+    // Empty Array of Parse users
+    var users = [PFUser]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadUsers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,16 +33,38 @@ class UserListViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
     }
-    */
+    
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let userCell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
+        
+        let userObject: PFUser = users[indexPath.row]
+        userCell.textLabel!.text = userObject.object(forKey: "username") as? String
+        
+        return userCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Tapped row: \(indexPath.row)")
+    }
+    
+    
+    
+    func loadUsers() {
+        let userQuery = PFQuery(className: "_User")
+        userQuery.findObjectsInBackground { (result: [PFObject]?, error) in
+            
+            if let foundUsers = result as? [PFUser] {
+                self.users = foundUsers
+                self.myTable.reloadData()
+            }
+        }
+    }
+    
+    
 
 }
