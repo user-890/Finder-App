@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 
-class ProfViewController: UIViewController {
+class ProfViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Variables
     var user: PFUser?
+    var timelinePosts: [PFObject]?
     
     //Outlets
     @IBOutlet var userLabel: UILabel!
@@ -28,12 +29,36 @@ class ProfViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //tableView
+        tableView.delegate = self
+        tableView.dataSource = self
+        refresh()
+        
         userLabel.text = user?.username
         //what shows up
         if (user != PFUser.current()) {
             segControl.isHidden = true
         }
         // Do any additional setup after loading the view.
+    }
+    
+    func refresh(){
+        let timeline: [PFObject] = user?.object(forKey: "timeline") as! [PFObject]
+        timelinePosts = timeline
+        //same for bookmarks
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return timelinePosts?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profCell", for: indexPath) as! ProfCell
+        let timelinePost = timelinePosts![indexPath.row]
+        cell.post = timelinePost as PFObject
+        //do samething for bookmark
+        return cell
     }
 
     override func didReceiveMemoryWarning() {

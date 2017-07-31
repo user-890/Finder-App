@@ -12,6 +12,7 @@
 		491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EAA1C1F1E74ED00194503 /* Fact.swift */; };
 		494916F41F2BAF3B006905E7 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494916F31F2BAF3B006905E7 /* SideMenuViewController.swift */; };
 		494916F81F2BB023006905E7 /* ProfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494916F71F2BB023006905E7 /* ProfViewController.swift */; };
+		495616781F2FB8CC009A3E07 /* ProfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495616771F2FB8CC009A3E07 /* ProfCell.swift */; };
 		49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35851F17F7B2006E88B2 /* HomeViewController.swift */; };
 		49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BD35871F17FC29006E88B2 /* OverlayView.xib */; };
 		49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */; };
@@ -89,6 +90,7 @@
 		491EAA1C1F1E74ED00194503 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		494916F31F2BAF3B006905E7 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		494916F71F2BB023006905E7 /* ProfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfViewController.swift; sourceTree = "<group>"; };
+		495616771F2FB8CC009A3E07 /* ProfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfCell.swift; sourceTree = "<group>"; };
 		49BD35851F17F7B2006E88B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49BD35871F17FC29006E88B2 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */,
 				F724AA741F2965C400B38BEF /* ImageRecognitionTableViewCell.swift */,
 				F724AA761F2965D800B38BEF /* TextRecognitionTableViewCell.swift */,
+				495616771F2FB8CC009A3E07 /* ProfCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
 				F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
+				495616781F2FB8CC009A3E07 /* ProfCell.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 				F724AA731F29647100B38BEF /* MenuViewController.swift in Sources */,
 			);
