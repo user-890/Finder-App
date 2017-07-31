@@ -20,5 +20,7 @@
 "NoCameraAlert" = "No Camaras";
 "CameraAlertMessage" = "Lo sentimos, este dispositivo no tiene cámara";
 "SelectProfPicTitle" = "Seleccionar imagen de perfil";
-
-
+"loginAlertTitle" = "Entrada inválida";
+"signInAlertTitle" = "Credenciales incorrectas";
+"loginAlertMessage" = "Por favor ingrese su nombre de usuario y contraseña";
+"signInAlertMessage" = "Por favor, introduzca el nombre de usuario y contraseña correctos";

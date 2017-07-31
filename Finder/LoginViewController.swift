@@ -13,6 +13,9 @@ import Parse
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    let loginAlertController = UIAlertController(title: NSLocalizedString("loginAlertTitle", comment: "Title of the alert"), message: NSLocalizedString("loginAlertMessage", comment: "Alert message displayed"), preferredStyle: .alert)
+    
+    let signInErrorAlert = UIAlertController(title: NSLocalizedString("signInAlertTitle", comment: "Sign in error alert"), message: NSLocalizedString("signInAlertMessage", comment: "Alert message displayed"), preferredStyle: .alert)
     
     // MARK: Properties
     @IBOutlet weak var gifView: UIImageView!
@@ -21,9 +24,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var ForgotPasswordButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
-    
-    
-    
     
     
     override func viewDidLoad() {
@@ -70,12 +70,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // Login User with Parse Authentication
     @IBAction func pressLogin(_ sender: Any) {
         
-        PFUser.logInWithUsername(inBackground: usernameLabel.text!, password: passwordLabel.text!) { (user: PFUser?, error: Error?) in
-            if user != nil {
-                print("You're logged in!")
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            }
-        }
+            //check if user entered password and alert
+            let username = self.usernameLabel.text ?? ""
+            let password = self.passwordLabel.text ?? ""
+            
+            if username.isEmpty || password.isEmpty{
+                //alert user
+                self.present(self.signInErrorAlert, animated: true)
+                
+                // create an OK action
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    // handle response here.
+                    self.usernameLabel.text = nil
+                    self.passwordLabel.text = nil
+                }
+                
+                // add the OK action to the alert controller
+                self.signInErrorAlert.addAction(OKAction)
+                
+            } else {
+                
+                PFUser.logInWithUsername(inBackground: usernameLabel.text!, password: passwordLabel.text!) { (user: PFUser?, error: Error?) in
+                    if let error = error{
+                        
+                        self.present(self.loginAlertController, animated: true)
+                        print("User log in failed: \(error.localizedDescription)")
+                    } else{
+                        if user != nil {
+                            print("You're logged in!")
+                            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        }
+                    }
+                }
+                
+            } //end of else
+        
         
     }
     

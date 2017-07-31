@@ -20,3 +20,7 @@
 "NoCameraAlert" = "No Camera";
 "CameraAlertMessage" = "Sorry, this device has no camera";
 "SelectProfPicTitle" = "Select Profile Picture";
+"loginAlertTitle" = "Invalid Input";
+"signInAlertTitle" = "Wrong credentials";
+"loginAlertMessage" = "Please enter username AND password";
+"signInAlertMessage" = "Please enter correct username/password";
