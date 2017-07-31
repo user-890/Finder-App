@@ -155,7 +155,9 @@ class HomeViewController: UIViewController {
             let point = CGPoint(x: 0, y: 0)
             let curFact: PFObject = facts[index]
             let str = curFact["fact"] as? NSString
+
             print("\(str) \(index)")
+            
             array.append(textToImage(drawText: str!, inImage: base!, atPoint: point))
         }
         return array

@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import LocalAuthentication
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,11 +18,28 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var profilePhotoImageView: UIImageView!
+    @IBOutlet weak var selectProfilePicBtnTitle: UIButton!
+    
     
     @IBAction func onBack(_ sender: Any) {
         self.dismiss(animated: true) { 
             //do nothing 
         }
+    }
+    
+    @IBAction func selectProfilePhoto(_ sender: Any) {
+        var myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        self.present(myPickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -48,6 +65,8 @@ class RegisterViewController: UIViewController {
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.white])
         
         fullNameTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("RegisFullName", comment: "Fullname registration"), attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        selectProfilePicBtnTitle.setTitle(NSLocalizedString("SelectProfPicTitle", comment: "Title of button to select profile picture"), for: .normal)
 
         
         // make corners round
@@ -87,6 +106,15 @@ class RegisterViewController: UIViewController {
         newUser.username = usernameTextField.text
         newUser.password = passwordTextField.text
         newUser.email = emailTextField.text
+        
+        // PROFILE IMAGE
+        let profileImageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
+        
+        if profileImageData != nil {
+            // Make sure have got all of the information to be send to Parse Cloud services
+            let profileImageFile = PFFile(data: profileImageData!)
+            newUser.setObject(profileImageFile, forKey: "profile_picture")
+        }
         
         // Call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
@@ -182,6 +210,8 @@ class RegisterViewController: UIViewController {
         authenticateUser()
         
     }
+    
+
     
 
 
