@@ -27,8 +27,6 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     let version = "2017-7-20"
     
 
-
-
     
     func noCamera(){
         let alertVC = UIAlertController(
@@ -117,6 +115,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             
                             //AVSpeechSynthesizer implementation
                             let className = self.navigationItem.title
+                            
                             let utterance = AVSpeechUtterance(string: className!)
     
                             let speechLang = Bundle.main.preferredLocalizations.first! //get current language locale

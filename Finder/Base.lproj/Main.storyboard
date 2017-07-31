@@ -900,7 +900,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vxd-Ov-cTs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9yY-uQ-UcA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uD3-9l-hdW">
@@ -1203,7 +1203,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="lGh-iv-qfl"/>
         <segue reference="gDh-mQ-rng"/>
-        <segue reference="7HM-mA-rME"/>
-        <segue reference="aHs-PI-U1q"/>
+        <segue reference="YFo-Sp-NZk"/>
+        <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>
