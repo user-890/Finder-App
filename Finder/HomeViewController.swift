@@ -238,10 +238,22 @@ extension HomeViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        print(direction)
-        print(facts.count)
         let fact: PFObject = facts[index]
-        print(fact["fact"])
+        if direction == .right {
+            print("works")
+            let curUser = PFUser.current()
+            var curTimeline: [PFObject] = curUser?.object(forKey: "timeline") as! [PFObject]
+            curTimeline.append(fact)
+            curUser?.setObject(curTimeline, forKey: "timeline")
+            curUser?.saveInBackground(block: { (success: Bool, error: Error?) in
+                print("success")
+                //chill
+            })
+            //insert post to array
+            
+        }
+        //print(facts.count)
+        //print(fact["fact"])
         //print(facts[index]["fact"])
     }
 }
