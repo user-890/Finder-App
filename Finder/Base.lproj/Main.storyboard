@@ -625,6 +625,24 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="529-j5-1dB">
+                                        <rect key="frame" x="16" y="358" width="243" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44X-Lx-y4L">
+                                                <rect key="frame" x="80" y="10" width="64" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="LoGOUT ">
+                                                    <color key="titleColor" red="0.37254901959999998" green="0.72941176470000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onLogout:" destination="9p5-QK-Z5D" eventType="touchUpInside" id="zwc-PA-Xxp"/>
+                                                    <action selector="onProfile:" destination="9p5-QK-Z5D" eventType="touchUpInside" id="lXB-Rt-T0L"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5490196078431373" green="0.63921568627450975" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -637,9 +655,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="logoutButtonView" destination="529-j5-1dB" id="05M-c0-nNj"/>
                         <outlet property="profileButtonView" destination="Qm0-JH-jvk" id="UJD-B6-Wp1"/>
                         <outlet property="userLabel" destination="Z15-dT-GDT" id="uzk-HJ-1in"/>
                         <segue destination="kct-sq-has" kind="presentation" identifier="profileSegue" id="pL7-a1-dQu"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="VfP-KU-Rpx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIf-64-I9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -858,7 +878,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8b0-Wc-NbZ" id="Hux-6e-MWj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phy-Ag-lDR">
@@ -930,7 +950,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vnw-tk-6aM" id="Gpq-vD-RiT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-cover-image" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-kn-MxL">
@@ -961,7 +981,7 @@
                                         <rect key="frame" x="0.0" y="241" width="375" height="275"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Gw-N3-x30" id="Cru-ZT-qMd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="275"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="gg8-ei-iXb">
@@ -1133,6 +1153,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="mEu-3Z-jAt"/>
         <segue reference="omV-ek-p9L"/>
+        <segue reference="VfP-KU-Rpx"/>
         <segue reference="aHs-PI-U1q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -92,7 +92,7 @@ class RegisterViewController: UIViewController {
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print("Yay, registered new user!")
-                //self.createFields(user: newUser)
+                self.createFields(user: newUser)
                 self.performSegue(withIdentifier: "registerSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
@@ -110,6 +110,11 @@ class RegisterViewController: UIViewController {
         user.setObject(defaultFollows, forKey: "followers")
         user.setObject(defaultFollows, forKey: "following")
         user.setObject(defaultBookmarks, forKey: "timeline")
+        user.saveInBackground { (success: Bool, error: Error?) in
+            if success {
+                print("boooooo yeahhhhhh")
+            }
+        }
     }
     
     

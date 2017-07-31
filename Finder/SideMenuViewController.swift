@@ -14,12 +14,25 @@ class SideMenuViewController: UIViewController {
     //Outlets
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var profileButtonView: UIView!
+    @IBOutlet var logoutButtonView: UIView!
     
     
     //Action
     @IBAction func onProfile(_ sender: Any) {
         performSegue(withIdentifier: "profileSegue", sender: nil)
     }
+    
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOutInBackground { (error: Error?) in
+            if let error = error{
+                //do nothing
+            } else {
+                self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+
+            }
+        }
+    }
+    
     
 
     override func viewDidLoad() {
@@ -28,7 +41,7 @@ class SideMenuViewController: UIViewController {
         let curUser = PFUser.current()
         userLabel.text = curUser?.username as! String
         profileButtonView.layer.cornerRadius = 5
-        
+        logoutButtonView.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }
