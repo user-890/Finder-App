@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
+    @IBOutlet weak var selectProfilePicBtnTitle: UIButton!
     
     
     @IBAction func onBack(_ sender: Any) {
@@ -64,6 +65,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName: UIColor.white])
         
         fullNameTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("RegisFullName", comment: "Fullname registration"), attributes: [NSForegroundColorAttributeName: UIColor.white])
+        
+        selectProfilePicBtnTitle.setTitle(NSLocalizedString("SelectProfPicTitle", comment: "Title of button to select profile picture"), for: .normal)
 
         
         // make corners round
