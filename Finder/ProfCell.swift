@@ -15,18 +15,8 @@ class ProfCell: UITableViewCell {
     
     var post: PFObject! {
         didSet {
-            let query = PFQuery(className: "Fact")
-            query.whereKey("objectId", equalTo: post.objectId)
-            query.limit = 1
-            do {
-                let postObjL = try query.findObjects()
-                let postObj = postObjL[0]
-                factLabel.text = postObj["fact"] as? String ?? ""
-            } catch {
-                print("error")
-            }
             //let obj = PFObject.getObjectWithID(post.objectId)
-            
+            factLabel.text = post["fact"] as? String ?? ""
             //factLabel.text = post["fact"] as! String
         }
     }
