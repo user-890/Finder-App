@@ -372,7 +372,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Interest" id="wLw-wO-Dcy">
-                        <barButtonItem key="rightBarButtonItem" title="Continue" id="4mg-Om-z3K"/>
+                        <barButtonItem key="rightBarButtonItem" title="Continue" id="4mg-Om-z3K">
+                            <connections>
+                                <segue destination="eRa-5A-r4d" kind="presentation" id="jTO-OO-Zt0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1D-i1-fb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1201,6 +1205,7 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jTO-OO-Zt0"/>
         <segue reference="omV-ek-p9L"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
