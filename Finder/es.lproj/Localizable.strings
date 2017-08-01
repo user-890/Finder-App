@@ -22,5 +22,5 @@
 "SelectProfPicTitle" = "Seleccionar imagen de perfil";
 "loginAlertTitle" = "Entrada inválida";
 "signInAlertTitle" = "Credenciales incorrectas";
-"loginAlertMessage" = "Por favor ingrese su nombre de usuario y contraseña";
+"loginAlertMessage" = "Por favor ingrese el nombre de usuario y contraseña correctos";
 "signInAlertMessage" = "Por favor, introduzca el nombre de usuario y contraseña correctos";
