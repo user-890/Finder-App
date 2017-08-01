@@ -114,13 +114,13 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             // Make sure have got all of the information to be send to Parse Cloud services
             let profileImageFile = PFFile(data: profileImageData!)
             newUser.setObject(profileImageFile, forKey: "profile_picture")
+            self.createFields(user: newUser)
         }
         
         // Call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if success {
                 print("Yay, registered new user!")
-                //self.createFields(user: newUser)
                 self.performSegue(withIdentifier: "registerSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
@@ -130,8 +130,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func createFields(user: PFUser) {
-        
-        //user.setObject(, forKey: "prof_pic")
+        //let defaultIcon = Fact.getPFFileFromImage(image: UIImage(named: "Image-6"))
+        let defaultBookmarks: [PFObject] = []
+        let defaultFollows: [PFUser] = []
+        //user.setObject(defaultIcon, forKey: "prof_pic")
+        user.setObject(defaultBookmarks, forKey: "bookmarks")
+        user.setObject(defaultFollows, forKey: "followers")
+        user.setObject(defaultFollows, forKey: "following")
+        user.setObject(defaultBookmarks, forKey: "timeline")
     }
     
     
