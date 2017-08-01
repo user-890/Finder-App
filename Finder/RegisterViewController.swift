@@ -141,11 +141,13 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         //let defaultIcon = Fact.getPFFileFromImage(image: UIImage(named: "Image-6"))
         let defaultBookmarks: [PFObject] = []
         let defaultFollows: [PFUser] = []
+        let seen: [Int] = []
         //user.setObject(defaultIcon, forKey: "prof_pic")
         user.setObject(defaultBookmarks, forKey: "bookmarks")
         user.setObject(defaultFollows, forKey: "followers")
         user.setObject(defaultFollows, forKey: "following")
         user.setObject(defaultBookmarks, forKey: "timeline")
+        user.setObject(seen, forKey: "seen")
     }
     
     
