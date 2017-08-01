@@ -21,6 +21,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var selectProfilePicBtnTitle: UIButton!
     
+
+    
     
     @IBAction func onBack(_ sender: Any) {
         self.dismiss(animated: true) { 
@@ -40,6 +42,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         
         self.dismiss(animated: true, completion: nil)
+        registerButton.isHidden = false
+        
     }
     
     
@@ -50,6 +54,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         updateUI()
         loadGif()
         
+        registerButton.isHidden = true
     }
     
     func loadGif() {
@@ -93,6 +98,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         registerButton.layer.cornerRadius = 10
         registerButton.layer.masksToBounds = true
+        
+        profilePhotoImageView.layer.cornerRadius = 40
+        profilePhotoImageView.layer.masksToBounds = true
         
     }
     
