@@ -374,7 +374,7 @@
                     <navigationItem key="navigationItem" title="Interest" id="wLw-wO-Dcy">
                         <barButtonItem key="rightBarButtonItem" title="Continue" id="4mg-Om-z3K">
                             <connections>
-                                <segue destination="eRa-5A-r4d" kind="presentation" id="jTO-OO-Zt0"/>
+                                <segue destination="ttE-O4-RQ1" kind="presentation" id="rrG-4D-1pD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -682,6 +682,7 @@
                                         <state key="normal" title="Logout"/>
                                         <connections>
                                             <action selector="onLogout:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="LDm-3j-zx3"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="tXU-RQ-SCg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1205,8 +1206,9 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jTO-OO-Zt0"/>
+        <segue reference="rrG-4D-1pD"/>
         <segue reference="omV-ek-p9L"/>
+        <segue reference="tXU-RQ-SCg"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>

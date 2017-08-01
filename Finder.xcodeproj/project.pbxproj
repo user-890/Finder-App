@@ -118,7 +118,7 @@
 		F7A0300F1F216F6600515762 /* login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login.gif; sourceTree = "<group>"; };
 		F7A030141F21722400515762 /* FullArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		F7A030161F217CB700515762 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = "<group>"; };
+		F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualRecognitionV3.framework; path = ../Carthage/Build/iOS/VisualRecognitionV3.framework; sourceTree = "<group>"; };
 		F7A030211F21BB1600515762 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RestKit.framework; path = Carthage/Build/iOS/RestKit.framework; sourceTree = "<group>"; };
 		F7CF69461F154333009FDF40 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF69491F154333009FDF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -235,7 +235,6 @@
 			children = (
 				461F5DF01F2A659100E9EF76 /* Localizable.strings */,
 				F7A030211F21BB1600515762 /* RestKit.framework */,
-				F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */,
 				F7CF69481F154333009FDF40 /* Finder */,
 				F7CF695D1F154333009FDF40 /* FinderTests */,
 				F7CF69471F154333009FDF40 /* Products */,
@@ -310,6 +309,7 @@
 				F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */,
 				49BD35871F17FC29006E88B2 /* OverlayView.xib */,
 				49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */,
+				F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */,
 				F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */,
 				4956167D1F30252C009A3E07 /* ProfCell.swift */,
 			);
