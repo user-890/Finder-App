@@ -10,10 +10,12 @@
 		461F5DEB1F2A61AE00E9EF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461F5DED1F2A61AE00E9EF76 /* Main.storyboard */; };
 		461F5DF21F2A659100E9EF76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 461F5DF01F2A659100E9EF76 /* Localizable.strings */; };
 		491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EAA1C1F1E74ED00194503 /* Fact.swift */; };
+		4956167A1F3024D9009A3E07 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495616791F3024D9009A3E07 /* SideMenuViewController.swift */; };
+		4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167B1F3024FD009A3E07 /* ProfViewController.swift */; };
+		4956167E1F30252C009A3E07 /* ProfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167D1F30252C009A3E07 /* ProfCell.swift */; };
 		49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35851F17F7B2006E88B2 /* HomeViewController.swift */; };
 		49BD35881F17FC29006E88B2 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BD35871F17FC29006E88B2 /* OverlayView.xib */; };
 		49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */; };
-		49C57DDB1F2AAE1100272511 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */; };
 		9FF7164DA4695276ACB929FB /* Pods_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ABFEF8E1DE63E6B0D91D2 /* Pods_FinderTests.framework */; };
 		B24FF73D014F1F6C78970B0C /* Pods_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */; };
 		F70E7EA81F228D1E0069001A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70E7EA71F228D1E0069001A /* User.swift */; };
@@ -84,10 +86,12 @@
 		464865221F2AA5F9006F51A4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		464865231F2AA5F9006F51A4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Finder/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		491EAA1C1F1E74ED00194503 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		495616791F3024D9009A3E07 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		4956167B1F3024FD009A3E07 /* ProfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfViewController.swift; sourceTree = "<group>"; };
+		4956167D1F30252C009A3E07 /* ProfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfCell.swift; sourceTree = "<group>"; };
 		49BD35851F17F7B2006E88B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49BD35871F17FC29006E88B2 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
-		49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../ProfileViewController.swift; sourceTree = "<group>"; };
 		6631D15A5A034D48EE3A495F /* Pods-FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		6DE2669AA0725E3C6752F2AC /* Pods-FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinderTests/Pods-FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F23CE4570C0E103EF1C8B95 /* Pods_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				F7CF69701F155686009FDF40 /* LoginViewController.swift */,
-				49C57DDA1F2AAE1100272511 /* ProfileViewController.swift */,
 				F7CF69741F15569F009FDF40 /* TimelineViewController.swift */,
 				F7A030141F21722400515762 /* FullArticleViewController.swift */,
 				F718E4CA1F16D45C00AA1DD0 /* MapViewController.swift */,
@@ -283,6 +286,8 @@
 				F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */,
 				F724AA6F1F29458600B38BEF /* PasswordResetViewController.swift */,
 				F7269D0E1F2E6A2500DBF5D9 /* UserListViewController.swift */,
+				495616791F3024D9009A3E07 /* SideMenuViewController.swift */,
+				4956167B1F3024FD009A3E07 /* ProfViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				49BD35871F17FC29006E88B2 /* OverlayView.xib */,
 				49BD35891F17FF86006E88B2 /* ExampleOverlayView.swift */,
 				F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */,
+				4956167D1F30252C009A3E07 /* ProfCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -357,7 +363,7 @@
 				TargetAttributes = {
 					F7CF69451F154333009FDF40 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MN29R57D4L;
+						DevelopmentTeam = 5JTWQYEJ7H;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -540,6 +546,7 @@
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */,
 				F724AA701F29458600B38BEF /* PasswordResetViewController.swift in Sources */,
+				4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */,
 				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
@@ -550,9 +557,10 @@
 				491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */,
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
 				F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */,
+				4956167A1F3024D9009A3E07 /* SideMenuViewController.swift in Sources */,
 				F7269D0F1F2E6A2500DBF5D9 /* UserListViewController.swift in Sources */,
+				4956167E1F30252C009A3E07 /* ProfCell.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
-				49C57DDB1F2AAE1100272511 /* ProfileViewController.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,7 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = MN29R57D4L;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finder",
@@ -720,7 +728,7 @@
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.finder-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Finder/Finder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -735,7 +743,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = MN29R57D4L;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finder",
@@ -743,7 +751,7 @@
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.finder-app";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Finder/Finder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

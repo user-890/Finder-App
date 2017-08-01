@@ -87,7 +87,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 // add the OK action to the alert controller
                 self.signInErrorAlert.addAction(OKAction)
-                self.present(success, animated: false, completion: nil)
+                //self.present(success, animated: false, completion: nil)
                 
             } else {
                 
