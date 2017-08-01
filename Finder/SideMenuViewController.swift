@@ -27,10 +27,14 @@ class SideMenuViewController: UIViewController {
             if let error = error{
                 //do nothing
             } else {
-                //self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+                self.performSegue(withIdentifier: "logout", sender: nil)
                 
             }
         }
+    }
+    
+    @IBAction func showUsers(_ sender: Any) {
+        self.performSegue(withIdentifier: "userSegue" , sender: nil)
     }
     
     

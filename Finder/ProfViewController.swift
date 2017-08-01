@@ -14,6 +14,7 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     //Variables
     var user: PFUser?
     var timelinePosts: [PFObject]?
+    var bookmarkPosts: [PFObject]?
     
     //Outlets
     @IBOutlet var userLabel: UILabel!
@@ -26,6 +27,11 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
             //eyyy close
         }
     }
+    
+    @IBAction func onSwitch(_ sender: Any) {
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,18 +51,56 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func refresh(){
         let timeline: [PFObject] = user?.object(forKey: "timeline") as! [PFObject]
-        timelinePosts = timeline
+        var temp: [PFObject] = []
+        for t in timeline {
+            let query = PFQuery(className: "Fact")
+            query.whereKey("objectId", equalTo: t.objectId)
+            query.limit = 1
+            query.findObjectsInBackground(block: { (timelines: [PFObject]?, error: Error?) in
+                if let timelines = timelines {
+                    temp.append(timelines[0])
+                    self.tableView.reloadData()
+                    self.timelinePosts = temp
+                }
+            })
+        }
         //same for bookmarks
+        let bookmark: [PFObject] = user?.object(forKey: "bookmarks") as! [PFObject]
+        var temporary: [PFObject] = []
+        for b in bookmark {
+            let query = PFQuery(className: "Fact")
+            query.whereKey("objectId", equalTo: b.objectId)
+            query.limit = 1
+            query.findObjectsInBackground(block: { (bookmarks: [PFObject]?, error: Error?) in
+                if let bookmarks = bookmarks {
+                    temporary.append(bookmarks[0])
+                    self.tableView.reloadData()
+                    self.bookmarkPosts = temporary
+                }
+            })
+        }
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timelinePosts?.count ?? 0
+        if segControl.selectedSegmentIndex == 0 {
+           return timelinePosts?.count ?? 0
+        } else {
+            return bookmarkPosts?.count ?? 0
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profCell", for: indexPath) as! ProfCell
-        let timelinePost = timelinePosts![indexPath.row]
-        cell.post = timelinePost as PFObject
+        if segControl.selectedSegmentIndex == 0 {
+            let timelinePost = timelinePosts![indexPath.row]
+            cell.post = timelinePost as PFObject
+        } else if segControl.selectedSegmentIndex == 1 {
+            //bookmarks
+            let bookmarkPost = bookmarkPosts![indexPath.row]
+            cell.post = bookmarkPost as PFObject
+        }
         //do samething for bookmark
         return cell
     }

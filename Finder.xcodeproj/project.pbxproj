@@ -28,6 +28,7 @@
 		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
 		F79C59031F30FB6500841DE3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C59021F30FB6500841DE3 /* RoundButton.swift */; };
+		F79C59051F31078E00841DE3 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C59041F31078E00841DE3 /* InterestViewController.swift */; };
 		F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300A1F216F3300515762 /* SWRevealViewController.m */; };
 		F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300B1F216F3300515762 /* UIImage-and-gif.swift */; };
 		F7A030101F216F6600515762 /* login.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7A0300F1F216F6600515762 /* login.gif */; };
@@ -111,6 +112,7 @@
 		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
 		F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		F79C59021F30FB6500841DE3 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		F79C59041F31078E00841DE3 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		F7A030081F216F3200515762 /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7A030091F216F3300515762 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F7A0300A1F216F3300515762 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				F7269D0E1F2E6A2500DBF5D9 /* UserListViewController.swift */,
 				495616791F3024D9009A3E07 /* SideMenuViewController.swift */,
 				4956167B1F3024FD009A3E07 /* ProfViewController.swift */,
+				F79C59041F31078E00841DE3 /* InterestViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				F79C59031F30FB6500841DE3 /* RoundButton.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
 				F7A0300D1F216F3300515762 /* UIImage-and-gif.swift in Sources */,
+				F79C59051F31078E00841DE3 /* InterestViewController.swift in Sources */,
 				F724AA701F29458600B38BEF /* PasswordResetViewController.swift in Sources */,
 				4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */,
 				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
