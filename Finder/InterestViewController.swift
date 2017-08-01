@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class InterestViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class InterestViewController: UIViewController {
     @IBOutlet weak var techButton: RoundButton!
     @IBOutlet weak var politicsButton: RoundButton!
     
+    var arrayWithoutData = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +31,20 @@ class InterestViewController: UIViewController {
     
     
     @IBAction func pressHistory(_ sender: Any) {
-       if historyButton.backgroundColor == UIColor.clear {
+        if historyButton.backgroundColor == UIColor.clear {
             historyButton.backgroundColor = UIColor.yellow
-        
-            // Change the text color: 
-        
+            
+            // Change the text color:
+            
             // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("history")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
+            
+            
         }
         else if historyButton.backgroundColor == UIColor.yellow{
             historyButton.backgroundColor = UIColor.clear
@@ -84,11 +94,51 @@ class InterestViewController: UIViewController {
     }
     
     
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "mainScreen" {
+            if let dest = segue.destination as? RegisterViewController {
+                dest.interest = self.arrayWithoutData
+            }
+        }
+    }
+    
+    
+    @IBAction func pressContinue(_ sender: Any) {
+        
+        let user = PFUser.current()
+        user?.setObject(arrayWithoutData, forKey: "interests")
+        user?.saveInBackground(block: { (success: Bool, error: Error?) in
+            print("success")
+            self.performSegue(withIdentifier: "mainScreen", sender: nil)
+        })
+
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
 }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

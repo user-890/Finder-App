@@ -459,7 +459,7 @@
                     <navigationItem key="navigationItem" title="Interest" id="wLw-wO-Dcy">
                         <barButtonItem key="rightBarButtonItem" title="Continue" id="4mg-Om-z3K">
                             <connections>
-                                <segue destination="ttE-O4-RQ1" kind="presentation" id="rrG-4D-1pD"/>
+                                <action selector="pressContinue:" destination="YfH-E1-5Kc" id="s5O-t8-nQs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -469,6 +469,7 @@
                         <outlet property="politicsButton" destination="8Zc-S2-zbz" id="lfO-Fk-g87"/>
                         <outlet property="sportsButton" destination="Ufk-jk-v1u" id="aC4-fC-8G3"/>
                         <outlet property="techButton" destination="M87-XT-n1v" id="Vs8-Mu-N2m"/>
+                        <segue destination="ttE-O4-RQ1" kind="show" identifier="mainScreen" id="b6I-uW-BB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1D-i1-fb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1306,9 +1307,9 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rrG-4D-1pD"/>
-        <segue reference="omV-ek-p9L"/>
         <segue reference="AF3-0c-CXY"/>
+        <segue reference="b6I-uW-BB4"/>
+        <segue reference="omV-ek-p9L"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>
