@@ -33,6 +33,10 @@ class SideMenuViewController: UIViewController {
         }
     }
     
+    @IBAction func showUsers(_ sender: Any) {
+        self.performSegue(withIdentifier: "userSegue" , sender: nil)
+    }
+    
     
     
     override func viewDidLoad() {
