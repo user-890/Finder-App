@@ -15,6 +15,8 @@ class RecommendedTableViewCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sourceLink: UIButton!
+    
     
     
     var recommend : Recommended! {
@@ -51,9 +53,20 @@ class RecommendedTableViewCell: UITableViewCell {
         self.backgroundImageView.sd_setImage(with: imgurl)
         self.titleLabel.text = recommend.Title
         
+        //let sourcingLink = URL(string: recommend.sendURL)
+        sourceLink.setTitle(recommend.sendURL, for: .normal)
         
     }
     
+    
+    
+    @IBAction func pressLInk(_ sender: Any) {
+        
+        if let url = URL(string: recommend.sendURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
     
     
     
