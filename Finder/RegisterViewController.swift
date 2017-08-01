@@ -99,7 +99,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         registerButton.layer.cornerRadius = 10
         registerButton.layer.masksToBounds = true
         
-        profilePhotoImageView.layer.cornerRadius = 40
+        profilePhotoImageView.layer.cornerRadius = 72
         profilePhotoImageView.layer.masksToBounds = true
         
     }
