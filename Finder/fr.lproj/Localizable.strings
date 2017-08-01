@@ -22,5 +22,5 @@
 "Select Profile Picture" = "Sélectionnez l'image de profil";
 "loginAlertTitle" = "Entrée invalide";
 "signInAlertTitle" = "Mauvais diplômes";
-"loginAlertMessage" = "Veuillez entrer le nom d'utilisateur et le mot de passe";
+"loginAlertMessage" = "Veuillez entrer le nom d'utilisateur et le mot de passe correct";
 "signInAlertMessage" = "Veuillez entrer le nom d'utilisateur / le mot de passe correct";
