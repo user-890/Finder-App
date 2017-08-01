@@ -41,7 +41,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
         NSFontAttributeName: textFont,
         NSForegroundColorAttributeName: textColor,
         NSParagraphStyleAttributeName: paraStyle
-        ]
+    ]
     
     //Put the image into a rectangle as large as the original image.
     inImage.draw(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
@@ -107,29 +107,29 @@ func getFacts(seenFacts: inout [Int]) -> [PFObject] {
     }
     KRProgressHUD.show()
     for i in cur {
-    let query = PFQuery(className: "Fact")
+        let query = PFQuery(className: "Fact")
         print(i)
         query.whereKey("fact_id", equalTo: i)
-    //query.addDescendingOrder("createdAt")
-    //query.limit = 5
-    //syncronous fetch
-    do {
-        let res = try query.findObjects()
-        facts.append(contentsOf: res)
-        print("get facts succes")
-    } catch {
-        print("error")
+        //query.addDescendingOrder("createdAt")
+        //query.limit = 5
+        //syncronous fetch
+        do {
+            let res = try query.findObjects()
+            facts.append(contentsOf: res)
+            print("get facts succes")
+        } catch {
+            print("error")
+        }
     }
-    }
-//    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-//        if error == nil {
-//            facts = posts!
-//            print("all is well")
-//        } else {
-//            print(error ?? "ERROR")
-//        }
-//        
-//    }
+    //    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+    //        if error == nil {
+    //            facts = posts!
+    //            print("all is well")
+    //        } else {
+    //            print(error ?? "ERROR")
+    //        }
+    //
+    //    }
     KRProgressHUD.dismiss()
     return facts
     
@@ -155,14 +155,12 @@ class HomeViewController: UIViewController {
             let point = CGPoint(x: 0, y: 0)
             let curFact: PFObject = facts[index]
             let str = curFact["fact"] as? NSString
-
             print("\(str) \(index)")
-            
             array.append(textToImage(drawText: str!, inImage: base!, atPoint: point))
         }
         return array
     }
-
+    
     //OnTap
     @IBAction func onReadMore(_ sender: Any) {
         self.performSegue(withIdentifier: "readMoreSegue", sender: nil)
@@ -178,41 +176,41 @@ class HomeViewController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-
+        
         // Do any additional setup after loading the view.
     }
     
     // MARK: IBActions
     
-//    @IBAction func leftButtonTapped() {
-//        kolodaView?.swipe(.left)
-//    }
-//    
-//    @IBAction func rightButtonTapped() {
-//        kolodaView?.swipe(.right)
-//    }
-//    
-//    @IBAction func undoButtonTapped() {
-//        kolodaView?.revertAction()
-//    }
-
-
+    //    @IBAction func leftButtonTapped() {
+    //        kolodaView?.swipe(.left)
+    //    }
+    //
+    //    @IBAction func rightButtonTapped() {
+    //        kolodaView?.swipe(.right)
+    //    }
+    //
+    //    @IBAction func undoButtonTapped() {
+    //        kolodaView?.revertAction()
+    //    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 // MARK: KolodaViewDelegate
@@ -238,10 +236,22 @@ extension HomeViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-        print(direction)
-        print(facts.count)
         let fact: PFObject = facts[index]
-        print(fact["fact"])
+        if direction == .right {
+            print("works")
+            let curUser = PFUser.current()
+            var curTimeline: [PFObject] = curUser?.object(forKey: "timeline") as! [PFObject]
+            curTimeline.append(fact)
+            curUser?.setObject(curTimeline, forKey: "timeline")
+            curUser?.saveInBackground(block: { (success: Bool, error: Error?) in
+                print("success")
+                //chill
+            })
+            //insert post to array
+            
+        }
+        //print(facts.count)
+        //print(fact["fact"])
         //print(facts[index]["fact"])
     }
 }
