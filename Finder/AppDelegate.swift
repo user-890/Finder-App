@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         //user persist - check if current user is logged in
         if let currentUser = PFUser.current(){
-            print("Welcome back to Finder, \(currentUser.username!) 😀")
+            print("Welcome back to FIRN, \(currentUser.username!) 😀")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let homeController = storyboard.instantiateViewController(withIdentifier: "Main")
             window?.rootViewController = homeController

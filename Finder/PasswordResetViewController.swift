@@ -59,7 +59,6 @@ class PasswordResetViewController: UIViewController {
         }
         
         
-        
     }
     
     func resetPassword(email : String){

@@ -146,7 +146,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
 
         
     }
-
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
