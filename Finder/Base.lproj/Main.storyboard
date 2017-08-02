@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -459,7 +459,7 @@
                     <navigationItem key="navigationItem" title="Interest" id="wLw-wO-Dcy">
                         <barButtonItem key="rightBarButtonItem" title="Continue" id="4mg-Om-z3K">
                             <connections>
-                                <segue destination="ttE-O4-RQ1" kind="presentation" id="rrG-4D-1pD"/>
+                                <action selector="pressContinue:" destination="YfH-E1-5Kc" id="s5O-t8-nQs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -469,6 +469,7 @@
                         <outlet property="politicsButton" destination="8Zc-S2-zbz" id="lfO-Fk-g87"/>
                         <outlet property="sportsButton" destination="Ufk-jk-v1u" id="aC4-fC-8G3"/>
                         <outlet property="techButton" destination="M87-XT-n1v" id="Vs8-Mu-N2m"/>
+                        <segue destination="ttE-O4-RQ1" kind="presentation" identifier="mainScreen" id="b6I-uW-BB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1D-i1-fb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1318,9 +1319,9 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AF3-0c-CXY"/>
-        <segue reference="rrG-4D-1pD"/>
+        <segue reference="b6I-uW-BB4"/>
         <segue reference="omV-ek-p9L"/>
+        <segue reference="AF3-0c-CXY"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>

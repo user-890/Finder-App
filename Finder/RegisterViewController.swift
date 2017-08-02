@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var selectProfilePicBtnTitle: UIButton!
     
-
+    var interest: [String] = []
     
     
     @IBAction func onBack(_ sender: Any) {
@@ -142,7 +142,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let defaultBookmarks: [PFObject] = []
         let defaultFollows: [PFUser] = []
         let seen: [Int] = []
-        let interest: [String] = []
+        //let interest: [String] = []
         //user.setObject(defaultIcon, forKey: "prof_pic")
         user.setObject(defaultBookmarks, forKey: "bookmarks")
         user.setObject(defaultFollows, forKey: "followers")
