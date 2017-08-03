@@ -26,6 +26,7 @@
 		F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B091F25B971002BB458 /* PostFact.swift */; };
 		F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */; };
 		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
+		F7739D0F1F33CC85008CD0EC /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7739D0E1F33CC85008CD0EC /* Vote.swift */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
 		F79A756B1F32B8F70095C175 /* customTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A756A1F32B8F70095C175 /* customTabBar.swift */; };
 		F79A756D1F32C2C40095C175 /* ToCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A756C1F32C2C40095C175 /* ToCardsController.swift */; };
@@ -110,6 +111,7 @@
 		F7551B091F25B971002BB458 /* PostFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFact.swift; sourceTree = "<group>"; };
 		F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeFactViewController.swift; sourceTree = "<group>"; };
 		F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFactTableViewCell.swift; sourceTree = "<group>"; };
+		F7739D0E1F33CC85008CD0EC /* Vote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
 		F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		F78193521F16DF5A0043F7DA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7739D0E1F33CC85008CD0EC /* Vote.swift */,
 				F78193AD1F20018A0043F7DA /* Recommended.swift */,
 				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F70E7EA71F228D1E0069001A /* User.swift */,
@@ -564,6 +567,7 @@
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
 				F79A756B1F32B8F70095C175 /* customTabBar.swift in Sources */,
 				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
+				F7739D0F1F33CC85008CD0EC /* Vote.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F79C59031F30FB6500841DE3 /* RoundButton.swift in Sources */,
 				F7CF69751F15569F009FDF40 /* TimelineViewController.swift in Sources */,
