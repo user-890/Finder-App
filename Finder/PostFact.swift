@@ -20,6 +20,7 @@ class Post: NSObject {
     //the image is either liked or not
     var liked: Bool?
     let sourceURL: String?
+    var trueCount: Int?
     
     init(pfObject: PFObject) {
         creationTime = pfObject["creationTime"] as? TimeInterval
@@ -30,6 +31,7 @@ class Post: NSObject {
         commentsCount = pfObject["commentsCount"] as? Int
         liked = pfObject["liked"] as! Bool
         sourceURL = pfObject["source"] as? String
+        trueCount = 0
         
     }
     
@@ -56,6 +58,7 @@ class Post: NSObject {
         post["likesCount"] = 0
         post["commentsCount"] = 0
         post["liked"] = false
+        post["trueCount"] = 0
         
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackground(block: completion)
