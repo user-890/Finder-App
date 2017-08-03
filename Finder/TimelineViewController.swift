@@ -169,7 +169,31 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // Fetch the data from the API
     func get_data ()
     {
-        let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
+        
+//        var newsURL: String
+//        let query = PFQuery(className: "User")
+//        query.whereKey("objectId", equalTo: t.objectId)
+//        query.limit = 1
+//        query.findObjectsInBackground(block: { (timelines: [PFObject]?, error: Error?) in
+//            if let timelines = timelines {
+//                temp.append(timelines[0])
+//                self.tableView.reloadData()
+//                self.timelinePosts = temp
+//            }
+//        })
+//
+//        
+//        print(firstInterest)
+//
+//        
+//        if firstInterest == "history" {
+//            newsURL = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+//        } else {
+//            print("I have to do more things")
+//        }
+//        
+        
+        let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418");
         let task = URLSession.shared.dataTask(with: apiurl! as URL) {
             
             
