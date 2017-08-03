@@ -74,6 +74,17 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    //detailProfSegue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailProfSegue" {
+            let vc = segue.destination as! ProfViewController
+            let cell = sender as! UITableViewCell
+            let indexPath = myTable.indexPath(for: cell)!
+            vc.user = users[indexPath.row]
+        }
+    }
+
+    
     
 
 }

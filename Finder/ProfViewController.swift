@@ -43,7 +43,7 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         userLabel.text = user?.username
         //what shows up
-        if (user != PFUser.current()) {
+        if (user?.objectId != PFUser.current()?.objectId) {
             segControl.isHidden = true
         }
         // Do any additional setup after loading the view.
