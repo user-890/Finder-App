@@ -11,6 +11,7 @@ import VisualRecognitionV3
 import AlamofireImage
 import AVFoundation
 
+
 class TakePictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
@@ -112,7 +113,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                     if let classification = classifiedImage.classifiers.first?.classes.first?.classification {
                         DispatchQueue.main.async {
                             self.navigationItem.title = classification
-                            
+ 
                             //AVSpeechSynthesizer implementation
                             let className = self.navigationItem.title
                             
@@ -145,6 +146,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
 
         
     }
+    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)

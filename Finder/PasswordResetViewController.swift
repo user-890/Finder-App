@@ -34,11 +34,29 @@ class PasswordResetViewController: UIViewController {
         if (emailAddress?.isEmpty)! {
             // Display warning message
             let userMessage: String = NSLocalizedString("userMessage", comment: "This is a message") //"Please type in your email address"
+            
+            
+            let passwordResetAlert = UIAlertController(title: NSLocalizedString("passwordResetAlertTitle", comment: "Password reset error"), message: userMessage, preferredStyle: .alert)
+            
+            
+                
+                //alert user
+                self.present(passwordResetAlert, animated: true)
+                
+                // create an OK action
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    // handle response here.
+                    self.emailAddressTextField.text = nil
+                }
+                
+                // add the OK action to the alert controller
+                passwordResetAlert.addAction(OKAction)
+                //self.present(success, animated: false, completion: nil)
+            
             return
         } else {
             resetPassword(email: emailAddress!)
         }
-        
         
         
     }
@@ -54,7 +72,7 @@ class PasswordResetViewController: UIViewController {
                 let success = UIAlertController(title: "Success", message: NSLocalizedString("SuccessMessage", comment: "Message when password reset successful"), preferredStyle: .alert)
                 let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 success.addAction(okButton)
-                self.present(success, animated: false, completion: nil)
+                self.present(success, animated: true, completion: nil)
                 
                 
                 

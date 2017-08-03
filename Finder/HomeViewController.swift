@@ -50,7 +50,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     _ = drawText.size(attributes: textFontAttributes)
     //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
-    let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width-10, height: inImage.size.height)
+    let rect: CGRect = CGRect(x: atPoint.x + 10, y: atPoint.y + 65, width: inImage.size.width-10, height: inImage.size.height)
     
     
     //Now Draw the text into an image.

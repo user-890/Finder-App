@@ -24,3 +24,4 @@
 "signInAlertTitle" = "Mauvais diplômes";
 "loginAlertMessage" = "Veuillez entrer le nom d'utilisateur et le mot de passe correct";
 "signInAlertMessage" = "Veuillez entrer le nom d'utilisateur / le mot de passe correct";
+"passwordResetAlertTitle" = "Réinitialisation du mot de passe réussi";
