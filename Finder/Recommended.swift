@@ -13,13 +13,15 @@ class Recommended {
     var Title: String;
     var sendURL: String;
     var PostImage: String;
+    var desc: String;
     
-    init(Title: String, sendURL: String, PostImage: String)
+    init(Title: String, sendURL: String, PostImage: String, Desc: String)
     {
         
         self.Title = Title;
         self.sendURL = sendURL;
         self.PostImage = PostImage;
+        self.desc = Desc
         
         
     }
@@ -51,6 +53,7 @@ class Recommended {
                     let imgUrl = items["urlToImage"]! as! String
                     let imgParsedUrl = URL(string: imgUrl)!
                     let dataurl = items["url"]!;
+                    let desc = items["description"]!;
                     //var img = UIImage()
                     let task2 = URLSession.shared.dataTask(with: imgParsedUrl as! URL) {
                         
@@ -72,7 +75,7 @@ class Recommended {
                     task2.resume()
                     
                     
-                    let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl)
+                    let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String)
                     posts.append(NewPost)
                 }
                 
