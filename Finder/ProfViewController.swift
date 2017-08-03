@@ -46,13 +46,8 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
             curUser?.saveInBackground(block: { (success: Bool, error: Error?) in
                 //added to followers
             })
-        } else {
-            //unfollow user
-            //remove user from curUser's following
-            
-            //remove curUser from user's following
-        }
-        followButton.isSelected = !followButton.isSelected
+            followButton.isSelected = true
+       }
     }
     
     @IBAction func onDone(_ sender: Any) {
@@ -86,7 +81,8 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             segControl.isHidden = true
             //set initial state of follow button
-            let following: [PFObject] = user?.object(forKey: "following") as! [PFObject]
+            let curUser = PFUser.current()
+            let following: [PFObject] =  curUser?.object(forKey: "following") as! [PFObject]
             var isFollowing = false
             for f in following {
                 print(f)

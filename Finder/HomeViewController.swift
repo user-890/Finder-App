@@ -87,8 +87,8 @@ func getFacts(seenFacts: inout [Int]) -> [PFObject] {
     var cur: [Int] = []
     //makeFacts()
     let curUser = PFUser.current()
-    let interestList = curUser?["interests"] as! [String]
-    print(interestList[0])
+    //let interestList = curUser?["interests"] as! [String]
+    //print(interestList[0])
     for index in 1...5{
         var n = Int(arc4random_uniform(UInt32(lim))) //0-14 inclusive
         if seenFacts.count + cur.count != 15 {
