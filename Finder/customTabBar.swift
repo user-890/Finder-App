@@ -31,9 +31,7 @@ class customTabBar: UITabBarController {
     }
     
     func goToCardsViewController() {
-        
-        let nextViewController = storyboard?.instantiateViewController(withIdentifier: "toCards") as! ToCardsController
-        self.present(nextViewController, animated:true, completion:nil)
+        self.selectedIndex = 1
     }
     
     override func viewDidLayoutSubviews() {
