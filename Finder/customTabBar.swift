@@ -16,17 +16,24 @@ class customTabBar: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        customButton.setTitle("Cards", for: .normal)
-        customButton.setTitleColor(.white, for: .normal)
+        //customButton.setTitle("Cards", for: .normal)
+        //customButton.setTitleColor(.white, for: .normal)
         customButton.setTitleColor(.yellow, for: .highlighted)
         customButton.frame = CGRect(x: 100, y: 0, width: 44, height: 44)
-        customButton.backgroundColor = .green
-        //customButton.layer.borderWidth = 4
+        customButton.backgroundColor = UIColor.black
+        customButton.layer.borderWidth = 2
+        customButton.layer.borderColor = UIColor.white.cgColor
+        
+        let image = UIImage(named: "cards-icon")
+        customButton.setImage(image, for: .normal)
+        
         customButton.addTarget(self, action: #selector(goToCardsViewController), for: .touchUpInside)
         
         self.view.insertSubview(customButton, aboveSubview: self.tabBar)
         
-        
+        // Chnage tab bar item tint 
+        self.tabBarController?.tabBar.tintColor = UIColor.white
+        //self.tabBarController?.tabBar.tintColor = UIColor.red()
         
     }
     
@@ -36,7 +43,7 @@ class customTabBar: UITabBarController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        customButton.frame = CGRect.init(x: self.tabBar.center.x - 32, y: self.view.bounds.height - 74, width: 64, height: 64)
+        customButton.frame = CGRect.init(x: self.tabBar.center.x - 32, y: self.view.bounds.height - 64, width: 64, height: 64)
         customButton.layer.cornerRadius = 32
     }
     
