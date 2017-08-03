@@ -50,7 +50,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     _ = drawText.size(attributes: textFontAttributes)
     //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
-    let rect: CGRect = CGRect(x: atPoint.x, y: atPoint.y, width: inImage.size.width-10, height: inImage.size.height)
+    let rect: CGRect = CGRect(x: atPoint.x + 10, y: atPoint.y + 65, width: inImage.size.width-10, height: inImage.size.height)
     
     
     //Now Draw the text into an image.
@@ -86,6 +86,9 @@ func getFacts(seenFacts: inout [Int]) -> [PFObject] {
     var facts: [PFObject] = []
     var cur: [Int] = []
     //makeFacts()
+    let curUser = PFUser.current()
+    //let interestList = curUser?["interests"] as! [String]
+    //print(interestList[0])
     for index in 1...5{
         var n = Int(arc4random_uniform(UInt32(lim))) //0-14 inclusive
         if seenFacts.count + cur.count != 15 {
@@ -108,7 +111,7 @@ func getFacts(seenFacts: inout [Int]) -> [PFObject] {
     KRProgressHUD.show()
     for i in cur {
         let query = PFQuery(className: "Fact")
-        print(i)
+        //print(i)
         query.whereKey("fact_id", equalTo: i)
         //query.addDescendingOrder("createdAt")
         //query.limit = 5
@@ -116,20 +119,11 @@ func getFacts(seenFacts: inout [Int]) -> [PFObject] {
         do {
             let res = try query.findObjects()
             facts.append(contentsOf: res)
-            print("get facts succes")
+            //print("get facts succes")
         } catch {
             print("error")
         }
     }
-    //    query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-    //        if error == nil {
-    //            facts = posts!
-    //            print("all is well")
-    //        } else {
-    //            print(error ?? "ERROR")
-    //        }
-    //
-    //    }
     KRProgressHUD.dismiss()
     return facts
     

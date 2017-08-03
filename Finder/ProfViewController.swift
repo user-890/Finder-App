@@ -20,7 +20,35 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var segControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var followingLabel: UILabel!
+    @IBOutlet var followersLabel: UILabel!
+    @IBOutlet var followButton: UIButton!
     
+    
+    @IBAction func onFollow(_ sender: Any) {
+        //backend
+        let curUser = PFUser.current()
+        var curFollowing: [PFUser] = curUser?.object(forKey: "following") as! [PFUser]
+        var thisFollowers: [PFUser] = user?.object(forKey: "followers") as! [PFUser]
+        if !followButton.isSelected {
+            //follow user
+            //add user to curUser's following
+            curFollowing.append(user!)
+            curUser?.setObject(curFollowing, forKey: "following")
+            //add curUser to user's followers
+            thisFollowers.append(curUser!)
+            user?.setObject(thisFollowers, forKey: "followers")
+            //save
+            user?.saveInBackground(block: { (success: Bool, error: Error?) in
+                //added following
+                print("added following")
+            })
+            curUser?.saveInBackground(block: { (success: Bool, error: Error?) in
+                //added to followers
+            })
+            followButton.isSelected = true
+       }
+    }
     
     @IBAction func onDone(_ sender: Any) {
         self.dismiss(animated: true) {
@@ -42,9 +70,32 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         refresh()
         
         userLabel.text = user?.username
+        let followers: [PFObject] = user?.object(forKey: "followers") as! [PFObject]
+        followersLabel.text = "\(followers.count)"
+        let following: [PFObject] = user?.object(forKey: "following") as! [PFObject]
+        followingLabel.text = "\(following.count)"
+
         //what shows up
-        if (user != PFUser.current()) {
+        if (user?.objectId == PFUser.current()?.objectId){
+            followButton.isHidden = true
+        } else {
             segControl.isHidden = true
+            //set initial state of follow button
+            let curUser = PFUser.current()
+            let following: [PFObject] =  curUser?.object(forKey: "following") as! [PFObject]
+            var isFollowing = false
+            for f in following {
+                print(f)
+                if f.objectId == user?.objectId {
+                    isFollowing = true
+                    followButton.isSelected = true
+                    print("is following")
+                }
+            }
+            if !isFollowing{
+                print("not following")
+                followButton.isSelected = false
+            }
         }
         // Do any additional setup after loading the view.
     }

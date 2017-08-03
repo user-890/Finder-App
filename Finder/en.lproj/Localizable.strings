@@ -24,3 +24,4 @@
 "signInAlertTitle" = "Wrong credentials";
 "loginAlertMessage" = "Please enter correct username AND password";
 "signInAlertMessage" = "Please enter correct username/password";
+"passwordResetAlertTitle" = "Password Reset Failed";
