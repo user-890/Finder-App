@@ -170,6 +170,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // Fetch the data from the API
     func get_data ()
     {
+git
         var currentUser = PFUser.current()
         
         // User interest
@@ -203,6 +204,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         print(articleUrl)
         
         let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
+
         let task = URLSession.shared.dataTask(with: apiurl! as URL) {
             
             

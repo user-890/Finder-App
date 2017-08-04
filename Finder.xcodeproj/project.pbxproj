@@ -27,6 +27,8 @@
 		F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0B1F25B9C1002BB458 /* ComposeFactViewController.swift */; };
 		F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */; };
 		F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78193AD1F20018A0043F7DA /* Recommended.swift */; };
+		F79A756B1F32B8F70095C175 /* customTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A756A1F32B8F70095C175 /* customTabBar.swift */; };
+		F79A756D1F32C2C40095C175 /* ToCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A756C1F32C2C40095C175 /* ToCardsController.swift */; };
 		F79C59031F30FB6500841DE3 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C59021F30FB6500841DE3 /* RoundButton.swift */; };
 		F79C59051F31078E00841DE3 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C59041F31078E00841DE3 /* InterestViewController.swift */; };
 		F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A0300A1F216F3300515762 /* SWRevealViewController.m */; };
@@ -111,6 +113,8 @@
 		F78193571F1752230043F7DA /* Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Finder.entitlements; sourceTree = "<group>"; };
 		F78193AD1F20018A0043F7DA /* Recommended.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommended.swift; sourceTree = "<group>"; };
 		F78193B01F2009850043F7DA /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
+		F79A756A1F32B8F70095C175 /* customTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTabBar.swift; sourceTree = "<group>"; };
+		F79A756C1F32C2C40095C175 /* ToCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToCardsController.swift; sourceTree = "<group>"; };
 		F79C59021F30FB6500841DE3 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		F79C59041F31078E00841DE3 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		F7A030081F216F3200515762 /* Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finder-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -301,6 +305,8 @@
 				495616791F3024D9009A3E07 /* SideMenuViewController.swift */,
 				4956167B1F3024FD009A3E07 /* ProfViewController.swift */,
 				F79C59041F31078E00841DE3 /* InterestViewController.swift */,
+				F79A756A1F32B8F70095C175 /* customTabBar.swift */,
+				F79A756C1F32C2C40095C175 /* ToCardsController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -552,9 +558,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
+				F79A756D1F32C2C40095C175 /* ToCardsController.swift in Sources */,
 				F7A030151F21722400515762 /* FullArticleViewController.swift in Sources */,
 				F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
+				F79A756B1F32B8F70095C175 /* customTabBar.swift in Sources */,
 				F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */,
 				F7CF694A1F154333009FDF40 /* AppDelegate.swift in Sources */,
 				F79C59031F30FB6500841DE3 /* RoundButton.swift in Sources */,
