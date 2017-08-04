@@ -142,7 +142,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let defaultBookmarks: [PFObject] = []
         let defaultFollows: [PFUser] = []
         let seen: [Int] = []
-        //let interest: [String] = []
         //user.setObject(defaultIcon, forKey: "prof_pic")
         user.setObject(defaultBookmarks, forKey: "bookmarks")
         user.setObject(defaultFollows, forKey: "followers")

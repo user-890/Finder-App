@@ -55,6 +55,15 @@ class InterestViewController: UIViewController {
     @IBAction func pressSports(_ sender: Any) {
         if sportsButton.backgroundColor == UIColor.clear {
             sportsButton.backgroundColor = UIColor.yellow
+            
+            // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("sports")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
+            
         }
         else if sportsButton.backgroundColor == UIColor.yellow {
             sportsButton.backgroundColor = UIColor.clear
