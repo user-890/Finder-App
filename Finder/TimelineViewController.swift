@@ -26,6 +26,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // Destination to full article
     var dest_url : String!
     
+    var interest: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,8 +173,34 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         var currentUser = PFUser.current()
         
         // User interest
-        var interest: [String] = currentUser?.object(forKey: "interests") as! [String]
-        print(interest)
+        
+        if (interest = currentUser?.object(forKey: "interests") as! [String]) != nil {
+            print("This string is not empty")
+        } else {
+            print("This string is empty")
+        }
+        
+        
+        print(interest ?? "No interest")
+        
+        var firstInterest = interest.first
+        print(firstInterest! ?? "entertainment")
+        
+        var articleUrl: String
+        
+        if firstInterest == "history" {
+            articleUrl = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        } else if firstInterest == "sports"{
+            articleUrl = "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        } else if firstInterest == "politics"{
+            articleUrl = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        } else if firstInterest == "technology"{
+            articleUrl = " https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        } else {
+            articleUrl = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b"
+        }
+        
+        print(articleUrl)
         
         let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
         let task = URLSession.shared.dataTask(with: apiurl! as URL) {

@@ -75,6 +75,14 @@ class InterestViewController: UIViewController {
     @IBAction func pressEntertainment(_ sender: Any) {
         if entertainmentButton.backgroundColor == UIColor.clear {
             entertainmentButton.backgroundColor = UIColor.yellow
+            
+            // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("entertainment")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
         }
         else if entertainmentButton.backgroundColor == UIColor.yellow {
             entertainmentButton.backgroundColor = UIColor.clear
@@ -86,6 +94,14 @@ class InterestViewController: UIViewController {
     @IBAction func pressTechnology(_ sender: Any) {
         if techButton.backgroundColor == UIColor.clear {
             techButton.backgroundColor = UIColor.yellow
+            
+            // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("technology")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
         }
         else if techButton.backgroundColor == UIColor.yellow {
             techButton.backgroundColor = UIColor.clear
@@ -96,6 +112,14 @@ class InterestViewController: UIViewController {
     @IBAction func pressPolitics(_ sender: Any) {
         if politicsButton.backgroundColor == UIColor.clear {
             politicsButton.backgroundColor = UIColor.yellow
+            
+            // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("politics")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
         }
         else if politicsButton.backgroundColor == UIColor.yellow {
             politicsButton.backgroundColor = UIColor.clear
