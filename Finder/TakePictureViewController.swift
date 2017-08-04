@@ -18,10 +18,12 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     @IBOutlet var popUpView: UIView!
+    @IBOutlet weak var ourWebView: UIWebView!
 
     
     var effect: UIVisualEffect!
     
+    var classifiedImagesArray: [String] = []
     
     let picker = UIImagePickerController()
     let apiKey = "700430452c908377738869e1218f70b469753899"
@@ -117,6 +119,9 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             //AVSpeechSynthesizer implementation
                             let className = self.navigationItem.title
                             
+                            self.classifiedImagesArray.append(className!)
+                            print(self.classifiedImagesArray[0])
+                            
                             let utterance = AVSpeechUtterance(string: className!)
     
                             let speechLang = Bundle.main.preferredLocalizations.first! //get current language locale
@@ -154,6 +159,40 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     
     // Get popUp View on the same view controller
     func animataeIn() {
+        
+        //let ourWebView = UIWebView()
+        //self.view.addSubview(ourWebView)
+        
+        // Load the URL request
+        
+        let firstClassifiedImage = classifiedImagesArray[0]
+        print(firstClassifiedImage)
+        
+        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
+        print(finalUrl)
+        
+        var webUrl = URL(string: "https://en.wikipedia.org/wiki/\(firstClassifiedImage)")!
+//        print(webUrl)
+        
+        if webUrl != nil {
+            print(webUrl)
+            var webUrlRequest = URLRequest(url: webUrl)
+            print(webUrlRequest)
+            ourWebView.loadRequest(webUrlRequest)
+            
+        } else {
+            
+            
+            print("Something's not right!")
+        }
+        
+        
+        
+        
+        
+        //ourWebView.loadRequest(webUrlRequest)
+        
+        
         self.view.addSubview(popUpView)
         popUpView.center = self.view.center
         
