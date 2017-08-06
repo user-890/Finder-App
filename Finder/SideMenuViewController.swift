@@ -16,6 +16,9 @@ class SideMenuViewController: UIViewController {
     @IBOutlet var profileButtonView: UIView!
     @IBOutlet var logoutButtonView: UIView!
     
+    @IBOutlet weak var logoutView: UIView!
+    @IBOutlet weak var profileView: UIView!
+    
     
     //Action
     @IBAction func onProfile(_ sender: Any) {

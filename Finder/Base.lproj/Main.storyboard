@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-kp-VJw">
@@ -791,60 +791,100 @@
                         <viewControllerLayoutGuide type="bottom" id="IO2-7k-Rio"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cOc-SZ-GgQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-hg-LQL">
-                                <rect key="frame" x="16" y="119" width="116" height="74"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundSideBar" translatesAutoresizingMaskIntoConstraints="NO" id="knh-QX-VCR">
+                                <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koW-VZ-lUG">
-                                        <rect key="frame" x="34" y="22" width="48" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Logout"/>
-                                        <connections>
-                                            <action selector="onLogout:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="LDm-3j-zx3"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSw-p0-IdI">
-                                <rect key="frame" x="16" y="258" width="116" height="74"/>
+                            </imageView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eSw-p0-IdI">
+                                <rect key="frame" x="0.0" y="312" width="275" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-7M-oUo">
-                                        <rect key="frame" x="36" y="22" width="44" height="30"/>
+                                        <rect key="frame" x="115" y="74" width="44" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Profile"/>
+                                        <state key="normal" title="Profile">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="onProfile:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="9d7-7o-dkd"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-ay-X9e">
+                                        <rect key="frame" x="115" y="25" width="45" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-vQ-jcs">
-                                <rect key="frame" x="154" y="59" width="76" height="21"/>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyq-bU-tTD">
+                                <rect key="frame" x="0.0" y="488" width="275" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSN-8O-gpH">
-                                <rect key="frame" x="16" y="402" width="72" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSN-8O-gpH">
+                                        <rect key="frame" x="101" y="74" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Users">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showUsers:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="haQ-1W-Xno"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="world" translatesAutoresizingMaskIntoConstraints="NO" id="3HU-Uo-Jgd">
+                                        <rect key="frame" x="115" y="33" width="45" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apk-hg-LQL">
+                                <rect key="frame" x="0.0" y="135" width="275" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Users"/>
-                                <connections>
-                                    <action selector="showUsers:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="haQ-1W-Xno"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koW-VZ-lUG">
+                                        <rect key="frame" x="113" y="74" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLogout:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="LDm-3j-zx3"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-XQ-Kkj">
+                                        <rect key="frame" x="115" y="25" width="45" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-cY-n6t">
+                                <rect key="frame" x="0.0" y="0.0" width="275" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-vQ-jcs">
+                                        <rect key="frame" x="80" y="53" width="114" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="275" height="667"/>
                     <connections>
                         <outlet property="logoutButtonView" destination="Apk-hg-LQL" id="MXT-r1-C0J"/>
+                        <outlet property="logoutView" destination="Apk-hg-LQL" id="eQX-ss-sxx"/>
                         <outlet property="profileButtonView" destination="eSw-p0-IdI" id="xMW-QN-gSp"/>
+                        <outlet property="profileView" destination="eSw-p0-IdI" id="2MK-9I-fyy"/>
                         <outlet property="userLabel" destination="nGI-vQ-jcs" id="ta1-3o-S7f"/>
                         <segue destination="foa-qB-cdX" kind="presentation" identifier="profileSegue" id="oGC-sO-1FE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="AF3-0c-CXY"/>
@@ -853,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIo-LV-TkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2885.5999999999999" y="-385.45727136431788"/>
+            <point key="canvasLocation" x="2826.4000000000001" y="-387.25637181409297"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ksk-OE-cA8">
@@ -1379,19 +1419,23 @@
         <image name="296815 - vote" width="48" height="48"/>
         <image name="Image" width="768" height="509"/>
         <image name="add-image-placeholder" width="600" height="800"/>
+        <image name="backgroundSideBar" width="540" height="360"/>
         <image name="buzz" width="636" height="358"/>
         <image name="camera-icon" width="40" height="40"/>
         <image name="homeIcon" width="30" height="30"/>
         <image name="menu-1" width="25" height="25"/>
         <image name="profile-cover-image" width="1280" height="768"/>
+        <image name="tag" width="32" height="32"/>
         <image name="timelineIcon" width="25" height="25"/>
+        <image name="umbrella" width="32" height="32"/>
+        <image name="world" width="32" height="32"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AF3-0c-CXY"/>
         <segue reference="b6I-uW-BB4"/>
         <segue reference="omV-ek-p9L"/>
+        <segue reference="AF3-0c-CXY"/>
+        <segue reference="oGC-sO-1FE"/>
         <segue reference="y9p-j1-K5Q"/>
-        <segue reference="ZCK-9K-7gA"/>
     </inferredMetricsTieBreakers>
 </document>
