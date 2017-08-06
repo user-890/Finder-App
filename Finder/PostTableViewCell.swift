@@ -85,6 +85,8 @@ class PostTableViewCell: UITableViewCell {
         self.trayView.addGestureRecognizer(gestureRecognizer)
         trayView.center.y = (contentView.bounds.size.height) + 80
         
+        
+        
         randomWidth()
     }
     

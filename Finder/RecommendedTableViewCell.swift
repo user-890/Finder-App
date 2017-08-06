@@ -19,6 +19,8 @@ class RecommendedTableViewCell: UITableViewCell {
     @IBOutlet weak var trayView: UIView!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
+    @IBOutlet weak var recommendedView: UIView!
+    
     
     var trayOriginalCenter: CGPoint!
     var startLocation: CGPoint!
@@ -118,6 +120,9 @@ class RecommendedTableViewCell: UITableViewCell {
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
         trayView.center.y = (contentView.bounds.size.height) + 80
+        
+
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
