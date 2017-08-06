@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
             configuration.applicationId = "finder"
             configuration.clientKey = "finder"
-            configuration.server = "http://finder-app-fbu.herokuapp.com/parse"
+            configuration.server = "http://finder-fbu.herokuapp.com/parse"
         }))
         
         //user persist - check if current user is logged in

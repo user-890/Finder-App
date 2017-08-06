@@ -170,7 +170,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // Fetch the data from the API
     func get_data ()
     {
-git
         var currentUser = PFUser.current()
         
         // User interest
