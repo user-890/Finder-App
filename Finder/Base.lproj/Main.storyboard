@@ -639,8 +639,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-d1-wCQ">
-                                                    <rect key="frame" x="0.0" y="209" width="375" height="300"/>
+                                                <view alpha="0.80000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-d1-wCQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tyler Holloway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-pF-82K">
                                                             <rect key="frame" x="8" y="8" width="98.5" height="21"/>
@@ -654,13 +654,6 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="65%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-bC-QQj">
-                                                            <rect key="frame" x="40" y="140" width="36" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OS-hg-bjJ">
                                                             <rect key="frame" x="40" y="176" width="34" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -668,24 +661,32 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqb-1G-vhs">
-                                                            <rect key="frame" x="84" y="138" width="240" height="24"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="1" green="0.1477645799" blue="0.084607196659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </view>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hk8-tw-rGp">
                                                             <rect key="frame" x="84" y="174" width="142" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-bC-QQj">
+                                                            <rect key="frame" x="38" y="138" width="36" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsZ-1F-9XI">
+                                                            <rect key="frame" x="82" y="135" width="240" height="27"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="1" green="0.1477645799" blue="0.084607196659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
+                                                        <constraint firstItem="lgl-bC-QQj" firstAttribute="top" secondItem="pLe-tM-6RV" secondAttribute="bottom" constant="85" id="40s-3w-qDa"/>
                                                         <constraint firstItem="pLe-tM-6RV" firstAttribute="leading" secondItem="dSz-pF-82K" secondAttribute="leading" id="59J-ZA-CyK"/>
                                                         <constraint firstItem="pLe-tM-6RV" firstAttribute="top" secondItem="dSz-pF-82K" secondAttribute="bottom" constant="8" id="Gh2-1K-mbt"/>
                                                         <constraint firstAttribute="height" constant="300" id="LYm-Yy-xPj"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="8" id="QC0-zw-Rcx"/>
+                                                        <constraint firstItem="lgl-bC-QQj" firstAttribute="leading" secondItem="bTg-d1-wCQ" secondAttribute="leading" constant="38" id="bFd-SD-jkQ"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="8" id="dKV-iI-QRH"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="leading" secondItem="bTg-d1-wCQ" secondAttribute="leading" constant="8" id="uDl-PZ-cEE"/>
                                                         <constraint firstAttribute="width" constant="375" id="uzg-VE-k0h"/>
@@ -702,8 +703,11 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outlet property="factText" destination="t6l-iG-nhJ" id="Th2-Mi-ZfC"/>
+                                            <outlet property="falseBar" destination="hk8-tw-rGp" id="euh-l7-gzc"/>
                                             <outlet property="timeStamp" destination="pLe-tM-6RV" id="QxU-t6-Flp"/>
                                             <outlet property="trayView" destination="bTg-d1-wCQ" id="O6V-GC-cdu"/>
+                                            <outlet property="trueBar" destination="JsZ-1F-9XI" id="M1N-q3-PkV"/>
+                                            <outlet property="truePercent" destination="lgl-bC-QQj" id="4St-vR-50y"/>
                                             <outlet property="usernameLabel" destination="dSz-pF-82K" id="d92-Rp-IDy"/>
                                         </connections>
                                     </tableViewCell>
@@ -1058,7 +1062,7 @@
                 <navigationController storyboardIdentifier="toCards" automaticallyAdjustsScrollViewInsets="NO" id="Y9F-zV-hGe" customClass="ToCardsController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="homeIcon" selectedImage="homeIcon" id="2zx-lg-fye"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zdI-vu-uyF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zdI-vu-uyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1249,7 +1253,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZMz-MP-OB6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="camera-icon" id="lqW-gM-GNP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="thj-8R-1AU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="thj-8R-1AU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1268,7 +1272,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BKA-ye-tLe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="world-icon" selectedImage="world-icon" id="Iae-at-5mA"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="JSJ-hM-qVC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSJ-hM-qVC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1286,7 +1290,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rsk-ZT-tUm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J4T-Fu-UkK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4T-Fu-UkK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1304,7 +1308,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1mG-Df-zhb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WFS-Ab-8U2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WFS-Ab-8U2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1324,7 +1328,7 @@
                     <tabBarItem key="tabBarItem" title="" image="timelineIcon" selectedImage="timelineIcon" id="9TY-Du-Vev"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dbG-Uh-xfS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SVK-UH-h2r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVK-UH-h2r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1342,7 +1346,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="84a-6B-Y8F" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C7t-B1-F8e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7t-B1-F8e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1360,7 +1364,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbF-5d-9Jr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q7V-RK-P56">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q7V-RK-P56">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

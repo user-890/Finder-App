@@ -19,6 +19,15 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var trayView: UIView!
+    @IBOutlet weak var falseBar: UIView!
+    @IBOutlet weak var trueBar: UIImageView!
+    @IBOutlet weak var truePercent: UILabel!
+    
+    
+    
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    
+    
     
     //Constraints
     
@@ -75,10 +84,21 @@ class PostTableViewCell: UITableViewCell {
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
         trayView.center.y = (contentView.bounds.size.height) + 80
+        
+        randomWidth()
     }
     
     
-    
+    func randomWidth() {
+        let randomNum: UInt32 = arc4random_uniform(100) // range is 0 to 99
+        let randomNumTwo: UInt32 = arc4random_uniform(100)
+        
+        print(randomNum)
+        self.trueBar.frame.size.width = CGFloat(randomNum)
+        
+        self.truePercent.text = String(randomNum)
+        
+    }
     
     func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
         var translation = gestureRecognizer.translation(in: trayView)
