@@ -64,6 +64,7 @@ class RecommendedTableViewCell: UITableViewCell {
         //let sourcingLink = URL(string: recommend.sendURL)
         sourceLink.setTitle(recommend.sendURL, for: .normal)
         
+        self.timeStamp.text = recommend.publishedAt
         
     }
     

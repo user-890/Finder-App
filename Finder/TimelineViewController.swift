@@ -228,9 +228,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                     let dataurl = items["url"]!;
                     //let img = self.imageParsed(imgData: imgParsedUrl);
                     let desc = items["description"]
+                    let publishedAt = items["publishedAt"] as! String
                     
-                    
-                    let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String)
+                    let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String, publishedAt: publishedAt as! String)
                     self.arr.append(NewPost)
                     
                     DispatchQueue.main.async {

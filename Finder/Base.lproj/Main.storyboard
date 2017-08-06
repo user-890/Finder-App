@@ -621,6 +621,7 @@
                                             <outlet property="backgroundImageView" destination="nUC-KO-Ylp" id="NhX-2H-jgp"/>
                                             <outlet property="descLabel" destination="dfw-tb-SaL" id="CBS-xA-bdU"/>
                                             <outlet property="sourceLink" destination="QbD-Of-1eF" id="QD6-xn-MqY"/>
+                                            <outlet property="timeStamp" destination="cb1-XL-kKn" id="SBL-IB-ERR"/>
                                             <outlet property="titleLabel" destination="KD7-ny-2vW" id="WqV-Oc-2iB"/>
                                             <outlet property="trayView" destination="Dh0-2S-g0X" id="EMb-1z-WJD"/>
                                         </connections>

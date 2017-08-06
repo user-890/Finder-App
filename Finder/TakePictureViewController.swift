@@ -84,6 +84,18 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         popUpView.layer.cornerRadius = 5
         
         //loadWebView()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let vc = UIImagePickerController()
+            vc.delegate = self
+            vc.allowsEditing = false
+            vc.sourceType = UIImagePickerControllerSourceType.camera
+            print("Camera is available 📸")
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            print("Camera 🚫 available so we will use photo library instead")
+            noCamera()
+        }
 
     }
     
@@ -171,8 +183,10 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
         print(finalUrl)
         
+        
         var webUrl = URL(string: "https://en.wikipedia.org/wiki/\(firstClassifiedImage)")!
 //        print(webUrl)
+        
         
         if webUrl != nil {
             print(webUrl)
