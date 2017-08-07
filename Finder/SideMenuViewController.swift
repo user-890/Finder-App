@@ -40,6 +40,10 @@ class SideMenuViewController: UIViewController {
         self.performSegue(withIdentifier: "userSegue" , sender: nil)
     }
     
+    @IBAction func showRequests(_ sender: Any) {
+        self.performSegue(withIdentifier: "requestSegue" , sender: nil)
+    }
+    
     
     
     override func viewDidLoad() {

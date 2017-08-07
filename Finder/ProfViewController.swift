@@ -29,25 +29,28 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         //backend
         let curUser = PFUser.current()
         var curFollowing: [PFUser] = curUser?.object(forKey: "following") as! [PFUser]
-        var thisFollowers: [PFUser] = user?.object(forKey: "followers") as! [PFUser]
         if !followButton.isSelected {
             //follow user
             //add user to curUser's following
             curFollowing.append(user!)
             curUser?.setObject(curFollowing, forKey: "following")
-            //add curUser to user's followers
-            thisFollowers.append(curUser!)
-            user?.setObject(thisFollowers, forKey: "followers")
             //save
-            user?.saveInBackground(block: { (success: Bool, error: Error?) in
-                //added following
-                print("added following")
+            //Create Request
+            Request.postRequest(reciever: user!, withCompletion: { (success: Bool, error: Error?) in
+                if success{
+                    print("requested")
+                }
             })
             curUser?.saveInBackground(block: { (success: Bool, error: Error?) in
                 //added to followers
+                if success {
+                    print ("added followers")
+                } else {
+                    print("errorororororro")
+                }
             })
             followButton.isSelected = true
-       }
+        }
     }
     
     @IBAction func onDone(_ sender: Any) {
@@ -74,7 +77,7 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         followersLabel.text = "\(followers.count)"
         let following: [PFObject] = user?.object(forKey: "following") as! [PFObject]
         followingLabel.text = "\(following.count)"
-
+        
         //what shows up
         if (user?.objectId == PFUser.current()?.objectId){
             followButton.isHidden = true
@@ -130,12 +133,12 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             })
         }
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segControl.selectedSegmentIndex == 0 {
-           return timelinePosts?.count ?? 0
+            return timelinePosts?.count ?? 0
         } else {
             return bookmarkPosts?.count ?? 0
         }

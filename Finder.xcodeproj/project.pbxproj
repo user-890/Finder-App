@@ -10,6 +10,9 @@
 		461F5DEB1F2A61AE00E9EF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461F5DED1F2A61AE00E9EF76 /* Main.storyboard */; };
 		461F5DF21F2A659100E9EF76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 461F5DF01F2A659100E9EF76 /* Localizable.strings */; };
 		491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EAA1C1F1E74ED00194503 /* Fact.swift */; };
+		49349C1C1F38DC4D0076CC57 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1B1F38DC4D0076CC57 /* RequestViewController.swift */; };
+		49349C1E1F38DCE40076CC57 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1D1F38DCE40076CC57 /* RequestCell.swift */; };
+		49349C201F38E0160076CC57 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1F1F38E0160076CC57 /* Request.swift */; };
 		4956167A1F3024D9009A3E07 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495616791F3024D9009A3E07 /* SideMenuViewController.swift */; };
 		4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167B1F3024FD009A3E07 /* ProfViewController.swift */; };
 		4956167E1F30252C009A3E07 /* ProfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167D1F30252C009A3E07 /* ProfCell.swift */; };
@@ -90,6 +93,9 @@
 		464865221F2AA5F9006F51A4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		464865231F2AA5F9006F51A4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Finder/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		491EAA1C1F1E74ED00194503 /* Fact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		49349C1B1F38DC4D0076CC57 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		49349C1D1F38DCE40076CC57 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		49349C1F1F38E0160076CC57 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		495616791F3024D9009A3E07 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		4956167B1F3024FD009A3E07 /* ProfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfViewController.swift; sourceTree = "<group>"; };
 		4956167D1F30252C009A3E07 /* ProfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfCell.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F70E7EA71F228D1E0069001A /* User.swift */,
 				F7551B091F25B971002BB458 /* PostFact.swift */,
+				49349C1F1F38E0160076CC57 /* Request.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 				F79C59041F31078E00841DE3 /* InterestViewController.swift */,
 				F79A756A1F32B8F70095C175 /* customTabBar.swift */,
 				F79A756C1F32C2C40095C175 /* ToCardsController.swift */,
+				49349C1B1F38DC4D0076CC57 /* RequestViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				F7A0301D1F21BB0F00515762 /* VisualRecognitionV3.framework */,
 				F7551B0F1F268556002BB458 /* MapFactTableViewCell.swift */,
 				4956167D1F30252C009A3E07 /* ProfCell.swift */,
+				49349C1D1F38DCE40076CC57 /* RequestCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -383,7 +392,7 @@
 				TargetAttributes = {
 					F7CF69451F154333009FDF40 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MN29R57D4L;
+						DevelopmentTeam = 5JTWQYEJ7H;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -559,6 +568,7 @@
 			files = (
 				F7CF69711F155686009FDF40 /* LoginViewController.swift in Sources */,
 				F79A756D1F32C2C40095C175 /* ToCardsController.swift in Sources */,
+				49349C1C1F38DC4D0076CC57 /* RequestViewController.swift in Sources */,
 				F7A030151F21722400515762 /* FullArticleViewController.swift in Sources */,
 				F78193AE1F20018A0043F7DA /* Recommended.swift in Sources */,
 				F7CF694C1F154333009FDF40 /* ViewController.swift in Sources */,
@@ -573,6 +583,7 @@
 				4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */,
 				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
+				49349C201F38E0160076CC57 /* Request.swift in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 				F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */,
 				F7A030171F217CB700515762 /* RegisterViewController.swift in Sources */,
@@ -585,6 +596,7 @@
 				F7269D0F1F2E6A2500DBF5D9 /* UserListViewController.swift in Sources */,
 				4956167E1F30252C009A3E07 /* ProfCell.swift in Sources */,
 				49BD358A1F17FF86006E88B2 /* ExampleOverlayView.swift in Sources */,
+				49349C1E1F38DCE40076CC57 /* RequestCell.swift in Sources */,
 				F718E4CB1F16D45C00AA1DD0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,7 +756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = MN29R57D4L;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finder",
@@ -752,7 +764,7 @@
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.finderApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Finder/Finder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -767,7 +779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Finder/Finder.entitlements;
-				DEVELOPMENT_TEAM = MN29R57D4L;
+				DEVELOPMENT_TEAM = 5JTWQYEJ7H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Finder",
@@ -775,7 +787,7 @@
 				);
 				INFOPLIST_FILE = Finder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.finderApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Finder/Finder-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
