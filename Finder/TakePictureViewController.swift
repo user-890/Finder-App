@@ -186,7 +186,7 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
 //        print(finalUrl)
         
         
-        var webUrl = URL(string: "https://en.wikipedia.org/wiki/\(firstClassifiedImage)")!
+        var webUrl = URL(string: "https://\(Bundle.main.preferredLocalizations.first!).wikipedia.org/wiki/\(firstClassifiedImage)")!
         print(webUrl)
         
         

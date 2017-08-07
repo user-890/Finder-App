@@ -8,15 +8,15 @@ PODS:
   - KRActivityIndicatorView (2.0.2)
   - KRProgressHUD (3.0.0):
     - KRActivityIndicatorView (~> 2.0.2)
-  - Parse (1.15.0):
+  - Parse (1.15.1):
     - Bolts/Tasks (~> 1.8)
   - ParseUI (1.2.0):
     - Bolts/Tasks (~> 1.3)
     - Parse (~> 1.9)
   - pop (1.0.10)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
@@ -35,10 +35,10 @@ SPEC CHECKSUMS:
   Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
   KRActivityIndicatorView: 2a9d5442ba8da6274db3afdf46aeaef7cf6dd8ad
   KRProgressHUD: 14f9fad06080bdb1e59569104a8eda654c83e813
-  Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
+  Parse: b7a77b20b8a6dede8058da1e2b339593578ce158
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
 PODFILE CHECKSUM: f540f02cfb004b34dfe6caee396667768bf89e97

@@ -207,67 +207,61 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         print(articleUrl)
-        
-        let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
 
-        let task = URLSession.shared.dataTask(with: apiurl! as URL) {
-            
-            
-            (data,response,error) in
-            
-            if error != nil {
-                print (error)
-                return
+            let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
+        
+            let task = URLSession.shared.dataTask(with: apiurl! as URL) {
                 
-            }
-            
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: Any]
-                let d = json["articles"] as! [[String: AnyObject]]
-                print(d)
-                for items in d
-                {
-                    let title = items["title"]!
-                    let imgUrl = items["urlToImage"]! as! String
-                    //let imgParsedUrl = URL(string: imgUrl)!
-                    let dataurl = items["url"]!;
-                    //let img = self.imageParsed(imgData: imgParsedUrl);
-                    let desc = items["description"]
-                    let publishedAt = items["publishedAt"] as! String
+                
+                (data,response,error) in
+                
+                if error != nil {
+                    print (error)
+                    return
                     
-                    let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String, publishedAt: publishedAt as! String)
-                    self.arr.append(NewPost)
-                    
-                    DispatchQueue.main.async {
-                        self.tableview.reloadData()
-                        
-                    }
                 }
                 
-            }
-            catch let jError {
                 
-                print (jError)
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: Any]
+                    let d = json["articles"] as! [[String: AnyObject]]
+                    print(d)
+                    for items in d
+                    {
+                        let title = items["title"]!
+                        let imgUrl = items["urlToImage"]! as! String
+                        //let imgParsedUrl = URL(string: imgUrl)!
+                        let dataurl = items["url"]!;
+                        //let img = self.imageParsed(imgData: imgParsedUrl);
+                        let desc = items["description"]
+                        let publishedAt = items["publishedAt"] as! String
+                       // let lang = items["language"]
+                        
+                        let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String, publishedAt: publishedAt as! String)
+                        self.arr.append(NewPost)
+                        
+                        DispatchQueue.main.async {
+                            self.tableview.reloadData()
+                            
+                        }
+                    }
+                    
+                }
+                catch let jError {
+                    
+                    print (jError)
+                    
+                }
+                
+                //let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                //print(str)
+                
                 
             }
+                   task.resume()
             
-            
-            
-            //let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            //print(str)
-            
-            
-            
-            
-            
-            
-        }
         
-        task.resume()
-        
-        
-        
+
     }
     
     
