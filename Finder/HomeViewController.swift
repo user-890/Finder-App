@@ -243,10 +243,32 @@ extension HomeViewController: KolodaViewDelegate {
             })
             //insert post to array
             
+            //post to timeline
+            //post to own
+            Timeline.postTimeline(owner: PFUser.current()!.objectId!, fact: fact["fact"] as! String, link: fact["source"] as! String) { (success: Bool, error: Error?) in
+                if success {
+                    print("successfully posted!")
+                } else if let error = error {
+                    print(String(describing: error.localizedDescription))
+                }
+            }
+            //post to followers timeline
+            let followers: [PFUser] = PFUser.current()?.object(forKey: "followers") as! [PFUser]
+            for follower in followers {
+                print(follower)
+                //for each or the users followers
+                Timeline.postTimeline(owner: follower.objectId!, fact: fact["fact"] as! String, link: fact["source"] as! String) { (success: Bool, error: Error?) in
+                    if success {
+                        print("successfully posted! follower")
+                        print("\(fact) \(link)")
+                    } else if let error = error {
+                        print(String(describing: error.localizedDescription))
+                    }
+                }
+                
+            }
+            
         }
-        //print(facts.count)
-        //print(fact["fact"])
-        //print(facts[index]["fact"])
     }
 }
 

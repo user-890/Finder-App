@@ -13,6 +13,7 @@
 		49349C1C1F38DC4D0076CC57 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1B1F38DC4D0076CC57 /* RequestViewController.swift */; };
 		49349C1E1F38DCE40076CC57 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1D1F38DCE40076CC57 /* RequestCell.swift */; };
 		49349C201F38E0160076CC57 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C1F1F38E0160076CC57 /* Request.swift */; };
+		49349C221F38E2CC0076CC57 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49349C211F38E2CC0076CC57 /* Timeline.swift */; };
 		4956167A1F3024D9009A3E07 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495616791F3024D9009A3E07 /* SideMenuViewController.swift */; };
 		4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167B1F3024FD009A3E07 /* ProfViewController.swift */; };
 		4956167E1F30252C009A3E07 /* ProfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956167D1F30252C009A3E07 /* ProfCell.swift */; };
@@ -96,6 +97,7 @@
 		49349C1B1F38DC4D0076CC57 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		49349C1D1F38DCE40076CC57 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
 		49349C1F1F38E0160076CC57 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		49349C211F38E2CC0076CC57 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		495616791F3024D9009A3E07 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		4956167B1F3024FD009A3E07 /* ProfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfViewController.swift; sourceTree = "<group>"; };
 		4956167D1F30252C009A3E07 /* ProfCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfCell.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				F70E7EA71F228D1E0069001A /* User.swift */,
 				F7551B091F25B971002BB458 /* PostFact.swift */,
 				49349C1F1F38E0160076CC57 /* Request.swift */,
+				49349C211F38E2CC0076CC57 /* Timeline.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,
 				F70E7EAA1F228FD80069001A /* TakePictureViewController.swift in Sources */,
 				F7A030171F217CB700515762 /* RegisterViewController.swift in Sources */,
+				49349C221F38E2CC0076CC57 /* Timeline.swift in Sources */,
 				F7551B0A1F25B971002BB458 /* PostFact.swift in Sources */,
 				F70E7EA81F228D1E0069001A /* User.swift in Sources */,
 				491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */,
