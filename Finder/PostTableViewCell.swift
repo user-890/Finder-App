@@ -75,12 +75,13 @@ class PostTableViewCell: UITableViewCell {
         
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
-        trayView.center.y = (contentView.bounds.size.height) + 80
+        trayView.center.y = (contentView.bounds.size.height) + 70
         
         
         trayView.layer.cornerRadius = 30
-        
-        
+        trayView.layer.borderWidth = 5
+        let mydarkerGreen = UIColor(red: 0/255, green: 102/255, blue: 0/255, alpha: 1)
+        trayView.layer.borderColor = mydarkerGreen.cgColor
     }
     
     
