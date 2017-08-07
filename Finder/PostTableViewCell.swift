@@ -19,6 +19,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var trayView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     //Constraints
     
@@ -75,6 +76,11 @@ class PostTableViewCell: UITableViewCell {
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
         trayView.center.y = (contentView.bounds.size.height) + 80
+        
+        
+        trayView.layer.cornerRadius = 30
+        
+        
     }
     
     
@@ -112,6 +118,12 @@ class PostTableViewCell: UITableViewCell {
         
     }
     
+    
+    func getRandomImae() {
+        
+        
+        
+    }
     
     
     

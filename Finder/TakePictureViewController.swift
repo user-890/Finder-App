@@ -177,18 +177,20 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         
         // Load the URL request
         
-        let firstClassifiedImage = classifiedImagesArray[0]
-        print(firstClassifiedImage)
         
-        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
-        print(finalUrl)
+        var firstClassifiedImage = classifiedImagesArray[0]
+        print(firstClassifiedImage)
+        print(classifiedImagesArray.count)
+        
+//        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
+//        print(finalUrl)
         
         
         var webUrl = URL(string: "https://en.wikipedia.org/wiki/\(firstClassifiedImage)")!
-//        print(webUrl)
+        print(webUrl)
         
         
-        if webUrl != nil {
+        if webUrl != nil && firstClassifiedImage != nil{
             print(webUrl)
             var webUrlRequest = URLRequest(url: webUrl)
             print(webUrlRequest)
