@@ -715,7 +715,7 @@
                                             <outlet property="usernameLabel" destination="dSz-pF-82K" id="d92-Rp-IDy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardTableViewCell" rowHeight="293" id="WLn-wg-6Pb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardTableViewCell" rowHeight="293" id="WLn-wg-6Pb" customClass="TLCell" customModule="Finder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="735" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLn-wg-6Pb" id="8fD-Ma-0Io">
@@ -723,7 +723,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" fixedFrame="YES" text="Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-Yf-Gec">
-                                                    <rect key="frame" x="46" y="60" width="282" height="66"/>
+                                                    <rect key="frame" x="8" y="25" width="359" height="247"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -800,10 +800,8 @@
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outlet property="factText" destination="hrY-Yf-Gec" id="2vl-DO-ksl"/>
-                                            <outlet property="timeStamp" destination="qQr-Lg-h8L" id="9Iv-4k-ypa"/>
-                                            <outlet property="trayView" destination="oVs-HK-TYt" id="g6W-90-Spx"/>
-                                            <outlet property="usernameLabel" destination="2IQ-I2-qsN" id="DlW-Xs-9Uw"/>
+                                            <outlet property="factLabel" destination="hrY-Yf-Gec" id="wfb-nS-dwK"/>
+                                            <outlet property="usernameLabel" destination="2IQ-I2-qsN" id="IQW-uf-EcQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

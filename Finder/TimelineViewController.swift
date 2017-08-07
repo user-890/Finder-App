@@ -39,6 +39,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         get_data()
         sideMenus()
         updatePosts()
+        updateTL()
         
         // Set up Refresh Control
         let refreshControl = UIRefreshControl()
@@ -81,8 +82,19 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func updateTL(){
+        let curUser = PFUser.current()
         let query = PFQuery(className: "Timeline")
-        query.order(byDescending: "")
+        query.includeKey("author")
+        query.whereKey("owner", equalTo: curUser?.objectId)
+        query.order(byDescending: "createdAt")
+        query.findObjectsInBackground { (results: [PFObject]?, error: Error?) in
+            if error == nil {
+                self.cards = results
+                self.tableview.reloadData()
+            } else {
+                print("errorerrorerrorerror")
+            }
+        }
     }
 
     
@@ -144,19 +156,27 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row < post!.count && indexPath.row % 3 == 0{
-            
+        if indexPath.row/3 < post!.count && indexPath.row % 3 == 0{
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
-            //let posts = post?[indexPath.row]
-            cell.post = post?[indexPath.row]
-            tableview.rowHeight = 289
+            let posts = post?[indexPath.row]
+            cell.post = post?[indexPath.row/3]
+           tableview.rowHeight = 289
             return cell
             
             
+        } else if (indexPath.row/2 < cards!.count && indexPath.row % 2 == 0) {
+            
+            let cellThree = tableView.dequeueReusableCell(withIdentifier: "cardTableViewCell", for: indexPath) as! TLCell
+            
+            print(cards)
+            cellThree.card = cards?[indexPath.row/2]
+            tableview.rowHeight = 430
+            
+            return cellThree
+            
+            
         } else {
-            
-            
-            
             let cellTwo = tableView.dequeueReusableCell(withIdentifier: "recommended", for: indexPath) as! RecommendedTableViewCell
             
             
@@ -164,8 +184,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             tableview.rowHeight = 430
             
             return cellTwo
-            
-            
+
             
         }
         
