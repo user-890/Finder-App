@@ -50,6 +50,10 @@ class SideMenuViewController: UIViewController {
         profileButtonView.layer.cornerRadius = 5
         logoutButtonView.layer.cornerRadius = 5
         
+        logoutView.layer.cornerRadius = 30
+        logoutView.layer.borderWidth = 3
+        logoutView.layer.borderColor = UIColor.white.cgColor
+        
         // Do any additional setup after loading the view.
     }
     

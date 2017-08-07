@@ -51,6 +51,7 @@
 		F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF69791F15809A009FDF40 /* PostTableViewCell.swift */; };
 		F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */; };
 		F7E1B9761F2486110041FB8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E1B9751F2486110041FB8D /* CoreLocation.framework */; };
+		F7E3443A1F390F80005B772D /* dummyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E344391F390F80005B772D /* dummyClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedTableViewCell.swift; sourceTree = "<group>"; };
 		F7E1B9701F2468A30041FB8D /* TextToSpeechV1.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TextToSpeechV1.framework.dSYM; path = Carthage/Build/iOS/TextToSpeechV1.framework.dSYM; sourceTree = "<group>"; };
 		F7E1B9751F2486110041FB8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F7E344391F390F80005B772D /* dummyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				491EAA1C1F1E74ED00194503 /* Fact.swift */,
 				F70E7EA71F228D1E0069001A /* User.swift */,
 				F7551B091F25B971002BB458 /* PostFact.swift */,
+				F7E344391F390F80005B772D /* dummyClass.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				F70E7EA81F228D1E0069001A /* User.swift in Sources */,
 				491EAA1D1F1E74ED00194503 /* Fact.swift in Sources */,
 				49BD35861F17F7B2006E88B2 /* HomeViewController.swift in Sources */,
+				F7E3443A1F390F80005B772D /* dummyClass.swift in Sources */,
 				F7551B101F268556002BB458 /* MapFactTableViewCell.swift in Sources */,
 				4956167A1F3024D9009A3E07 /* SideMenuViewController.swift in Sources */,
 				F7269D0F1F2E6A2500DBF5D9 /* UserListViewController.swift in Sources */,
