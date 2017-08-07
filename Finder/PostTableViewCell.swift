@@ -127,13 +127,25 @@ class PostTableViewCell: UITableViewCell {
     }
     
     
-    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let color = trayView.backgroundColor
+        
+        // Configure the view for the selected state
+        if isSelected {
+            trayView.backgroundColor = color
+        }
+    }
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
+        let color = trayView.backgroundColor
+        
         // Configure the view for the selected state
+        if isSelected {
+            trayView.backgroundColor = color
+        }
     }
     
 }

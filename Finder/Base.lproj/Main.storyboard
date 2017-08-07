@@ -102,6 +102,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="275" height="667"/>
                     <connections>
                         <outlet property="ForgotPasswordButton" destination="HU0-N1-Hmr" id="tTp-F4-YjY"/>
                         <outlet property="createAccountButton" destination="3Yv-2V-uhx" id="HR6-rb-zRT"/>
@@ -721,8 +723,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timeline" id="1Pa-5k-nDh">
-                        <barButtonItem key="leftBarButtonItem" image="menu-1" id="CRH-ab-Rq3"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu-1" id="CRH-ab-Rq3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="B2v-VL-fLr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="rsk-ZT-tUm" kind="show" id="OLv-ve-SeI"/>
                             </connections>
@@ -1408,7 +1413,7 @@
         <scene sceneID="8ku-5E-2lc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ozV-qT-VbG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="timelineIcon" selectedImage="timelineIcon" id="9TY-Du-Vev"/>
+                    <tabBarItem key="tabBarItem" title="" image="home-icon" selectedImage="home-icon" id="9TY-Du-Vev"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dbG-Uh-xfS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVK-UH-h2r">
@@ -1469,20 +1474,20 @@
         <image name="backgroundSideBar" width="540" height="360"/>
         <image name="buzz" width="636" height="358"/>
         <image name="camera-icon" width="40" height="40"/>
+        <image name="home-icon" width="30" height="30"/>
         <image name="homeIcon" width="30" height="30"/>
         <image name="menu-1" width="25" height="25"/>
         <image name="profile-cover-image" width="1280" height="768"/>
         <image name="tag" width="32" height="32"/>
-        <image name="timelineIcon" width="25" height="25"/>
         <image name="umbrella" width="32" height="32"/>
         <image name="world" width="32" height="32"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b6I-uW-BB4"/>
-        <segue reference="omV-ek-p9L"/>
+        <segue reference="2jg-dB-vGk"/>
         <segue reference="AF3-0c-CXY"/>
         <segue reference="oGC-sO-1FE"/>
+        <segue reference="omV-ek-p9L"/>
         <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>

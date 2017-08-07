@@ -22,9 +22,10 @@ class customTabBar: UITabBarController {
         customButton.frame = CGRect(x: 100, y: 0, width: 44, height: 44)
         customButton.backgroundColor = UIColor.black
         customButton.layer.borderWidth = 2
-        customButton.layer.borderColor = UIColor.white.cgColor
+        var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+        customButton.layer.borderColor = ourGreen.cgColor
         
-        let image = UIImage(named: "cards-icon")
+        let image = UIImage(named: "chat-2")
         customButton.setImage(image, for: .normal)
         
         customButton.addTarget(self, action: #selector(goToCardsViewController), for: .touchUpInside)
@@ -34,7 +35,7 @@ class customTabBar: UITabBarController {
         // Chnage tab bar item tint 
         self.tabBarController?.tabBar.tintColor = UIColor.white
         //self.tabBarController?.tabBar.tintColor = UIColor.red()
-        
+    
     }
     
     func goToCardsViewController() {
