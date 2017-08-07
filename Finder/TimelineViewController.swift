@@ -20,6 +20,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var post: [PFObject]? = []
     
+    var cards: [PFObject]? = []
     
     // Array of articles
     var arr = [Recommended]()
@@ -77,6 +78,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                 print(String(describing: error?.localizedDescription))
             }
         }
+    }
+    
+    func updateTL(){
+        let query = PFQuery(className: "Timeline")
+        query.order(byDescending: "")
     }
 
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -713,6 +713,97 @@
                                             <outlet property="timeStamp" destination="pLe-tM-6RV" id="QxU-t6-Flp"/>
                                             <outlet property="trayView" destination="bTg-d1-wCQ" id="O6V-GC-cdu"/>
                                             <outlet property="usernameLabel" destination="dSz-pF-82K" id="d92-Rp-IDy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardTableViewCell" rowHeight="293" id="WLn-wg-6Pb">
+                                        <rect key="frame" x="0.0" y="735" width="375" height="293"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLn-wg-6Pb" id="8fD-Ma-0Io">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" fixedFrame="YES" text="Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-Yf-Gec">
+                                                    <rect key="frame" x="46" y="60" width="282" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVs-HK-TYt">
+                                                    <rect key="frame" x="0.0" y="209" width="375" height="300"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQr-Lg-h8L">
+                                                            <rect key="frame" x="325" y="15" width="35" height="16"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORk-lN-Dmn">
+                                                            <rect key="frame" x="40" y="140" width="36" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="945-MT-rCQ">
+                                                            <rect key="frame" x="40" y="176" width="34" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-s8-8dO">
+                                                            <rect key="frame" x="84" y="138" width="240" height="24"/>
+                                                            <color key="backgroundColor" red="1" green="0.1477645799" blue="0.084607196659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAh-oN-Mog">
+                                                            <rect key="frame" x="84" y="174" width="142" height="24"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Tyler Holloway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IQ-I2-qsN">
+                                                            <rect key="frame" x="15" y="15" width="99" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="mQf-s8-8dO" secondAttribute="trailing" constant="51" id="8FG-dn-C2N"/>
+                                                        <constraint firstAttribute="height" constant="300" id="EyO-10-GMS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DAh-oN-Mog" secondAttribute="bottom" constant="102" id="HoA-0j-3Sk"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="top" secondItem="2IQ-I2-qsN" secondAttribute="bottom" constant="102" id="S6l-K9-DX6"/>
+                                                        <constraint firstItem="2IQ-I2-qsN" firstAttribute="top" secondItem="oVs-HK-TYt" secondAttribute="top" constant="15" id="TMv-Fg-qus"/>
+                                                        <constraint firstItem="qQr-Lg-h8L" firstAttribute="top" secondItem="oVs-HK-TYt" secondAttribute="top" constant="15" id="WaX-a6-lMj"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="leading" secondItem="oVs-HK-TYt" secondAttribute="leading" constant="84" id="XNL-pm-6OA"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="centerY" secondItem="ORk-lN-Dmn" secondAttribute="centerY" id="YbV-Ch-O0i"/>
+                                                        <constraint firstItem="DAh-oN-Mog" firstAttribute="leading" secondItem="945-MT-rCQ" secondAttribute="trailing" constant="10" id="aXR-BP-gPC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DAh-oN-Mog" secondAttribute="trailing" constant="149" id="bfX-WW-FwG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qQr-Lg-h8L" secondAttribute="bottom" constant="269" id="cQA-Um-Swu"/>
+                                                        <constraint firstItem="DAh-oN-Mog" firstAttribute="top" secondItem="mQf-s8-8dO" secondAttribute="bottom" constant="12" id="ebH-Ha-fqm"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="centerY" secondItem="oVs-HK-TYt" secondAttribute="centerY" id="fzs-QL-Uqu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qQr-Lg-h8L" secondAttribute="trailing" constant="15" id="iyq-OK-G1k"/>
+                                                        <constraint firstItem="qQr-Lg-h8L" firstAttribute="leading" secondItem="2IQ-I2-qsN" secondAttribute="trailing" constant="211.5" id="m58-0N-Qs3"/>
+                                                        <constraint firstAttribute="width" constant="375" id="oKF-I5-Z6N"/>
+                                                        <constraint firstItem="2IQ-I2-qsN" firstAttribute="leading" secondItem="oVs-HK-TYt" secondAttribute="leading" constant="15" id="qhU-eW-EtE"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="leading" secondItem="DAh-oN-Mog" secondAttribute="leading" id="sad-Ol-MVS"/>
+                                                        <constraint firstItem="DAh-oN-Mog" firstAttribute="centerY" secondItem="945-MT-rCQ" secondAttribute="centerY" id="vrY-Na-EUS"/>
+                                                        <constraint firstItem="mQf-s8-8dO" firstAttribute="leading" secondItem="ORk-lN-Dmn" secondAttribute="trailing" constant="8" symbolic="YES" id="xgg-9s-t5W"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstItem="oVs-HK-TYt" firstAttribute="leading" secondItem="8fD-Ma-0Io" secondAttribute="leading" id="B9c-8N-K6g"/>
+                                                <constraint firstAttribute="trailing" secondItem="oVs-HK-TYt" secondAttribute="trailing" id="Mp3-n3-Nnu"/>
+                                                <constraint firstItem="oVs-HK-TYt" firstAttribute="top" secondItem="8fD-Ma-0Io" secondAttribute="top" constant="208.5" id="rNq-u5-WME"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="factText" destination="hrY-Yf-Gec" id="2vl-DO-ksl"/>
+                                            <outlet property="timeStamp" destination="qQr-Lg-h8L" id="9Iv-4k-ypa"/>
+                                            <outlet property="trayView" destination="oVs-HK-TYt" id="g6W-90-Spx"/>
+                                            <outlet property="usernameLabel" destination="2IQ-I2-qsN" id="DlW-Xs-9Uw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1529,10 +1620,10 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="y9p-j1-K5Q"/>
         <segue reference="b6I-uW-BB4"/>
         <segue reference="omV-ek-p9L"/>
         <segue reference="AF3-0c-CXY"/>
         <segue reference="oGC-sO-1FE"/>
-        <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>
