@@ -220,7 +220,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         } else if firstInterest == "politics"{
             articleUrl = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else if firstInterest == "technology"{
-            articleUrl = " https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+            articleUrl = "https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else if firstInterest == "fashion"{
             articleUrl = "https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else {
