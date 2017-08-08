@@ -22,6 +22,9 @@ class customTabBar: UITabBarController {
         customButton.frame = CGRect(x: 100, y: 0, width: 44, height: 44)
         customButton.backgroundColor = UIColor.black
         customButton.layer.borderWidth = 2
+        //var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+
+
         customButton.layer.borderColor = UIColor.white.cgColor
         
         let image = UIImage(named: "cards-icon")

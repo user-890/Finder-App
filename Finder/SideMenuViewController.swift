@@ -50,7 +50,11 @@ class SideMenuViewController: UIViewController {
         super.viewDidLoad()
         
         let curUser = PFUser.current()
-        userLabel.text = curUser?.username as! String
+        let curUsername = curUser?.username as! String
+        userLabel.text = "Welcome \(curUsername)"
+        
+        
+        //userLabel.text = curUser?.username as! String
         profileButtonView.layer.cornerRadius = 5
         logoutButtonView.layer.cornerRadius = 5
         

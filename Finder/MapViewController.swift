@@ -14,6 +14,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
     
     
+    
     // MARK: Properties
     
     @IBOutlet weak var tableview: UITableView!
@@ -21,40 +22,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     @IBOutlet var trayView: UIView!
     @IBOutlet weak var addressLabel: UILabel!
     
-    // Array of articles
-    //var arr = [Recommended]()
-    let manager = CLLocationManager()
     var trayOriginalCenter: CGPoint!
+    var startLocation: CGPoint!
+    var trayAtBottom = true
     
-    
-    
-    
-    // Update locationw whenever the user moves
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations[0]
-        
-        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        mapView.setRegion(region, animated: true)
-        
-        
-        CLGeocoder().reverseGeocodeLocation(location) { (
-            placemark, error) in
-            if error != nil {
-                print("An error has occurred")
-            } else {
-                // See if there's content int he placemark variable
-                if let place = placemark?[0] {
-                    if let checker = place.subThoroughfare {
-                        self.addressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
-                    }
-                }
-            }
-        }
-    }
-    
+
     
 
     
@@ -86,32 +58,34 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     }
     
     
-    @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
-        var translation = sender.translation(in: view)
-        print("translation \(translation)")
-        
-        if sender.state == UIGestureRecognizerState.began {
+    func didPanTray(_ gestureRecognizer: UIPanGestureRecognizer) {
+        var translation = gestureRecognizer.translation(in: trayView)
+        //print("translation \(translation)")
+        //print("contentView \(contentView.center)")
+        let velocity = gestureRecognizer.velocity(in: trayView)
+        if gestureRecognizer.state == UIGestureRecognizerState.began {
             trayOriginalCenter = trayView.center
             
-        } else if sender.state == UIGestureRecognizerState.changed {
-            trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
-        } else if sender.state == UIGestureRecognizerState.ended {
-            let velocity = sender.velocity(in: view)
-
-            let trayDownOffset: CGFloat = 160
-            let trayUp: CGPoint = trayView.center
-            let trayDown = CGPoint(x: trayView.center.x ,y: trayView.center.y + trayDownOffset)
-            
-            
-            if velocity.y > 0 {
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.trayView.center = trayDown
-                })
+        } else if gestureRecognizer.state == UIGestureRecognizerState.changed {
+            if (trayAtBottom && velocity.y > 0) || (!trayAtBottom && velocity.y < 0){
+                //do nnothing
             } else {
-                UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                    self.trayView.center = trayUp                 
+                trayView.center = CGPoint(x: trayOriginalCenter.x, y: trayOriginalCenter.y + translation.y)
+            }
+        } else if gestureRecognizer.state == UIGestureRecognizerState.ended {
+            if velocity.y < 0{ //swipe up
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.trayView.center = self.view.center
+                    self.trayAtBottom = false
+                })
+                
+            } else { //swipe down
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.trayView.center.y = (self.view.bounds.size.height) + 80
+                    self.trayAtBottom = true
                 })
             }
+            
         }
         
     }
@@ -120,14 +94,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
         
 
+        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanTray(_:)))
+        self.trayView.addGestureRecognizer(gestureRecognizer)
+        trayView.center.y = (view.bounds.size.height) + 80
         
-        //getApiData()
+        trayView.layer.cornerRadius = 30
+        trayView.layer.borderWidth = 5
+        var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+        trayView.layer.borderColor = ourGreen.cgColor
+
     }
     
     
