@@ -122,8 +122,9 @@ class RecommendedTableViewCell: UITableViewCell {
         
         trayView.layer.cornerRadius = 30
         trayView.layer.borderWidth = 5
+        var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
         var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
-        trayView.layer.borderColor = ourGreen.cgColor
+        trayView.layer.borderColor = ourYellow.cgColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
