@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -592,7 +592,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-d1-wCQ">
-                                                    <rect key="frame" x="0.0" y="208" width="375" height="300"/>
+                                                    <rect key="frame" x="0.0" y="208.5" width="375" height="300"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-tM-6RV">
                                                             <rect key="frame" x="325.5" y="15" width="41.5" height="16"/>
@@ -600,53 +600,51 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-bC-QQj">
-                                                            <rect key="frame" x="40" y="140" width="36" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OS-hg-bjJ">
-                                                            <rect key="frame" x="40" y="176.5" width="34" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqb-1G-vhs">
-                                                            <rect key="frame" x="84" y="137" width="240" height="26"/>
-                                                            <color key="backgroundColor" red="1" green="0.1477645799" blue="0.084607196659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hk8-tw-rGp">
-                                                            <rect key="frame" x="84" y="175" width="142" height="23"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Tyler Holloway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSz-pF-82K">
                                                             <rect key="frame" x="15" y="15" width="117.5" height="20"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl2-NL-bNd">
+                                                            <rect key="frame" x="107" y="149" width="203" height="2"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="progressTintColor" red="1" green="0.93772148389999999" blue="0.1062693775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAg-GZ-KlN">
+                                                            <rect key="frame" x="107" y="186" width="203" height="2"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="progressTintColor" red="1" green="0.1477645799" blue="0.084607196659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </progressView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMe-ho-cNm">
+                                                            <rect key="frame" x="41" y="172" width="36" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="False">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="pressFalse:" destination="f1Y-VG-jg2" eventType="touchUpInside" id="qKN-8G-z4I"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxH-eH-CwP">
+                                                            <rect key="frame" x="44" y="134" width="31" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="True">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="pressTrue:" destination="f1Y-VG-jg2" eventType="touchUpInside" id="9JU-TH-PFc"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="centerY" secondItem="lgl-bC-QQj" secondAttribute="centerY" id="20d-Gb-zvj"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="15" id="2xH-LR-fbK"/>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="leading" secondItem="hk8-tw-rGp" secondAttribute="leading" id="60j-zc-TUl"/>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="leading" secondItem="lgl-bC-QQj" secondAttribute="trailing" constant="8" symbolic="YES" id="6qo-0d-XbE"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="leading" secondItem="bTg-d1-wCQ" secondAttribute="leading" constant="15" id="8Yy-6K-zit"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hk8-tw-rGp" secondAttribute="trailing" constant="149" id="EXt-3p-XlH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="iqb-1G-vhs" secondAttribute="trailing" constant="51" id="Hym-k2-Ujw"/>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="centerY" secondItem="bTg-d1-wCQ" secondAttribute="centerY" id="IjV-yr-rLQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="pLe-tM-6RV" secondAttribute="trailing" constant="8" id="J0v-Ie-8Op"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hk8-tw-rGp" secondAttribute="bottom" constant="102" id="KhA-fS-ehQ"/>
                                                         <constraint firstAttribute="height" constant="300" id="LYm-Yy-xPj"/>
                                                         <constraint firstItem="pLe-tM-6RV" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="15" id="VHz-Hm-2Dc"/>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="leading" secondItem="bTg-d1-wCQ" secondAttribute="leading" constant="84" id="ah8-wx-fyp"/>
-                                                        <constraint firstItem="iqb-1G-vhs" firstAttribute="top" secondItem="dSz-pF-82K" secondAttribute="bottom" constant="102" id="fgS-2Q-l1L"/>
-                                                        <constraint firstItem="hk8-tw-rGp" firstAttribute="leading" secondItem="3OS-hg-bjJ" secondAttribute="trailing" constant="10" id="jNO-wT-5Ba"/>
-                                                        <constraint firstItem="hk8-tw-rGp" firstAttribute="centerY" secondItem="3OS-hg-bjJ" secondAttribute="centerY" id="pCd-9P-AE7"/>
-                                                        <constraint firstItem="hk8-tw-rGp" firstAttribute="top" secondItem="iqb-1G-vhs" secondAttribute="bottom" constant="12" id="pbU-zs-eQ9"/>
                                                         <constraint firstAttribute="bottom" secondItem="pLe-tM-6RV" secondAttribute="bottom" constant="269" id="q9i-0L-NTy"/>
                                                         <constraint firstAttribute="width" constant="375" id="uzg-VE-k0h"/>
                                                     </constraints>
@@ -662,8 +660,10 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outlet property="factText" destination="t6l-iG-nhJ" id="Th2-Mi-ZfC"/>
+                                            <outlet property="falseBar" destination="wAg-GZ-KlN" id="YCM-iP-mXA"/>
                                             <outlet property="timeStamp" destination="pLe-tM-6RV" id="QxU-t6-Flp"/>
                                             <outlet property="trayView" destination="bTg-d1-wCQ" id="O6V-GC-cdu"/>
+                                            <outlet property="trueBar" destination="sl2-NL-bNd" id="DsY-2i-vj9"/>
                                             <outlet property="usernameLabel" destination="dSz-pF-82K" id="d92-Rp-IDy"/>
                                         </connections>
                                     </tableViewCell>
