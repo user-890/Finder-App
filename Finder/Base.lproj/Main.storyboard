@@ -506,7 +506,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="414"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mnW-pl-mTU" id="uDs-f0-8t1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="414"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="413.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="nUC-KO-Ylp">
@@ -590,7 +590,7 @@
                                         <rect key="frame" x="0.0" y="442" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f1Y-VG-jg2" id="9Ck-Yl-vwy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" fixedFrame="YES" text="Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6l-iG-nhJ">
@@ -680,7 +680,7 @@
                                         <rect key="frame" x="0.0" y="735" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLn-wg-6Pb" id="8fD-Ma-0Io">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" fixedFrame="YES" text="Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-Yf-Gec">
@@ -692,31 +692,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vlg-Jo-v1Y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.98403556029999995" green="0.99847865099999999" blue="0.68315347309999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAd-FF-4fg">
-                                                    <rect key="frame" x="0.0" y="214" width="375" height="300"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="July 29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jU6-nk-7g1">
-                                                            <rect key="frame" x="325.5" y="15" width="41.5" height="16"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Tyler Holloway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wO2-p3-UGe">
-                                                            <rect key="frame" x="15" y="15" width="117.5" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <gestureRecognizers/>
                                                 </view>
                                             </subviews>
                                             <gestureRecognizers/>
@@ -726,8 +704,6 @@
                                         <connections>
                                             <outlet property="cardView" destination="8fD-Ma-0Io" id="m2D-AO-7cs"/>
                                             <outlet property="factLabel" destination="hrY-Yf-Gec" id="wfb-nS-dwK"/>
-                                            <outlet property="trayView" destination="gAd-FF-4fg" id="wZe-oz-KaZ"/>
-                                            <outlet property="usernameLabel" destination="wO2-p3-UGe" id="fzA-y3-kNr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -777,7 +753,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NnT-qj-284" id="qw4-DX-i7M">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -987,7 +963,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2FC-gN-3lO" id="d0g-QX-0En">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-zS-d9V">
@@ -1133,7 +1109,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyc-fd-C0k" id="syJ-Na-R5f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-E9-Rpc">
@@ -1359,7 +1335,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8b0-Wc-NbZ" id="Hux-6e-MWj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Approximately 83.6 percent of these daily active users are outside the United States and Canada" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1J-eZ-iXg">
@@ -1543,8 +1519,8 @@
         <image name="add-image-placeholder" width="600" height="800"/>
         <image name="buzz" width="636" height="358"/>
         <image name="homeIcon" width="30" height="30"/>
-        <image name="icons8-Magazine_2" width="45" height="45"/>
-        <image name="icons8-Unsplash" width="45" height="45"/>
+        <image name="icons8-Magazine_2" width="40" height="40"/>
+        <image name="icons8-Unsplash" width="40" height="40"/>
         <image name="menu-1" width="25" height="25"/>
         <image name="planes" width="400" height="600"/>
         <image name="tag" width="32" height="32"/>
