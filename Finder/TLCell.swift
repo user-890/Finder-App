@@ -14,6 +14,7 @@ class TLCell: UITableViewCell {
     
     @IBOutlet var factLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var trayView: UIView!
     
     var card: PFObject! {
         didSet {
@@ -29,6 +30,10 @@ class TLCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        trayView.layer.cornerRadius = 30
+        trayView.layer.borderWidth = 5
+        var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+        trayView.layer.borderColor = ourGreen.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

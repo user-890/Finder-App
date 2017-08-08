@@ -171,7 +171,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             
             print(cards)
             cellThree.card = cards?[indexPath.row]
-            tableview.rowHeight = 430
+            tableview.rowHeight = 289
             
             return cellThree
             
