@@ -31,6 +31,15 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="FKB-yh-CHi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIRN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePf-yO-0Km">
+                                            <rect key="frame" x="129" y="124" width="116" height="73"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="61"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <gestureRecognizers/>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="HPb-EQ-eaI" appends="YES" id="3aq-Ey-WV2"/>
@@ -119,7 +128,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1786" y="653"/>
+            <point key="canvasLocation" x="1784.8" y="652.62368815592208"/>
         </scene>
         <!--Password Reset-->
         <scene sceneID="nyI-bI-dYW">
@@ -538,8 +547,8 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="August 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-XL-kKn">
                                                             <rect key="frame" x="303" y="15" width="60" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -671,7 +680,7 @@
                                         <rect key="frame" x="0.0" y="735" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLn-wg-6Pb" id="8fD-Ma-0Io">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="292.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="293"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" fixedFrame="YES" text="Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T! Facebook interns are GR8T!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-Yf-Gec">
@@ -1474,7 +1483,7 @@
         <scene sceneID="8ku-5E-2lc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ozV-qT-VbG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icons8-Magazine" selectedImage="icons8-Magazine" id="9TY-Du-Vev"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-Magazine_2" selectedImage="icons8-Magazine_2" id="9TY-Du-Vev"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dbG-Uh-xfS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVK-UH-h2r">
@@ -1534,8 +1543,8 @@
         <image name="add-image-placeholder" width="600" height="800"/>
         <image name="buzz" width="636" height="358"/>
         <image name="homeIcon" width="30" height="30"/>
-        <image name="icons8-Magazine" width="30" height="30"/>
-        <image name="icons8-Unsplash" width="30" height="30"/>
+        <image name="icons8-Magazine_2" width="45" height="45"/>
+        <image name="icons8-Unsplash" width="45" height="45"/>
         <image name="menu-1" width="25" height="25"/>
         <image name="planes" width="400" height="600"/>
         <image name="tag" width="32" height="32"/>
