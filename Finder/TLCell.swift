@@ -20,7 +20,7 @@ class TLCell: UITableViewCell {
     var card: PFObject! {
         didSet {
             factLabel.text = card["fact"] as? String
-            //usernameLabel.text = card["author"] as! String
+            usernameLabel.text = card["author"] as! String
             print(card["author"])
             
             }
