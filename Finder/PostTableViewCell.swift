@@ -74,7 +74,7 @@ class PostTableViewCell: UITableViewCell {
         
         trayView.backgroundColor = UIColor.black
         usernameLabel.textColor = UIColor.white
-        timeStamp.textColor = ourYellow
+        //timeStamp.textColor = ourYellow
         
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)

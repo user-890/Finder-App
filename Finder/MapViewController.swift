@@ -28,6 +28,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
 
     
+    let manager = CLLocationManager()
+    
+    
+    // Update locationw whenever the user moves
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations[0]
+        
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        mapView.setRegion(region, animated: true)
+        
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (
+            placemark, error) in
+            if error != nil {
+                print("An error has occurred")
+            } else {
+                // See if there's content int he placemark variable
+//                if let place = placemark?[0] {
+//                    if let checker = place.subThoroughfare {
+//                        self.addressLabel.text = "\(place.subThoroughfare!) \n \(place.thoroughfare!) \n \(place.country!)"
+//                    }
+//                }
+                
+                print("It worked")
+            }
+        }
+    }
+    
 
     
     
@@ -94,6 +125,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         
 
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanTray(_:)))
@@ -102,7 +137,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
         
         trayView.layer.cornerRadius = 30
         trayView.layer.borderWidth = 5
-        var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+        var ourGreen =  UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
         trayView.layer.borderColor = ourGreen.cgColor
 
     }
