@@ -82,9 +82,8 @@ class PostTableViewCell: UITableViewCell {
         
         
         trayView.layer.cornerRadius = 30
-        //trayView.layer.borderWidth = 2
-        
-        let mydarkerGreen = UIColor(red: 0/255, green: 102/255, blue: 0/255, alpha: 1)
+        trayView.layer.borderWidth = 5
+        trayView.layer.borderColor = ourYellow.cgColor
         //trayView.layer.borderColor = UIColor.black.cgColor
     }
     

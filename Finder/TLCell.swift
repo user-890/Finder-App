@@ -32,8 +32,8 @@ class TLCell: UITableViewCell {
         // Initialization code
         trayView.layer.cornerRadius = 30
         trayView.layer.borderWidth = 5
-        var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
-        trayView.layer.borderColor = ourGreen.cgColor
+        //var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
+        trayView.layer.borderColor = UIColor.white.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

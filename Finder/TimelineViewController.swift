@@ -22,7 +22,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var cards: [PFObject]? = []
     
-    // Array of articles
+    // Array of articles249/255, green: 208/255, blue: 16/255
     var arr = [Recommended]()
     // Destination to full article
     var dest_url : String!

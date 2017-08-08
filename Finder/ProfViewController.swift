@@ -67,7 +67,7 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .none
         followingView.layer.cornerRadius = 20
         //followingView.layer.borderWidth = 3
         //var ourGreen =  UIColor(red: 255/255, green: 255/255, blue: 153/255, alpha: 1)

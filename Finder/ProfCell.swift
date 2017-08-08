@@ -27,8 +27,8 @@ class ProfCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         cellView.layer.cornerRadius = 20
-        cellView.layer.borderWidth = 3
-        cellView.layer.borderColor = UIColor.white.cgColor
+        cellView.layer.borderWidth = 2
+        cellView.layer.borderColor = UIColor.black.cgColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
