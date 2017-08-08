@@ -29,6 +29,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var interest: [String] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -176,6 +177,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if (interest = currentUser?.object(forKey: "interests") as! [String]) != nil {
             print("This string is not empty")
+            print(interest)
         } else {
             print("This string is empty")
         }
@@ -196,7 +198,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             articleUrl = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else if firstInterest == "technology"{
             articleUrl = " https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
-        } else {
+        } else if firstInterest == "fashion"{
+            articleUrl = "https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        }else {
             articleUrl = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b"
         }
         

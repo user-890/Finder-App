@@ -52,6 +52,7 @@
 		F7CF697C1F1580D4009FDF40 /* RecommendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF697B1F1580D4009FDF40 /* RecommendedTableViewCell.swift */; };
 		F7E1B9761F2486110041FB8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E1B9751F2486110041FB8D /* CoreLocation.framework */; };
 		F7E3443A1F390F80005B772D /* dummyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E344391F390F80005B772D /* dummyClass.swift */; };
+		F7E3443C1F392EA0005B772D /* SecondInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E3443B1F392EA0005B772D /* SecondInterestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		F7E1B9701F2468A30041FB8D /* TextToSpeechV1.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TextToSpeechV1.framework.dSYM; path = Carthage/Build/iOS/TextToSpeechV1.framework.dSYM; sourceTree = "<group>"; };
 		F7E1B9751F2486110041FB8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F7E344391F390F80005B772D /* dummyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyClass.swift; sourceTree = "<group>"; };
+		F7E3443B1F392EA0005B772D /* SecondInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInterestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 				F79C59041F31078E00841DE3 /* InterestViewController.swift */,
 				F79A756A1F32B8F70095C175 /* customTabBar.swift */,
 				F79A756C1F32C2C40095C175 /* ToCardsController.swift */,
+				F7E3443B1F392EA0005B772D /* SecondInterestViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				F79C59051F31078E00841DE3 /* InterestViewController.swift in Sources */,
 				F724AA701F29458600B38BEF /* PasswordResetViewController.swift in Sources */,
 				4956167C1F3024FD009A3E07 /* ProfViewController.swift in Sources */,
+				F7E3443C1F392EA0005B772D /* SecondInterestViewController.swift in Sources */,
 				F7551B0C1F25B9C1002BB458 /* ComposeFactViewController.swift in Sources */,
 				F7A0300C1F216F3300515762 /* SWRevealViewController.m in Sources */,
 				F7CF697A1F15809A009FDF40 /* PostTableViewCell.swift in Sources */,

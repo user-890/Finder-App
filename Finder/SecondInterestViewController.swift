@@ -1,4 +1,12 @@
 //
+//  SecondInterestViewController.swift
+//  Finder
+//
+//  Created by Tyler Holloway on 8/7/17.
+//  Copyright © 2017 Finder. All rights reserved.
+//
+
+//
 //  InterestViewController.swift
 //  Finder
 //
@@ -9,7 +17,7 @@
 import UIKit
 import Parse
 
-class InterestViewController: UIViewController {
+class SecondInterestViewController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var historyButton: UIButton!
@@ -21,10 +29,10 @@ class InterestViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     var arrayWithoutData = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         historyButton.layer.borderWidth = 2
@@ -157,14 +165,14 @@ class InterestViewController: UIViewController {
         else if fashionButton.backgroundColor == UIColor.yellow {
             fashionButton.backgroundColor = UIColor.clear
         }
-
+        
     }
     
     
     
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "mainScreen" {
+        if segue.identifier == "tomainScreen" {
             if let dest = segue.destination as? RegisterViewController {
                 dest.interest = self.arrayWithoutData
             }
@@ -178,35 +186,15 @@ class InterestViewController: UIViewController {
         user?.setObject(arrayWithoutData, forKey: "interests")
         user?.saveInBackground(block: { (success: Bool, error: Error?) in
             print("success")
-            self.performSegue(withIdentifier: "mainScreen", sender: nil)
+            self.performSegue(withIdentifier: "tomainScreen", sender: nil)
         })
-
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 }
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
