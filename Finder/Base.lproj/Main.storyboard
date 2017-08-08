@@ -346,7 +346,6 @@
                                         </state>
                                         <connections>
                                             <action selector="pressFashion:" destination="YfH-E1-5Kc" eventType="touchUpInside" id="chX-VV-IT3"/>
-                                            <action selector="pressTechnology:" destination="YfH-E1-5Kc" eventType="touchUpInside" id="wEX-3c-a7W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPt-LH-7sw">
