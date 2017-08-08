@@ -12,11 +12,12 @@ import Parse
 class InterestViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var historyButton: RoundButton!
-    @IBOutlet weak var sportsButton: RoundButton!
-    @IBOutlet weak var entertainmentButton: RoundButton!
-    @IBOutlet weak var techButton: RoundButton!
-    @IBOutlet weak var politicsButton: RoundButton!
+    @IBOutlet weak var historyButton: UIButton!
+    @IBOutlet weak var sportsButton: UIButton!
+    @IBOutlet weak var entertainmentButton: UIButton!
+    @IBOutlet weak var techButton: UIButton!
+    @IBOutlet weak var politicsButton: UIButton!
+    @IBOutlet weak var fashionButton: UIButton!
     
     var arrayWithoutData = [String]()
 
@@ -25,7 +26,20 @@ class InterestViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        historyButton.layer.borderWidth = 2
+        historyButton.layer.borderColor = UIColor.black.cgColor
         
+        entertainmentButton.layer.borderWidth = 2
+        entertainmentButton.layer.borderColor = UIColor.black.cgColor
+        
+        sportsButton.layer.borderWidth = 2
+        sportsButton.layer.borderColor = UIColor.black.cgColor
+        
+        politicsButton.layer.borderWidth = 2
+        politicsButton.layer.borderColor = UIColor.black.cgColor
+        
+        techButton.layer.borderWidth = 2
+        techButton.layer.borderColor = UIColor.black.cgColor
         
     }
     
@@ -148,6 +162,26 @@ class InterestViewController: UIViewController {
 
         
     }
+    
+    
+    @IBAction func pressFashion(_ sender: Any) {
+        if fashionButton.backgroundColor == UIColor.clear {
+            fashionButton.backgroundColor = UIColor.yellow
+            
+            // Append the user's name to an inrerest array
+            let otherVC = RegisterViewController()
+            arrayWithoutData = otherVC.interest
+            
+            arrayWithoutData.append("fashion")
+            let firstElement = arrayWithoutData.first
+            print(firstElement)
+        }
+        else if fashionButton.backgroundColor == UIColor.yellow {
+            fashionButton.backgroundColor = UIColor.clear
+        }
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

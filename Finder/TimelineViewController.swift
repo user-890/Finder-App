@@ -221,13 +221,15 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             articleUrl = "https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else if firstInterest == "technology"{
             articleUrl = " https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
+        } else if firstInterest == "fashion"{
+            articleUrl = " https://newsapi.org/v1/articles?source=techradar&sortBy=top&apiKey=dac06852b2574464ad33ca8902bcb418"
         } else {
             articleUrl = "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b"
         }
         
         print(articleUrl)
 
-            let apiurl = NSURL(string: "https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=112947519e4a41e48da28e8c35965f7b");
+            let apiurl = NSURL(string: articleUrl);
         
             let task = URLSession.shared.dataTask(with: apiurl! as URL) {
                 
@@ -253,7 +255,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                         let dataurl = items["url"]!;
                         //let img = self.imageParsed(imgData: imgParsedUrl);
                         let desc = items["description"]
-                        let publishedAt = items["publishedAt"] as! String
+                        let publishedAt = items["publishedAt"] as? String ?? "21m"
                        // let lang = items["language"]
                         
                         let NewPost = Recommended(Title: title as! String, sendURL: dataurl as! String, PostImage: imgUrl, Desc: desc as! String, publishedAt: publishedAt as! String)
