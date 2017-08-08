@@ -11,7 +11,8 @@ import UIKit
 class MapFactTableViewCell: UITableViewCell {
     
     // MARK: Properties
-    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var factLabel: UILabel!
     
     
     var recommend : Recommended! {
@@ -46,7 +47,7 @@ class MapFactTableViewCell: UITableViewCell {
         
         let imgurl = URL(string: recommend.PostImage)
         //self.backgroundImageView.sd_setImage(with: imgurl)
-        self.titleLabel.text = recommend.Title
+        //self.titleLabel.text = recommend.Title
         
         
     }

@@ -26,9 +26,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     var startLocation: CGPoint!
     var trayAtBottom = true
     
-
+    // Array of Facts about FB
+    var facts = [String]()
     
-    let manager = CLLocationManager()
+//    let manager = CLLocationManager()
+    
     
     
     // Update locationw whenever the user moves
@@ -72,24 +74,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 20
+        return facts.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellTwo = tableView.dequeueReusableCell(withIdentifier: "mapFact", for: indexPath) as! MapFactTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mapFact", for: indexPath) as! MapFactTableViewCell
         
         
-        cellTwo.titleLabel.text = "The air quality is: Poor"
+        cell.factLabel.text = facts[indexPath.row]
         
-        return cellTwo
+        //cell.textLabel?.text = facts[indexPath.row]
+        
+        return cell
         
         
     }
     
     
-    func didPanTray(_ gestureRecognizer: UIPanGestureRecognizer) {
+    @IBAction func didPanTray(_ gestureRecognizer: UIPanGestureRecognizer) {
         var translation = gestureRecognizer.translation(in: trayView)
         //print("translation \(translation)")
         //print("contentView \(contentView.center)")
@@ -112,12 +116,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
                 
             } else { //swipe down
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.trayView.center.y = (self.view.bounds.size.height) + 80
+                    self.trayView.center.y = (self.view.bounds.size.height) + 60
                     self.trayAtBottom = true
                 })
             }
             
         }
+        
         
     }
     
@@ -125,20 +130,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+//        manager.delegate = self
+//        manager.desiredAccuracy = kCLLocationAccuracyBest
+//        manager.requestWhenInUseAuthorization()
+//        manager.startUpdatingLocation()
         
 
-        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanTray(_:)))
-        self.trayView.addGestureRecognizer(gestureRecognizer)
-        trayView.center.y = (view.bounds.size.height) + 80
+        //let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanTray(_:)))
+        //self.trayView.addGestureRecognizer(gestureRecognizer)
+        //trayView.center.y = (view.bounds.size.height) + 80
         
         trayView.layer.cornerRadius = 30
         trayView.layer.borderWidth = 5
         var ourGreen =  UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
         trayView.layer.borderColor = ourGreen.cgColor
+        
+        facts = ["Approximately 83.6 percent of these daily active users are outside the United States and Canada"," In September 2015, Facebook introduced immersive 360-degree videos to users' News Feeds.", "The company estimates that it has an average of 1.18 billion daily active users.", "There are 15,724 employees at Facebook, and it is headquartered in Menlo Park, California.", "There are about 3 billion internet users worldwide."]
 
     }
     
