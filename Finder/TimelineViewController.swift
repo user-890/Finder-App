@@ -156,21 +156,21 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row/3 < post!.count && indexPath.row % 3 == 0{
+        if indexPath.row < post!.count && indexPath.row % 3 == 0{
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell") as! PostTableViewCell
             let posts = post?[indexPath.row]
-            cell.post = post?[indexPath.row/3]
+            cell.post = post?[indexPath.row]
            tableview.rowHeight = 289
             return cell
             
             
-        } else if (indexPath.row/2 < cards!.count && indexPath.row % 2 == 0) {
+        } else if (indexPath.row < cards!.count && indexPath.row % 2 == 0) {
             
             let cellThree = tableView.dequeueReusableCell(withIdentifier: "cardTableViewCell", for: indexPath) as! TLCell
             
             print(cards)
-            cellThree.card = cards?[indexPath.row/2]
+            cellThree.card = cards?[indexPath.row]
             tableview.rowHeight = 430
             
             return cellThree
