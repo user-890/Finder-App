@@ -18,11 +18,12 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //Outlets
     @IBOutlet var userLabel: UILabel!
-    @IBOutlet var segControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var followingLabel: UILabel!
     @IBOutlet var followersLabel: UILabel!
     @IBOutlet var followButton: UIButton!
+    @IBOutlet var followingView: UIView!
+    @IBOutlet var followersView: UIView!
     
     
     @IBAction func onFollow(_ sender: Any) {
@@ -67,6 +68,12 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        followingView.layer.cornerRadius = 20
+        //followingView.layer.borderWidth = 3
+        //var ourGreen =  UIColor(red: 255/255, green: 255/255, blue: 153/255, alpha: 1)
+        //followingView.layer.borderColor = UIColor.white.cgColor
+        followersView.layer.cornerRadius = 20
+        
         //tableView
         tableView.delegate = self
         tableView.dataSource = self
@@ -82,7 +89,6 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (user?.objectId == PFUser.current()?.objectId){
             followButton.isHidden = true
         } else {
-            segControl.isHidden = true
             //set initial state of follow button
             let curUser = PFUser.current()
             let following: [PFObject] =  curUser?.object(forKey: "following") as! [PFObject]
@@ -137,24 +143,13 @@ class ProfViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if segControl.selectedSegmentIndex == 0 {
-            return timelinePosts?.count ?? 0
-        } else {
-            return bookmarkPosts?.count ?? 0
-        }
-        return 0
+        return timelinePosts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profCell", for: indexPath) as! ProfCell
-        if segControl.selectedSegmentIndex == 0 {
             let timelinePost = timelinePosts![indexPath.row]
             cell.post = timelinePost as PFObject
-        } else if segControl.selectedSegmentIndex == 1 {
-            //bookmarks
-            let bookmarkPost = bookmarkPosts![indexPath.row]
-            cell.post = bookmarkPost as PFObject
-        }
         //do samething for bookmark
         return cell
     }

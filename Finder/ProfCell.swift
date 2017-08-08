@@ -12,6 +12,8 @@ import Parse
 class ProfCell: UITableViewCell {
     
     @IBOutlet var factLabel: UILabel!
+    @IBOutlet var cellView: UIView!
+    
     
     var post: PFObject! {
         didSet {
@@ -24,6 +26,9 @@ class ProfCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cellView.layer.cornerRadius = 20
+        cellView.layer.borderWidth = 3
+        cellView.layer.borderColor = UIColor.white.cgColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
