@@ -20,15 +20,20 @@ class customTabBar: UITabBarController {
         //customButton.setTitleColor(.white, for: .normal)
         customButton.setTitleColor(.yellow, for: .highlighted)
         customButton.frame = CGRect(x: 100, y: 0, width: 44, height: 44)
+        
+        
+        var ourOrange =  UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1)
+        
+    
         customButton.backgroundColor = UIColor.black
-        customButton.layer.borderWidth = 2
-        //var ourGreen =  UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 1)
+        //customButton.layer.borderWidth = 2
+        
 
 
         customButton.layer.borderColor = UIColor.white.cgColor
         
-        let image = UIImage(named: "cards-icon")
-        customButton.setImage(image, for: .normal)
+        let image = UIImage(named: "home2-icon")
+        //customButton.setImage(image, for: .normal)
         
         customButton.addTarget(self, action: #selector(goToCardsViewController), for: .touchUpInside)
         

@@ -69,9 +69,12 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {     //53 163 152 | 95 186 131
         super.awakeFromNib()
         // Initialization code
-        trayView.backgroundColor = UIColor(red: 88/255, green: 115/255, blue: 60/255, alpha: 0.87)
-        usernameLabel.textColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
-        timeStamp.textColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
+        
+        var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
+        
+        trayView.backgroundColor = UIColor.black
+        usernameLabel.textColor = UIColor.white
+        timeStamp.textColor = ourYellow
         
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         self.trayView.addGestureRecognizer(gestureRecognizer)
@@ -79,10 +82,10 @@ class PostTableViewCell: UITableViewCell {
         
         
         trayView.layer.cornerRadius = 30
-        trayView.layer.borderWidth = 5
-        let mydarkerGreen = UIColor(red: 0/255, green: 102/255, blue: 0/255, alpha: 1)
-        trayView.layer.borderColor = mydarkerGreen.cgColor
+        //trayView.layer.borderWidth = 2
         
+        let mydarkerGreen = UIColor(red: 0/255, green: 102/255, blue: 0/255, alpha: 1)
+        //trayView.layer.borderColor = UIColor.black.cgColor
     }
     
     
