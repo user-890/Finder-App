@@ -1541,10 +1541,10 @@
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2jg-dB-vGk"/>
-        <segue reference="AF3-0c-CXY"/>
         <segue reference="omV-ek-p9L"/>
+        <segue reference="AF3-0c-CXY"/>
+        <segue reference="2jg-dB-vGk"/>
         <segue reference="y9p-j1-K5Q"/>
-        <segue reference="oGC-sO-1FE"/>
+        <segue reference="ZCK-9K-7gA"/>
     </inferredMetricsTieBreakers>
 </document>

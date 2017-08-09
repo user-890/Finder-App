@@ -48,12 +48,12 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         userCell.textLabel!.text = userObject.object(forKey: "username") as? String
         
         //let profilePictureObject = PFUser.current()?.object(forKey: "profile_picture") as! PFFile
-        if let profPic = PFUser.current()?["profile_picture"] as? PFFile {
-            profPic.getDataInBackground { (imageData: Data!, error: Error?) in
-                userCell.imageView?.image = UIImage(data:imageData)
-            }
-    
-        }
+//        if let profPic = PFUser.current()?["profile_picture"] as? PFFile {
+//            profPic.getDataInBackground { (imageData: Data!, error: Error?) in
+//                userCell.imageView?.image = UIImage(data:imageData)
+//            }
+//    
+//        }
         return userCell
     }
     
