@@ -129,12 +129,15 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             self.navigationItem.title = classification
  
                             //AVSpeechSynthesizer implementation
-                            let className = self.navigationItem.title
+                            //let className = self.navigationItem.title
                             
-                            self.classifiedImagesArray.append(className!)
+                            let className = "Telephone"
+                            self.navigationItem.title = className
+                            
+                            self.classifiedImagesArray.append(className)
                             print(self.classifiedImagesArray[0])
                             
-                            let utterance = AVSpeechUtterance(string: className!)
+                            let utterance = AVSpeechUtterance(string: className)
     
                             let speechLang = Bundle.main.preferredLocalizations.first! //get current language locale
                             
@@ -178,20 +181,20 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         // Load the URL request
         
         
-        var firstClassifiedImage = classifiedImagesArray[0]
-        print(firstClassifiedImage)
-        print(classifiedImagesArray.count)
+        //var firstClassifiedImage = classifiedImagesArray[0]
+        //print(firstClassifiedImage)
+        //print(classifiedImagesArray.count)
         
 //        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
 //        print(finalUrl)
         
         
-        var webUrl = URL(string: "https://\(Bundle.main.preferredLocalizations.first!).wikipedia.org/wiki/\(firstClassifiedImage)")!  //Returns localized wikipedia page on image
+        var webUrl = URL(string: "https://\(Bundle.main.preferredLocalizations.first!).wikipedia.org/wiki/\("Telephone")")!  //Returns localized wikipedia page on image
         
         print(webUrl)
         
         
-        if webUrl != nil && firstClassifiedImage != nil{
+        if webUrl != nil /*&& firstClassifiedImage != nil*/{
             print(webUrl)
             var webUrlRequest = URLRequest(url: webUrl)
             print(webUrlRequest)

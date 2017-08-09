@@ -26,14 +26,14 @@ class customTabBar: UITabBarController {
         
     
         customButton.backgroundColor = UIColor.black
-        //customButton.layer.borderWidth = 2
+        customButton.layer.borderWidth = 0.5
         
 
 
         customButton.layer.borderColor = UIColor.white.cgColor
         
-        let image = UIImage(named: "home2-icon")
-        //customButton.setImage(image, for: .normal)
+        let image = UIImage(named: "chat-2")
+        customButton.setImage(image, for: .normal)
         
         customButton.addTarget(self, action: #selector(goToCardsViewController), for: .touchUpInside)
         

@@ -19,10 +19,15 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeStamp: UILabel!
     @IBOutlet weak var trayView: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
     
-    //Constraints
+
     
+    // Poll
+    @IBOutlet weak var trueBar: UIProgressView!
+    @IBOutlet weak var falseBar: UIProgressView!
+    
+    var timesTapped: Float = 0.0
+    var timesFalseTapped: Float = 0.0
     
     
     var trayOriginalCenter: CGPoint!
@@ -85,8 +90,44 @@ class PostTableViewCell: UITableViewCell {
         trayView.layer.borderWidth = 5
         trayView.layer.borderColor = ourYellow.cgColor
         //trayView.layer.borderColor = UIColor.black.cgColor
+        
+        // Poll
+        self.timesTapped = 0
+        self.trueBar.progress = 0
+        
+        self.timesFalseTapped = 0
+        self.falseBar.progress = 0
+        
+        trueBar.transform = trueBar.transform.scaledBy(x: 1, y: 10)
+        falseBar.transform = falseBar.transform.scaledBy(x: 1, y: 10)
+        
     }
     
+    
+    @IBAction func pressTrue(_ sender: Any) {
+        self.timesTapped += 0.1
+        
+        
+        if self.timesTapped == 1.0 {
+            self.trueBar.progress = 1.0
+            return
+        }
+            self.trueBar.progress = timesTapped
+
+    }
+    
+    
+    
+    @IBAction func pressFalse(_ sender: Any) {
+        self.timesFalseTapped += 0.1
+        
+        if self.timesFalseTapped == 0 {
+            self.falseBar.progress = 1.0
+            return
+        }
+        
+        self.falseBar.progress = timesFalseTapped
+    }
     
     
     

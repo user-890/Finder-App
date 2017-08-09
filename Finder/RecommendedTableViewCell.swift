@@ -70,6 +70,8 @@ class RecommendedTableViewCell: UITableViewCell {
     
     
     
+    
+    
     @IBAction func pressLInk(_ sender: Any) {
         
         if let url = URL(string: recommend.sendURL) {

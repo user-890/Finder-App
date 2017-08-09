@@ -61,6 +61,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         loginButton.layer.cornerRadius = 10
         loginButton.layer.masksToBounds = true
+        var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 0.75)
+        loginButton.backgroundColor = ourYellow
         
     }
     
