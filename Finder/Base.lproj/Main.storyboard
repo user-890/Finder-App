@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-kp-VJw">
@@ -804,7 +804,7 @@
                                 <rect key="frame" x="0.0" y="191" width="275" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-ay-X9e">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-ay-X9e">
                                         <rect key="frame" x="115" y="25" width="45" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -870,7 +870,7 @@
                                             <action selector="onLogout:" destination="xlZ-dA-aAR" eventType="touchUpInside" id="LDm-3j-zx3"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-XQ-Kkj">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="server" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-XQ-Kkj">
                                         <rect key="frame" x="115" y="25" width="45" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -881,7 +881,7 @@
                                 <rect key="frame" x="0.0" y="303" width="275" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="world" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-LY-4MT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connections" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-LY-4MT">
                                         <rect key="frame" x="115" y="33" width="45" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1525,21 +1525,22 @@
         <image name="Image" width="768" height="509"/>
         <image name="add-image-placeholder" width="600" height="800"/>
         <image name="buzz" width="636" height="358"/>
+        <image name="connections" width="32" height="32"/>
         <image name="homeIcon" width="30" height="30"/>
         <image name="icons8-Magazine_2" width="40" height="40"/>
         <image name="icons8-Unsplash" width="40" height="40"/>
         <image name="menu-1" width="25" height="25"/>
         <image name="planes" width="400" height="600"/>
-        <image name="tag" width="32" height="32"/>
-        <image name="umbrella" width="32" height="32"/>
+        <image name="server" width="32" height="32"/>
+        <image name="star" width="32" height="32"/>
         <image name="world" width="32" height="32"/>
         <image name="world-icon" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2jg-dB-vGk"/>
-        <segue reference="YFo-Sp-NZk"/>
+        <segue reference="AF3-0c-CXY"/>
         <segue reference="omV-ek-p9L"/>
-        <segue reference="oGC-sO-1FE"/>
         <segue reference="y9p-j1-K5Q"/>
+        <segue reference="oGC-sO-1FE"/>
     </inferredMetricsTieBreakers>
 </document>
