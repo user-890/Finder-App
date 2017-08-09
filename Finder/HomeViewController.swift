@@ -26,7 +26,7 @@ func randomColor() -> UIColor {
 func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIImage{
     
     // Setup the font specific variables
-    let textColor: UIColor = UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
+    let textColor: UIColor = UIColor.white//UIColor(red: 220/255, green: 255/255, blue: 253/255, alpha: 1)
     let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 25)!
     let paraStyle = NSMutableParagraphStyle()
     
@@ -50,7 +50,7 @@ func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint) -> UIIma
     _ = drawText.size(attributes: textFontAttributes)
     //let textRect = CGRect(x: inImage.size.width / 2 - textFont.width / 2, y: 0,
     //                      width: inImage.size.width / 2 + textSize.width / 2, height: inImage.size.height - textFont.height)
-    let rect: CGRect = CGRect(x: atPoint.x + 10, y: atPoint.y + 65, width: inImage.size.width-10, height: inImage.size.height)
+    let rect: CGRect = CGRect(x: atPoint.x + 10, y: atPoint.y + 75, width: inImage.size.width-20, height: inImage.size.height)
     
     
     //Now Draw the text into an image.
@@ -145,7 +145,7 @@ class HomeViewController: UIViewController {
         var array: [UIImage] = []
         print(facts.count)
         for index in 0..<facts.count {
-            let base = UIImage(named: "mockcard")
+            let base = UIImage(named: "cardz")
             let point = CGPoint(x: 0, y: 0)
             let curFact: PFObject = facts[index]
             let str = curFact["fact"] as? NSString
