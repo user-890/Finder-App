@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-kp-VJw">
@@ -33,7 +33,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIRN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePf-yO-0Km">
-                                            <rect key="frame" x="129" y="124" width="116" height="73"/>
+                                            <rect key="frame" x="129" y="30" width="116" height="73"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="61"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1530,9 +1530,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2jg-dB-vGk"/>
-        <segue reference="AF3-0c-CXY"/>
+        <segue reference="YFo-Sp-NZk"/>
         <segue reference="omV-ek-p9L"/>
-        <segue reference="y9p-j1-K5Q"/>
         <segue reference="oGC-sO-1FE"/>
+        <segue reference="y9p-j1-K5Q"/>
     </inferredMetricsTieBreakers>
 </document>

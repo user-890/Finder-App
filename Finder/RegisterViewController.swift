@@ -96,6 +96,8 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         emailTextField.layer.borderColor = UIColor.white.cgColor
         
         
+        var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 0.75)
+        registerButton.backgroundColor = ourYellow
         registerButton.layer.cornerRadius = 10
         registerButton.layer.masksToBounds = true
         
