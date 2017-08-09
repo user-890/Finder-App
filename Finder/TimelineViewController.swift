@@ -45,6 +45,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
         tableview.insertSubview(refreshControl, at: 0)
+        
+        // Change navigation bar title font
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.black,
+             NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 17)!]
+    
+        
     }
     
     
@@ -190,6 +197,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
     }
+    
+    
     
     
     // Fetch the data from the API
