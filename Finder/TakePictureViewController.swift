@@ -83,6 +83,12 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
         // Make corners of pop up round
         popUpView.layer.cornerRadius = 5
         
+        ourWebView.layer.cornerRadius = 5
+        ourWebView.layer.borderWidth = 5
+        
+        var ourYellow = UIColor(red: 249/255, green: 208/255, blue: 16/255, alpha: 1)
+        ourWebView.layer.borderColor = ourYellow.cgColor
+        
         //loadWebView()
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {

@@ -1192,7 +1192,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.97647058823529409" green="0.81568627450980391" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="ozV-qT-VbG" kind="relationship" relationship="viewControllers" id="BnT-0Q-ER0"/>
                         <segue destination="Y9F-zV-hGe" kind="relationship" relationship="viewControllers" id="8Ar-fh-dQA"/>
@@ -1281,11 +1287,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz9-XG-AIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="1Ag-ev-aik">
-                    <rect key="frame" x="0.0" y="0.0" width="294" height="375"/>
+                    <rect key="frame" x="0.0" y="0.0" width="306" height="399"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQE-bO-sY2">
-                            <rect key="frame" x="0.0" y="0.0" width="294" height="375"/>
+                            <rect key="frame" x="0.0" y="-18" width="306" height="417"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </webView>
