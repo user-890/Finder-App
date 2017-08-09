@@ -137,8 +137,8 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
                             //AVSpeechSynthesizer implementation
                             //let className = self.navigationItem.title
                             
-                            let className = "Telephone"
-                            self.navigationItem.title = className
+                            let className = classification
+                            self.navigationItem.title = self.navigationItem.title
                             
                             self.classifiedImagesArray.append(className)
                             print(self.classifiedImagesArray[0])
@@ -181,21 +181,21 @@ class TakePictureViewController: UIViewController, UIImagePickerControllerDelega
     // Get popUp View on the same view controller
     func animataeIn() {
         
-        //let ourWebView = UIWebView()
-        //self.view.addSubview(ourWebView)
+        let ourWebView = UIWebView()
+        self.view.addSubview(ourWebView)
         
-        // Load the URL request
-        
-        
-        //var firstClassifiedImage = classifiedImagesArray[0]
-        //print(firstClassifiedImage)
-        //print(classifiedImagesArray.count)
-        
-//        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
-//        print(finalUrl)
+         //Load the URL request
         
         
-        var webUrl = URL(string: "https://\(Bundle.main.preferredLocalizations.first!).wikipedia.org/wiki/\("Telephone")")!  //Returns localized wikipedia page on image
+        var firstClassifiedImage = classifiedImagesArray[0]
+        print(firstClassifiedImage)
+        print(classifiedImagesArray.count)
+        
+        var finalUrl: String = "https://en.wikipedia.org/wiki/\(firstClassifiedImage)"
+        print(finalUrl)
+        
+        
+        var webUrl = URL(string: "https://\(Bundle.main.preferredLocalizations.first!).wikipedia.org/wiki/\(firstClassifiedImage)")!  //Returns localized wikipedia page on image
         
         print(webUrl)
         
