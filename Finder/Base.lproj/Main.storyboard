@@ -544,8 +544,12 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="August 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-XL-kKn">
-                                                            <rect key="frame" x="303" y="15" width="60" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="August 21" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-XL-kKn">
+                                                            <rect key="frame" x="305" y="15" width="60" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="APG-oz-FxV"/>
+                                                                <constraint firstAttribute="width" constant="60" id="fJB-Es-ISd"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -559,7 +563,7 @@
                                                         <constraint firstAttribute="bottom" secondItem="QbD-Of-1eF" secondAttribute="bottom" constant="8" id="92m-po-m1o"/>
                                                         <constraint firstAttribute="trailing" secondItem="QbD-Of-1eF" secondAttribute="trailing" constant="8" id="G0d-UR-Uj8"/>
                                                         <constraint firstItem="KD7-ny-2vW" firstAttribute="leading" secondItem="Dh0-2S-g0X" secondAttribute="leading" constant="15" id="L67-PR-1JC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="cb1-XL-kKn" secondAttribute="trailing" constant="8" id="Swl-77-bEI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cb1-XL-kKn" secondAttribute="trailing" constant="10" id="Swl-77-bEI"/>
                                                         <constraint firstItem="dfw-tb-SaL" firstAttribute="top" secondItem="KD7-ny-2vW" secondAttribute="bottom" constant="73" id="WOK-kd-Vnj"/>
                                                         <constraint firstAttribute="trailing" secondItem="KD7-ny-2vW" secondAttribute="trailing" constant="15" id="fh6-cI-56S"/>
                                                         <constraint firstAttribute="trailing" secondItem="dfw-tb-SaL" secondAttribute="trailing" constant="15" id="u78-EP-i1q"/>
@@ -604,7 +608,7 @@
                                                     <rect key="frame" x="0.0" y="208.5" width="375" height="300"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-tM-6RV">
-                                                            <rect key="frame" x="325.5" y="15" width="41.5" height="16"/>
+                                                            <rect key="frame" x="323.5" y="15" width="41.5" height="16"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -651,7 +655,7 @@
                                                     <constraints>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="15" id="2xH-LR-fbK"/>
                                                         <constraint firstItem="dSz-pF-82K" firstAttribute="leading" secondItem="bTg-d1-wCQ" secondAttribute="leading" constant="15" id="8Yy-6K-zit"/>
-                                                        <constraint firstAttribute="trailing" secondItem="pLe-tM-6RV" secondAttribute="trailing" constant="8" id="J0v-Ie-8Op"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pLe-tM-6RV" secondAttribute="trailing" constant="10" id="J0v-Ie-8Op"/>
                                                         <constraint firstAttribute="height" constant="300" id="LYm-Yy-xPj"/>
                                                         <constraint firstItem="pLe-tM-6RV" firstAttribute="top" secondItem="bTg-d1-wCQ" secondAttribute="top" constant="15" id="VHz-Hm-2Dc"/>
                                                         <constraint firstAttribute="bottom" secondItem="pLe-tM-6RV" secondAttribute="bottom" constant="269" id="q9i-0L-NTy"/>

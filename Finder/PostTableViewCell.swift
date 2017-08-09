@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
+
 class PostTableViewCell: UITableViewCell {
     
     // MARK: Properties

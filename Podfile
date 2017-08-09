@@ -12,6 +12,7 @@ target 'Finder' do
    pod 'ParseUI'
 
 
+
   # Pods for Finder
    pod 'AlamofireImage', '~> 3.1'
    pod "TextFieldEffects"

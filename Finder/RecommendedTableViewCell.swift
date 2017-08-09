@@ -10,6 +10,7 @@
 import UIKit
 import SDWebImage
 
+
 class RecommendedTableViewCell: UITableViewCell {
     
     // MARK: Properties
@@ -65,6 +66,9 @@ class RecommendedTableViewCell: UITableViewCell {
         sourceLink.setTitle(recommend.sendURL, for: .normal)
         
         self.timeStamp.text = recommend.publishedAt
+        
+       
+    
         
     }
     
